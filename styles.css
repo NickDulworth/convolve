@@ -50,11 +50,25 @@ img {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 @media (max-width: 900px) {
   .Nav {
     flex-direction: column;
     padding: 3rem 2rem;
   }
+=======
+.Card {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+  border-radius: var(--radius-md);
+  background: var(--surface-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+>>>>>>> parent of 9ccdb0e... width test
 
   .Nav > *:first-child {
     margin-bottom: 0.5rem;
