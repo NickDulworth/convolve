@@ -69,9 +69,11 @@
 
 html,
 body {
-  background-image: url("images/0.jpg");
+  background: #000000 url("images/0.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
   padding: 0;
-  margin: 0;
+  margin: 30;
   font-family: 'Karla', sans-serif;
 /*  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 /*  font-family: Arial Narrow,Arial,sans-serif; */
