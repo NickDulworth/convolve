@@ -129,7 +129,7 @@ body {
 
 .Card {
   width: 100%;
-  max-width: 100px;
+/*  max-width: 100px;*/
   padding: var(--spacing-sm);
   box-sizing: border-box;
   border-radius: var(--radius-md);
@@ -140,6 +140,13 @@ body {
 }
 
 .Card__selected {
+  border: 2px solid var(--primary-color);
+  text-overflow: ellipsis;
+}
+
+/*
+default*/
+#impulse-1 {
   border: 2px solid var(--primary-color);
   text-overflow: ellipsis;
 }
