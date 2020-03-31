@@ -146,20 +146,6 @@ body {
   text-overflow: ellipsis;
 }
 
-/*
-default*/
-/*#impulse-1 {
-=======
-#impulse-1 {
->>>>>>> parent of 4ccd110... Update styles.css
-=======
-#impulse-0 {
->>>>>>> parent of f697604... Update styles.css
-  border: 2px solid var(--primary-color);
-  text-overflow: ellipsis;
-}
-*/
-
 .Card__title {
   font-weight: bold;
 }
