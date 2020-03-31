@@ -128,8 +128,14 @@ body {
 }
 
 .Card {
+<<<<<<< HEAD
   width: 100%;
   max-width: 400px;
+=======
+/*  width: 100%;*/
+/*  max-width: 200px;*/
+  width: 200px;
+>>>>>>> parent of 4ccd110... Update styles.css
   padding: var(--spacing-sm);
   box-sizing: border-box;
   border-radius: var(--radius-md);
@@ -146,7 +152,11 @@ body {
 
 /*
 default*/
+<<<<<<< HEAD
 /*#impulse-1 {
+=======
+#impulse-1 {
+>>>>>>> parent of 4ccd110... Update styles.css
   border: 2px solid var(--primary-color);
   text-overflow: ellipsis;
 }
