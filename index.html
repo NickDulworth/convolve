@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Auralization</title>
+    <meta name="description" content="Impulse" />
+    <meta name="author" content="Nicolaus Dulworth" />
+    <link rel="stylesheet" href="styles.css" />
+  <!--   <link
+      href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link href="vendor/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+
+
+
+
+  <body data-theme="dark">
+
+    <div>
+      &nbsp;
+    <img src="http://nickdulworth.com/webaudio/images/0.jpg" class="classImageViewer" id="imageViewer">
+
+    </div>
+
+    <div class="App">
+      <div class="AppContent">
+
+<!-- Select source ////////////////////////////////////////////////////////          -->
+     
+        <div class="CardList">
+
+
+          <h2>Select Source Audio</h2>
+          <div id="source-0" class="Card">
+            <div class="Card__title">Record Yourself</div>
+            <div class="Card__description">Avoid Bluetooth Headphones</div>
+            <div style="height: 8px"></div>
+            <button id="record" class="Button Button__danger">
+              <i class="fas fa-microphone"></i>&nbsp;Record
+            </button>
+
+            &nbsp;
+            
+            <button id="play-recording-btn" class="Button">
+              <i class="fas fa-play"></i>&nbsp;Play Dry Recording
+            </button>
+          </div>
+          
+          <div id="source-1" class="Card">
+            <div class="Card__title">Source 1</div>
+            <div class="Card__description">
+              Lorem ipsums
+            </div>
+          </div>
+          
+          <div id="source-2" class="Card">
+            <div class="Card__title">Source 2</div>
+            <div class="Card__description">Lorem, ipsum dolor.</div>
+          </div>
+        </div>
+
+
+<!-- Select Impulse ////////////////////////////////////////////////////////          -->
+
+
+        <div class="CardList">
+          <h2>Select Room Model</h2>
+
+          <div id="impulse-0" class="Card">
+            <div class="Card__title">Impulse 0</div>
+            <div class="Card__description">Lorem ipsum dolor sit amet.</div>
+          </div>
+
+          <div id="impulse-1" class="Card">
+            <div class="Card__title">Impulse 1</div>
+            <div class="Card__description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </div>
+          </div>
+
+          <div id="impulse-2" class="Card">
+            <div class="Card__title">Impulse 2</div>
+            <div class="Card__description">Lorem ipsum dolor sit.</div>
+          </div>
+        </div>
+
+<!-- Play Source in Room ////////////////////////////////////////////////////////          -->
+
+
+        <div class="CardList">
+        <h2>Convolve</h2>
+        <button id="convolve-btn" class="Button Button__large">
+          <i class="fas fa-play"></i>&nbsp;Play Source in Room
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="vendor/reverb.js"></script>
+    <script src="convolve.js"></script>
+  </body>
+</html>

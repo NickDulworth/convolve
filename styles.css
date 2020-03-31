@@ -1,0 +1,213 @@
+:root {
+/*  --primary-color: #1778f2;*/
+  --primary-color:#eb212e; /* TA Red */
+/*  --secondary-color: rgb(239, 136, 176);*/
+  --secondary-color: #1778f2;
+  --bg-color: #f2f2f2;
+  --surface-color: white;
+  --bg-hover-color: #f2f2f2;
+  --surface-hover-color: hsl(0, 0%, 98%);
+
+  --primary-font-color: rgba(0, 0, 0, 0.87);
+  --secondary-font-color: rgba(0, 0, 0, 0.7);
+  --tertiary-font-color: rgba(0, 0, 0, 0.38);
+
+  --brand-fb-blue: #4267b2;
+
+  --on-background: rgba(255, 255, 255, 0.87);
+  --on-surface: rgba(255, 255, 255, 0.6);
+  --on-primary: #fff;
+  --on-secondary: #000;
+
+  /* spacing t-shirt sizes */
+  --spacing-none: 0;
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+  --spacing-xxxl: 48px;
+  --spacing-xxxxl: 64px;
+
+  /* radii */
+  --radius-sm: 0.1rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
+  --radius-xxl: 2rem;
+  --radius-circle: 50%;
+
+/*  --danger: #f53d4e;*/
+  --danger: #eb212e;
+}
+
+/* dark color theme */
+[data-theme='dark'] {
+/*  --primary-color: hsl(213, 80%, 52%);*/
+  --primary-color: #eb212e; /* TA Red */
+/*  --secondary-color: rgb(239, 136, 176);*/
+ --secondary-color: #1778f2;
+
+  --bg-color: black;
+  --surface-color: #1e1e1e;
+  --bg-hover-color: #121212;
+  --surface-hover-color: hsl(0, 0%, 14%);
+
+  --primary-font-color: rgba(255, 255, 255, 0.87);
+  --secondary-font-color: rgba(255, 255, 255, 0.55);
+  --tertiary-font-color: rgba(255, 255, 255, 0.4);
+
+  --brand-fb-blue: #2f477a;
+
+  --on-background: rgba(255, 255, 255, 0.87);
+  --on-surface: rgba(255, 255, 255, 0.6);
+  --on-primary: #1e1e1e;
+  --on-secondary: #000;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+/*  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+/*  font-family: Arial Narrow,Arial,sans-serif; */
+  background: var(--bg-color);
+  color: var(--primary-font-color);
+}
+
+.classImageViewer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+/*  width: 700px;*/
+  height: auto;
+
+}
+
+.App {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+/*  min-height: 100vh;*/
+  display: flex;
+  flex-direction: row;
+/*  align-items: center;*/
+  justify-content: center;
+}
+
+.AppContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.AppContent > *:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.CardList {
+  display: inline-block;
+  /* background: var(--surface-color); */
+  padding: 1rem;
+  box-sizing: border-box;
+  align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.CardList > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.Card {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+  border-radius: var(--radius-md);
+  background: var(--surface-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+
+.Card__selected {
+  border: 2px solid var(--primary-color);
+  text-overflow: ellipsis;
+}
+
+.Card__title {
+  font-weight: bold;
+}
+.Card__description {
+  color: var(--secondary-font-color);
+}
+
+h2 {
+  width: 100%;
+}
+
+.Button {
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xs) var(--spacing-md);
+  min-width: 3rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  background: var(--secondary-color);
+  color: var(--on-primary);
+}
+
+.Button__danger {
+  background: var(--danger);
+  border: 2px solid var(--danger);
+}
+
+.Button__large {
+  min-width: 4rem;
+/*  font-weight: bold;*/
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+/* Small Screens. */
+@media (max-width: 1100px) {
+  .App {
+    padding-bottom: 2rem;
+  }
+
+  .AppContent {
+    flex-direction: column;
+  }
+
+  .AppContent > *:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Phones only. */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .CardList {
+    width: 100vw;
+  }
+
+  .Card {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .Button__large {
+    width: 100%;
+  }
+}
