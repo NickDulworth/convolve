@@ -225,7 +225,8 @@
     imgElement = document.getElementById('imageViewer');
     imgElement.src = images[impulse]; // follows selected impulse
 
-    document.body.style.backgroundImage = "url(images[impulse])";
+    imageURL = images[impulse];
+    document.body.style.backgroundImage = "url(imgURL)";
   }
 
   function selectSource(source) {
