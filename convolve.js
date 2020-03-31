@@ -14,19 +14,23 @@
   let impulseNode = null;
 
   const impulses = [
-    'http://nickdulworth.com/webaudio/impulses/impulse0.m4a',
-    'http://nickdulworth.com/webaudio/impulses/impulse1.mp3',
-    'http://nickdulworth.com/webaudio/impulses/impulse1.m4a',
+    // 'http://nickdulworth.com/webaudio/impulses/impulse0.m4a',
+    // 'http://nickdulworth.com/webaudio/impulses/impulse1.mp3',
+    // 'http://nickdulworth.com/webaudio/impulses/impulse1.m4a',
     
-    // 'impulses/impulse0.m4a',
-    // 'impulses/impulse1.m4a',
-    // 'impulses/impulse2.m4a',
+    'impulses/impulse0.m4a',
+    'impulses/impulse1.m4a',
+    'impulses/impulse2.m4a',
   ];
 
   const images = [
     'http://nickdulworth.com/webaudio/images/0.jpg',
     'http://nickdulworth.com/webaudio/images/1.jpg',
     'http://nickdulworth.com/webaudio/images/2.jpg',
+
+    'images/0.jpg',
+    'images/1.jpg',
+    'images/2.jpg',
   ];
 
   const sources = [
