@@ -39,8 +39,9 @@
     // 'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
     // // 'http://nickdulworth.com/webaudio/sources/StereoTest.m4a',
     // 'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
+    'sources/clarinet_solo.m4a',
     'sources/StereoTest.m4a',
-    'sources/Violin_Bach_Partita No2-001.m4a'
+    // 'sources/Violin_Bach_Partita No2-001.m4a'
 
   ];
 
@@ -226,7 +227,7 @@
     imgElement.src = images[impulse]; // follows selected impulse
 
     // imageURL = images[impulse];
-    document.body.style.backgroundImage = images[impulse];
+    // document.body.style.backgroundImage = images[impulse];
 
   }
 
