@@ -36,10 +36,11 @@
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
     // 'http://nickdulworth.com/webaudio/sources/clarinet_solo.m4a',
-    'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
+    // 'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
     // // 'http://nickdulworth.com/webaudio/sources/StereoTest.m4a',
     // 'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
     'sources/StereoTest.m4a',
+    'sources/Violin_Bach_Partita No2-001.m4a'
 
   ];
 
