@@ -106,7 +106,7 @@ body {
   justify-content: center;
 }
 
-.AppContent > {
+.AppContent > *:not(:last-child) {
   margin-right: 2rem;
 }
 
@@ -123,13 +123,13 @@ body {
   align-items: center;
 }
 
-.CardList {
+.CardList > *:not(:last-child) {
   margin-bottom: 1rem;
 }
 
 .Card {
   width: 100%;
-  max-width: 200px;
+  max-width: 400px;
   padding: var(--spacing-sm);
   box-sizing: border-box;
   border-radius: var(--radius-md);
@@ -190,7 +190,7 @@ h2 {
     flex-direction: column;
   }
 
-  .AppContent > {
+  .AppContent > *:not(:last-child) {
     margin-right: 0;
     margin-bottom: 2rem;
   }
