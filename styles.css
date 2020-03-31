@@ -146,17 +146,11 @@ body {
 
 /*
 default*/
-#impulse-1 {
+/*#impulse-1 {
   border: 2px solid var(--primary-color);
   text-overflow: ellipsis;
 }
-
-/*
-default*/
-#source-1 {
-  border: 2px solid var(--primary-color);
-  text-overflow: ellipsis;
-}
+*/
 
 .Card__title {
   font-weight: bold;
