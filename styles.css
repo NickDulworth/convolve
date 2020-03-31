@@ -129,7 +129,8 @@ body {
 
 .Card {
 /*  width: 100%;*/
-  max-width: 200px;
+/*  max-width: 200px;*/
+  width: 200px;
   padding: var(--spacing-sm);
   box-sizing: border-box;
   border-radius: var(--radius-md);
