@@ -227,14 +227,13 @@
 
     // imageURL = images[impulse];
 
-    if impulse == 0 {
-    document.body.style.backgroundImage = "url(images/0.jpg')";
+    if impulse == 0 {document.body.style.backgroundImage = "url(images/0.jpg)";
     }
-    else if impulse == 1 {
-    document.body.style.backgroundImage = "url(images/1.jpg')";
-    } else if impulse == 2 {
-    document.body.style.backgroundImage = "url(images/2.jpg')";
-    } else {}
+    else if impulse == 1 {document.body.style.backgroundImage = "url(images/1.jpg)";
+    } 
+    else if impulse == 2 {document.body.style.backgroundImage = "url(images/2.jpg)";
+    } 
+    else {}
 
   }
 
