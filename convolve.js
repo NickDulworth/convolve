@@ -24,9 +24,9 @@
   ];
 
   const images = [
-    'http://nickdulworth.com/webaudio/images/0.jpg',
-    'http://nickdulworth.com/webaudio/images/1.jpg',
-    'http://nickdulworth.com/webaudio/images/2.jpg',
+    // 'http://nickdulworth.com/webaudio/images/0.jpg',
+    // 'http://nickdulworth.com/webaudio/images/1.jpg',
+    // 'http://nickdulworth.com/webaudio/images/2.jpg',
 
     'images/0.jpg',
     'images/1.jpg',
@@ -37,7 +37,9 @@
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
     // 'http://nickdulworth.com/webaudio/sources/clarinet_solo.m4a',
     'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
-    'http://nickdulworth.com/webaudio/sources/StereoTest.m4a',
+    // // 'http://nickdulworth.com/webaudio/sources/StereoTest.m4a',
+    // 'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
+    'sources/StereoTest.m4a',
 
   ];
 
