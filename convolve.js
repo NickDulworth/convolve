@@ -227,14 +227,14 @@
     imgElement.src = images[impulse]; // follows selected impulse
 
     // document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
-    if impulse == 0 {
+    if impulse = 0 {
     document.getElementById("subBody").style.backgroundImage = "url(images/0.jpg)";
       
-    } else if impulse == 1 {
+    } else if impulse = 1 {
     document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
 
     } 
-    else if impulse == 2 {
+    else if impulse = 2 {
     document.getElementById("subBody").style.backgroundImage = "url(images/2.jpg)";
 
     } 
