@@ -227,26 +227,38 @@
     imgElement.src = images[impulse]; // follows selected impulse
 
     // document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
-    if impulse = 0 {
-    document.getElementById("subBody").style.backgroundImage = "url(images/0.jpg)";
+    // if impulse = 0 {
+    // document.getElementById("subBody").style.backgroundImage = "url(images/0.jpg)";
       
-    } else if impulse = 1 {
-    document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
+    // } else if impulse = 1 {
+    // document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
 
-    } 
-    else if impulse = 2 {
-    document.getElementById("subBody").style.backgroundImage = "url(images/2.jpg)";
+    // } 
+    // else if impulse = 2 {
+    // document.getElementById("subBody").style.backgroundImage = "url(images/2.jpg)";
 
-    } 
-    else {
-    document.getElementById("subBody").style.backgroundImage = "url(images/0.jpg)";
-    }
+    // } 
+    // else {
+    // document.getElementById("subBody").style.backgroundImage = "url(images/0.jpg)";
+    // }
 
  
     // imageURL = images[impulse];
     // document.body.style.backgroundImage = images[impulse];
 
   }
+
+function bgnImg0() {
+document.getElementById("subBody").style.backgroundImage = "url(images/0.jpg)";
+}
+
+function bgnImg1() {
+document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
+}
+
+function bgnImg2() {
+document.getElementById("subBody").style.backgroundImage = "url(images/2.jpg)";
+}
 
 
 // function changeDivImage()
@@ -286,7 +298,11 @@
   document.getElementById('impulse-0').onclick = () => selectImpulse(0);
   document.getElementById('impulse-1').onclick = () => selectImpulse(1);
   document.getElementById('impulse-2').onclick = () => selectImpulse(2);
-  
+
+  document.getElementById('impulse-0').onclick = () => bgnImg0();
+  document.getElementById('impulse-1').onclick = () => bgnImg1();
+  document.getElementById('impulse-2').onclick = () => bgnImg2();
+
   //initialize source 1
   // document.getElementById('source-0').onload = () => selectSource(1);
   //
