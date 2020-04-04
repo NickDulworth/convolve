@@ -110,7 +110,7 @@ body {
 
   background-image:url(images/0.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: 100vw, contain;
 }
 
