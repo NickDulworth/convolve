@@ -72,8 +72,8 @@ body {
 /*  background: #000000 url("images/0.jpg");
   background-position: top;
   background-repeat: no-repeat;*/
-/*  padding: 0;
-  margin: 0;*/
+  padding: 0;
+  margin: 0;
   font-family: 'Karla', sans-serif;
 /*  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 /*  font-family: Arial Narrow,Arial,sans-serif; */
@@ -82,11 +82,11 @@ body {
 }
 
 .classImageViewer {
-/*  display: block;*/
+  display: block;
   margin-left: auto;
   margin-right: auto;
-/*  max-width: 60%;*/
-  width: 100%;
+  max-width: 60%;
+/*  width: 700px;*/
   height: auto;
 
 }
@@ -119,9 +119,6 @@ body {
   padding: 1rem;
   box-sizing: border-box;
   align-self: flex-start;
-  
-  position: absolute;
-  width: 100vw;
 
   display: flex;
   flex-direction: column;
@@ -144,12 +141,6 @@ body {
   overflow: hidden;
   box-sizing: border-box;
   border: 2px solid transparent;
-
-/*  position: absolute;*/
-/*  bottom: 8px;
-  right: 16px;
-*/
-
 }
 
 .Card__selected {
