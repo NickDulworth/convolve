@@ -222,29 +222,9 @@
     document.getElementById('impulse-2').classList.remove('Card__selected');
     document.getElementById('impulse-' + impulse).classList.add('Card__selected');
 
-    //select image
-    imgElement = document.getElementById('imageViewer');
-    imgElement.src = images[impulse]; // follows selected impulse
-
-    // document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
-    // if impulse = 0 {
-    // document.getElementById("subBody").style.backgroundImage = "url(images/0.jpg)";
-      
-    // } else if impulse = 1 {
-    // document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
-
-    // } 
-    // else if impulse = 2 {
-    // document.getElementById("subBody").style.backgroundImage = "url(images/2.jpg)";
-
-    // } 
-    // else {
-    // document.getElementById("subBody").style.backgroundImage = "url(images/0.jpg)";
-    // }
-
- 
-    // imageURL = images[impulse];
-    // document.body.style.backgroundImage = images[impulse];
+    // //select image
+    // imgElement = document.getElementById('imageViewer');
+    // imgElement.src = images[impulse]; // follows selected impulse
 
   }
 
