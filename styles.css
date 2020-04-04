@@ -86,10 +86,7 @@ body {
 /*  background: var(--bg-color);*/
   color: var(--primary-font-color);
 
-  background-image:url(images/0.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100%;
+
 }
 
 .classImageViewer {
@@ -100,6 +97,13 @@ body {
 /*  width: 700px;*/
   height: auto;
 
+}
+
+#subBody {
+  background-image:url(images/0.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%; 
 }
 
 .App {
