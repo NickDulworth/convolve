@@ -85,6 +85,11 @@ body {
 /*  font-family: Arial Narrow,Arial,sans-serif; */
 /*  background: var(--bg-color);*/
   color: var(--primary-font-color);
+
+  background-image:url(images/0.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
 }
 
 .classImageViewer {
@@ -108,10 +113,10 @@ body {
 /*  align-items: center;*/
   justify-content: center;
 
-  background-image:url(images/0.jpg);
+/*  background-image:url(images/0.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 100%;
+  background-size: 100%;*/
 }
 
 .AppContent {
