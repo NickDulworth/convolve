@@ -227,9 +227,20 @@
     imgElement.src = images[impulse]; // follows selected impulse
 
     // document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
+    if selected_impulse == 0 {
+    document.getElementById("subBody").style.backgroundImage = "url(images/0.jpg)";
+      
+    } else if selected_impulse == 1 {
+    document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
 
-    document.getElementById("subBody").style.backgroundImage = images[impulse];
+    } 
+    else if selected_impulse == 2 {
+    document.getElementById("subBody").style.backgroundImage = "url(images/2.jpg)";
 
+    } 
+    else {}
+
+ 
     // imageURL = images[impulse];
     // document.body.style.backgroundImage = images[impulse];
 
