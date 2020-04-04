@@ -125,7 +125,7 @@ body {
   margin-right: 2rem;
 }
 
-.gtmlList {
+.CardList {
   display: inline-block;
   /* background: var(--surface-color); */
   padding: 1rem;
@@ -137,7 +137,6 @@ body {
   justify-content: flex-start;
   align-items: center;
 
-  background-image:url(images/0.jpg);
 }
 
 .CardList > *:not(:last-child) {
