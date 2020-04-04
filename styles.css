@@ -121,7 +121,9 @@ body {
   align-self: flex-start;
   
   position: absolute;
-  
+  bottom: 8px;
+  right: 16px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -145,8 +147,7 @@ body {
   border: 2px solid transparent;
 
 
-  bottom: 8px;
-  right: 16px;
+
 }
 
 .Card__selected {
