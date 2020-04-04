@@ -97,7 +97,8 @@ body {
 
 }
 
-#subBody {
+#subBody { /*background image*/
+  width: auto;
   background-image:url(images/0.jpg);
   background-repeat: no-repeat;
   background-position: top center;
