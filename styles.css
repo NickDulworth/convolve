@@ -103,14 +103,14 @@ body {
 }
 
 .AppContent {
-/*  display: flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;*/
+  justify-content: center;
 }
 
 .AppContent > *:not(:last-child) {
-/*  margin-right: 2rem;*/
+  margin-right: 2rem;
 }
 
 .CardList {
@@ -121,7 +121,7 @@ body {
   align-self: flex-start;
   
   position: absolute;
-width: 100vw;
+  width: 100vw;
 
   display: flex;
   flex-direction: column;
