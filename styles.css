@@ -108,6 +108,7 @@ body {
   justify-content: center;
 
   background-image:url(images/0.jpg);
+  background-repeat: no-repeat;
 }
 
 .AppContent {
