@@ -103,10 +103,10 @@ body {
 }
 
 .AppContent {
-  display: flex;
+/*  display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
 }
 
 .AppContent > *:not(:last-child) {
@@ -146,9 +146,9 @@ width: 100vw;
   border: 2px solid transparent;
 
 /*  position: absolute;*/
-  bottom: 8px;
+/*  bottom: 8px;
   right: 16px;
-
+*/
 
 }
 
