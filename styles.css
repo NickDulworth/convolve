@@ -119,7 +119,7 @@ body {
   padding: 1rem;
   box-sizing: border-box;
   align-self: flex-start;
-
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
