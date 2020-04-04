@@ -226,10 +226,29 @@
     imgElement = document.getElementById('imageViewer');
     imgElement.src = images[impulse]; // follows selected impulse
 
+    document.getElementById("App").style.backgroundImage = "url(images/1.jpg)";
+
     // imageURL = images[impulse];
     // document.body.style.backgroundImage = images[impulse];
 
   }
+
+
+// function changeDivImage()
+//     {
+//         var imgPath = new String();
+//         imgPath = document.getElementById("div1").style.backgroundImage;
+
+//         if(imgPath == "url(images/blue.gif)" || imgPath == "")
+//         {
+//             document.getElementById("div1").style.backgroundImage = "url(images/green.gif)";
+//         }
+//         else
+//         {
+//             document.getElementById("div1").style.backgroundImage = "url(images/blue.gif)";
+//         }
+//     }
+
 
   function selectSource(source) {
 
