@@ -124,6 +124,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  background-image:url(images/0.jpg);
 }
 
 .CardList > *:not(:last-child) {
