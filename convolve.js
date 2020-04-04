@@ -228,7 +228,7 @@
 
     // document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
 
-    document.getElementById("subBody").style.backgroundImage = "url(impulse)";
+    document.getElementById("subBody").style.backgroundImage = images[impulse];
 
     // imageURL = images[impulse];
     // document.body.style.backgroundImage = images[impulse];
