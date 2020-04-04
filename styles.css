@@ -110,7 +110,7 @@ body {
   background-image:url(images/0.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 100vw, contain;
 }
 
 .AppContent {
