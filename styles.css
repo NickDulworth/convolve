@@ -67,7 +67,7 @@
   --on-secondary: #000;
 }
 
-/*html,*/
+html,
 body {
 /*  background: #000000 url("images/0.jpg");
   background-position: top;
@@ -119,7 +119,7 @@ body {
   padding: 1rem;
   box-sizing: border-box;
   align-self: flex-start;
-  position: absolute;
+  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -141,6 +141,10 @@ body {
   overflow: hidden;
   box-sizing: border-box;
   border: 2px solid transparent;
+
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
 }
 
 .Card__selected {
