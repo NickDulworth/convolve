@@ -70,6 +70,7 @@
 html {
 
     background: black;
+
 }
 
 
@@ -105,6 +106,8 @@ body {
   flex-direction: row;
 /*  align-items: center;*/
   justify-content: center;
+
+  background-image:url(images/0.jpg);
 }
 
 .AppContent {
