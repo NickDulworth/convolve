@@ -109,10 +109,10 @@ body {
   height: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
-/*  min-height: 100vh;*/
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
-/*  align-items: center;*/
+  align-items: center;
   justify-content: center;
 
 /*  background-image:url(images/0.jpg);
