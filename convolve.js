@@ -6,6 +6,7 @@
   // let selected_impulse = -1;
   // let selected_source = -1;
   let selected_impulse = 0;
+
   let selected_source = 1;
   let recording = false;
 
@@ -164,11 +165,9 @@
   }
 
   function handleToggleRecording() {
-
-    
     if (!recording) {
       console.log('Start Recording!');
-      document.getElementById('record').innerHTML = '<i class="fas fa-save"></i>&nbsp;Save';
+      document.getElementById('record').innerHTML = '<i class="fas fa-save"></i>&nbsp;Store';
       startRecording();
     } else {
       console.log('Stop Recording!');
@@ -223,20 +222,19 @@
     document.getElementById('impulse-1').classList.remove('Card__selected');
     document.getElementById('impulse-2').classList.remove('Card__selected');
     document.getElementById('impulse-' + impulse).classList.add('Card__selected');
+
+    //images
+    if (impulse == 0){
+      document.getElementById("bgnDiv").style.backgroundImage = "url(images/0.jpg)";
+    }
+    else if (impulse == 1) {
+      document.getElementById("bgnDiv").style.backgroundImage = "url(images/1.jpg)";
+    }
+    else if (impulse == 2) {
+    document.getElementById("bgnDiv").style.backgroundImage = "url(images/2.jpg)";
+    }
+    else {}
   }
-
-function bgnImg0() {
-document.getElementById("bgnDiv").style.backgroundImage = "url(images/0.jpg)";
-}
-
-function bgnImg1() {
-document.getElementById("bgnDiv").style.backgroundImage = "url(images/1.jpg)";
-}
-
-function bgnImg2() {
-document.getElementById("bgnDiv").style.backgroundImage = "url(images/2.jpg)";
-}
-
 
 // function changeDivImage()
 //     {
@@ -274,9 +272,9 @@ document.getElementById("bgnDiv").style.backgroundImage = "url(images/2.jpg)";
   document.getElementById('impulse-1').onclick = () => selectImpulse(1);
   document.getElementById('impulse-2').onclick = () => selectImpulse(2);
 
-  document.getElementById('impulse-0').onclick = () => bgnImg0();
-  document.getElementById('impulse-1').onclick = () => bgnImg1();
-  document.getElementById('impulse-2').onclick = () => bgnImg2();
+  // document.getElementById('impulse-0').onclick = () => bgnImg0();
+  // document.getElementById('impulse-1').onclick = () => bgnImg1();
+  // document.getElementById('impulse-2').onclick = () => bgnImg2();
 
   //initialize source 1
   // document.getElementById('source-0').onload = () => selectSource(1);

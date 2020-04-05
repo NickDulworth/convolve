@@ -89,6 +89,40 @@ body {
   background-size: cover;
 }
 
+.Head {
+/*  width: 100%;*/
+  /*max-width: 320px;
+  min-width: 320px;
+  */
+/*  width: 200px;
+*/position: absolute;
+  top: 40px;
+  right: 40px;
+
+  text-align-last: left;
+
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border: 4px solid transparent;
+  background: var(--card-color);
+  color: var(--card-font-color);
+}
+
+ul {
+/*    margin-left: 0px; 
+    padding-left: 20px;
+
+    margin-bottom: 0;
+*/
+    padding: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
 #logo {
   width: 200px;
   display: block;
@@ -160,7 +194,7 @@ body {
   min-width: 320px;
   */
 
-  width: 355px;
+/*  width: 300px;*/
   padding: var(--spacing-sm);
   box-sizing: border-box;
   border-radius: var(--radius-md);
@@ -193,28 +227,6 @@ h2 {
   text-align: center;
 }
 
-.Notes {
-/*  width: 100%;*/
-  /*max-width: 320px;
-  min-width: 320px;
-  */
-/*  width: 200px;
-*/position: absolute;
-  top: 40px;
-  right: 40px;
-
-  text-align-last: left;
-
-  padding: var(--spacing-sm);
-  box-sizing: border-box;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-sizing: border-box;
-
-  border: 4px solid transparent;
-  background: var(--card-color);
-  color: var(--card-font-color);
-}
 
 .Button {
   border-radius: var(--radius-xl);
