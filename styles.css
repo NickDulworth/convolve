@@ -10,7 +10,7 @@
 
   --primary-font-color: white;
   --secondary-font-color: black;
-  --tertiary-font-color: rgba(0, 0, 0, 0.38);
+  --button-font-color: black;
 
   --on-background: rgba(255, 255, 255, 0.87);
   --on-surface: rgba(255, 255, 255, 0.6);
@@ -181,12 +181,13 @@ h2 {
   text-align: center;
   border: 2px solid var(--secondary-color);
   background: var(--secondary-color);
-  color: var(--on-primary);
+  color: var(--button-font-color);
 }
 
 .Button__danger {
   background: var(--danger);
   border: 2px solid var(--danger);
+  color: var(--button-font-color);
 }
 
 .Button__large {
@@ -194,7 +195,7 @@ h2 {
 /*  font-weight: bold;*/
   line-height: 2rem;
   font-size: 1.5rem;
-  color: var(--secondary-font-color);
+  color: var(--button-font-color);
 }
 
 /* Small Screens. */
