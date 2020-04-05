@@ -168,11 +168,11 @@
     
     if (!recording) {
       console.log('Start Recording!');
-      document.getElementById('record').innerHTML = '<i class="fas fa-stop"></i>&nbsp;Save';
+      document.getElementById('record').innerHTML = '<i class="fas fa-save"></i>&nbsp;Save';
       startRecording();
     } else {
       console.log('Stop Recording!');
-      document.getElementById('record').innerHTML = 'Record';
+      document.getElementById('record').innerHTML = '<i class="fas fa-record-vinyl"></i>&nbsp;Record';
       stopRecording();
     }
   }
