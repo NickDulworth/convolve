@@ -161,7 +161,7 @@ body {
   font-weight: bold;
 }
 .Card__description {
-  color: var(--secondary-font-color);
+  color: var(--primary-font-color);
 }
 
 h2 {
