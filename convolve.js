@@ -229,15 +229,15 @@
   }
 
 function bgnImg0() {
-document.getElementById("subBody").style.backgroundImage = "url(images/0.jpg)";
+document.getElementById("bgnDiv").style.backgroundImage = "url(images/0.jpg)";
 }
 
 function bgnImg1() {
-document.getElementById("subBody").style.backgroundImage = "url(images/1.jpg)";
+document.getElementById("bgnDiv").style.backgroundImage = "url(images/1.jpg)";
 }
 
 function bgnImg2() {
-document.getElementById("subBody").style.backgroundImage = "url(images/2.jpg)";
+document.getElementById("bgnDiv").style.backgroundImage = "url(images/2.jpg)";
 }
 
 
