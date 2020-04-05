@@ -113,7 +113,7 @@ body {
 #logo {
   width: 200px;
   position: absolute;
-  right: 0px;
+  right: 40px;
 }
 
 .App {
@@ -142,7 +142,7 @@ body {
   justify-content: center;
 
   position: absolute;
-  bottom: 0px;
+  bottom: 40px;
 }
 
 .AppContent > *:not(:last-child) {
