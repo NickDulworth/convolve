@@ -3,12 +3,12 @@
   --primary-color: #eb212e; /* TA Red */
 /*  --secondary-color: rgb(239, 136, 176);*/
   --secondary-color: white;
-  
+
   --surface-color: white;
   --bg-hover-color: #f2f2f2;
   --surface-hover-color: hsl(0, 0%, 98%);
 
-  --primary-font-color: rgba(0, 0, 0, 0.87);
+  --primary-font-color: black;
   --secondary-font-color: rgba(0, 0, 0, 0.7);
   --tertiary-font-color: rgba(0, 0, 0, 0.38);
 
