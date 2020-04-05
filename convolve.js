@@ -172,7 +172,7 @@
       startRecording();
     } else {
       console.log('Stop Recording!');
-      document.getElementById('record').innerHTML = '<i class="fas fa-record-vinyl"></i>&nbsp;Record';
+      document.getElementById('record').innerHTML = '<i class="fas fa-microphone"></i>&nbsp;Record';
       stopRecording();
     }
   }

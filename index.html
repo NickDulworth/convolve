@@ -13,6 +13,8 @@
       rel="stylesheet"
     /> -->
     <link href="vendor/fontawesome/css/all.css" rel="stylesheet" />
+    <!-- <link href="//db.onlinewebfonts.com/c/85aa81413708ebb77a4ed7712511b8aa?family=Univers" rel="stylesheet" type="text/css"/>
+     -->
   </head>
 
 
@@ -28,7 +30,17 @@
 
 <div id="bgnDiv"> <!-- background image -->
 
-<img src="images/Threshold_Logo_Vector(3)-01.png" id="logo">
+
+<div class="Notes">
+
+    <img src="images/Threshold_Logo_Vector(3)-01.png" id="logo">
+
+  - Supported Browsers: Chrome
+  <br>
+  - For best results use earphones.
+  <br>
+  - Avoid bluetooth headphones as they can force mono playback.
+</div>
 
     <div class="App">
       <div class="AppContent">
@@ -40,16 +52,18 @@
           <h2>Select A Source</h2>
           <div id="source-0" class="Card">
             <div class="Card__title">Record Yourself</div>
-            <div class="Card__description">Lorum</div>
             <div style="height: 8px"></div>
             <button id="record" class="Button Button__danger">
-              <i class="fas fa-microphone"></i>&nbsp;Record
+              <span style="font-family:Karla"> <i class="fas fa-microphone"></i></span>
+              <span style="font-family:Arial Narrow"> Record</span>
             </button>
+
 
             &nbsp;
             
             <button id="play-recording-btn" class="Button">
-              <i class="fas fa-play"></i>&nbsp;Play Dry Recording
+              <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
+              <span style="font-family:Arial Narrow">Play Dry Recording</span>
             </button>
           </div>
           
@@ -71,6 +85,7 @@
 
 
         <div class="CardList">
+
           <h2>Select A Room Model</h2>
 
           <div id="impulse-0" class="Card Card__selected">
@@ -96,17 +111,18 @@
 
 
         <div class="CardList">
+
           <h2>Listen In The Room</h2>
           <button id="convolve-btn" class="Button Button__large">
-            <i class="fas fa-play"></i>&nbsp;Convolve
+          <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
           </button>
-          
+
           <button id="stop-btn" class="Button Button__large">
-            <i class="fas fa-stop"></i>&nbsp;Stop
+            <span style="font-family:Karla"> <i class="fas fa-stop"></i></span>
           </button>
 
+        </div>
 
-      </div>
     </div>
   </div> <!-- bgnDiv -->
 
