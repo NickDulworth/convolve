@@ -196,7 +196,7 @@ h2 {
   line-height: 2rem;
   font-size: 1.5rem;
   color: var(--button-font-color);
-  opacity: 0.95;
+  opacity: 0.75;
 }
 
 /* Small Screens. */
