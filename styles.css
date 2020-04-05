@@ -111,7 +111,9 @@ body {
 }
 
 #logo {
-  
+  width: 200px;
+  position: absolute;
+  right: 20;
 }
 
 .App {
@@ -228,6 +230,7 @@ h2 {
 
   .AppContent {
     flex-direction: column;
+    top: 0px;
   }
 
   .AppContent > *:not(:last-child) {
