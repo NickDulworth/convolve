@@ -168,7 +168,7 @@
     
     if (!recording) {
       console.log('Start Recording!');
-      document.getElementById('record').innerHTML = 'Stop Recording';
+      document.getElementById('record').innerHTML = '<i class="fas fa-stop"></i>&nbsp;Save';
       startRecording();
     } else {
       console.log('Stop Recording!');
