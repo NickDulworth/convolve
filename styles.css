@@ -1,7 +1,5 @@
 :root {
-/*  --primary-color: #1778f2;*/
   --primary-color: #eb212e; /* TA Red */
-/*  --secondary-color: rgb(239, 136, 176);*/
   --secondary-color: white;
 
   --surface-color: white;
@@ -153,7 +151,7 @@ body {
 }
 
 .Card__selected {
-  border: 2px solid var(--primary-color);
+  border: 4px solid var(--primary-color);
   text-overflow: ellipsis;
 }
 
@@ -179,10 +177,11 @@ h2 {
   line-height: 1.2rem;
   font-size: 0.9rem;
   text-align: center;
-  border: 2px solid var(--secondary-color);
-  background: var(--secondary-color);
   color: var(--button-font-color);
-}
+
+  background: var(--secondary-color);
+  border: 4px solid var(--secondary-color);
+  }
 
 .Button__danger {
   background: var(--danger);
