@@ -32,14 +32,13 @@
 
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
+    'sources/clarinet_solo.m4a',
+    'sources/StereoTest.m4a',
+    // 'sources/Violin_Bach_Partita No2-001.m4a'
     // 'http://nickdulworth.com/webaudio/sources/clarinet_solo.m4a',
     // 'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
     // // 'http://nickdulworth.com/webaudio/sources/StereoTest.m4a',
     // 'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
-    'sources/clarinet_solo.m4a',
-    'sources/StereoTest.m4a',
-    // 'sources/Violin_Bach_Partita No2-001.m4a'
-
   ];
 
   // Ask for mic access.
@@ -245,21 +244,10 @@
   document.getElementById('convolve-btn').onclick = handleConvolve;
   document.getElementById('record').onclick = handleToggleRecording;
   
-  // //initialize impulse 0
-  // object.onload = function(){selectImpulse(0)};
-
-  //
   document.getElementById('impulse-0').onclick = () => selectImpulse(0);
   document.getElementById('impulse-1').onclick = () => selectImpulse(1);
   document.getElementById('impulse-2').onclick = () => selectImpulse(2);
 
-  // document.getElementById('impulse-0').onclick = () => bgnImg0();
-  // document.getElementById('impulse-1').onclick = () => bgnImg1();
-  // document.getElementById('impulse-2').onclick = () => bgnImg2();
-
-  //initialize source 1
-  // document.getElementById('source-0').onload = () => selectSource(1);
-  //
   document.getElementById('source-0').onclick = () => selectSource(0); // source-0 is user recording
   document.getElementById('source-1').onclick = () => selectSource(1);
   document.getElementById('source-2').onclick = () => selectSource(2);
