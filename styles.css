@@ -12,8 +12,6 @@
   --secondary-font-color: black;
   --tertiary-font-color: rgba(0, 0, 0, 0.38);
 
-  --brand-fb-blue: #4267b2;
-
   --on-background: rgba(255, 255, 255, 0.87);
   --on-surface: rgba(255, 255, 255, 0.6);
   --on-primary: #fff;
@@ -196,6 +194,7 @@ h2 {
 /*  font-weight: bold;*/
   line-height: 2rem;
   font-size: 1.5rem;
+  color: var(--secondary-font-color);
 }
 
 /* Small Screens. */
