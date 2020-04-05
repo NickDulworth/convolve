@@ -31,15 +31,15 @@
 <div id="bgnDiv"> <!-- background image -->
 
 
-<div class="Head">
+    <!-- <div class="Head">
 
-    <img src="images/Threshold_Logo_Vector(3)-01.png" id="logo">
-    <ul>
-      <li>Supported Browsers: Chrome.</li>
-      <li>For best results use wired headphones.</li>
-      <li>Avoid bluetooth devices. They can force mono playback.</li>
-    </ul>
-</div>
+        <img src="images/Threshold_Logo_Vector(3)-01.png" id="logo">
+        <ul>
+          <li>Supported Browsers: Chrome.</li>
+          <li>For best results use wired headphones.</li>
+          <li>Avoid bluetooth devices. They can force mono playback.</li>
+        </ul>
+    </div> -->
 
     <div class="App">
       <div class="AppContent">
@@ -121,6 +121,49 @@
           </button>
 
         </div>
+
+      <div class="CardList">
+      <div class="Head">
+
+        <img src="images/Threshold_Logo_Vector(3)-01.png" id="logo">
+        <ul>
+          <li>Supported Browsers: Chrome.</li>
+          <li>For best results use wired headphones.</li>
+          <li>Avoid bluetooth devices. They can force mono playback.</li>
+        </ul>
+
+        <button class="Button" onclick="openFullscreen();">Open Fullscreen</button>
+        <button onclick="closeFullscreen();">Close Fullscreen</button>
+
+<script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+}
+</script>
+      
+      </div>
+      </div>
 
     </div>
   </div> <!-- bgnDiv -->
