@@ -160,8 +160,11 @@ removed do avoid scrolling
 
 .Card {
 /*  width: 100%;*/
-  max-width: 320px;
+  /*max-width: 320px;
   min-width: 320px;
+  */
+
+  width: 400px;
   padding: var(--spacing-sm);
   box-sizing: border-box;
   border-radius: var(--radius-md);
