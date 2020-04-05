@@ -179,7 +179,7 @@ body {
   padding: var(--spacing-sm);
   box-sizing: border-box;
   border-radius: var(--radius-md);
-  background: var(--surface-color);
+  background: rgba(0, 0, 0, 0.99);
   overflow: hidden;
   box-sizing: border-box;
   border: 2px solid transparent;
