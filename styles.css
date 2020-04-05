@@ -89,18 +89,6 @@ body {
   background-size: cover;
 }
 
-.logo {
-  width: 200px;
-  /*position: absolute;
-  top: 40px;
-  right: 40px;
-*/
-/*position: relative;*/
-/*position: absolute;
-  right: 0;*/
-
-}
-
 #logo {
   width: 200px;
   display: block;
