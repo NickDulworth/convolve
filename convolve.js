@@ -164,6 +164,8 @@
   }
 
   function handleToggleRecording() {
+
+    
     if (!recording) {
       console.log('Start Recording!');
       document.getElementById('record').innerHTML = 'Stop Recording';
