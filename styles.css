@@ -3,7 +3,7 @@
   --primary-color: #eb212e; /* TA Red */
 /*  --secondary-color: rgb(239, 136, 176);*/
   --secondary-color: white;
-  --bg-color: black;
+  
   --surface-color: white;
   --bg-hover-color: #f2f2f2;
   --surface-hover-color: hsl(0, 0%, 98%);
@@ -43,32 +43,8 @@
   --danger: #eb212e;
 }
 
-/* dark color theme */
-[data-theme='dark'] {
-/*  --primary-color: hsl(213, 80%, 52%);*/
-  --primary-color: #eb212e; /* TA Red */
-/*  --secondary-color: rgb(239, 136, 176);*/
- --secondary-color: #1778f2;
-
-  --bg-color: black;
-  --surface-color: #1e1e1e;
-  --bg-hover-color: #121212;
-  --surface-hover-color: hsl(0, 0%, 14%);
-
-  --primary-font-color: rgba(255, 255, 255, 0.87);
-  --secondary-font-color: rgba(255, 255, 255, 0.55);
-  --tertiary-font-color: rgba(255, 255, 255, 0.4);
-
-  --brand-fb-blue: #2f477a;
-
-  --on-background: rgba(255, 255, 255, 0.87);
-  --on-surface: rgba(255, 255, 255, 0.6);
-  --on-primary: #1e1e1e;
-  --on-secondary: #000;
-}
 
 html {
-
     background: black;
 }
 
