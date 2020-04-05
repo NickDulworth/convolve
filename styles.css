@@ -198,7 +198,7 @@ ul {
   min-width: 320px;
   */
 
-/*  width: 300px;*/
+  min-width: 300px;
   padding: var(--spacing-sm);
   box-sizing: border-box;
 
@@ -235,7 +235,7 @@ h2 {
 
 
 .Button {
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-md);
   padding: var(--spacing-xs) var(--spacing-md);
   min-width: 3rem;
   font-weight: bold;

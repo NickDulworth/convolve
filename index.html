@@ -48,7 +48,7 @@
      
         <div class="CardList">
 
-          <h2>Select A Source</h2>
+          <h2>1. Select Source</h2>
           <div id="source-0" class="Card">
             <div class="Card__title">Record Yourself</div>
             <div style="height: 8px"></div>
@@ -85,7 +85,7 @@
 
         <div class="CardList">
 
-          <h2>Select A Room Model</h2>
+          <h2>2. Select Room Model</h2>
 
           <div id="impulse-0" class="Card Card__selected">
             <div class="Card__title">Fancy Room</div>
@@ -103,6 +103,7 @@
             <div class="Card__title">House</div>
             <div class="Card__description">Somewhere</div>
           </div>
+
         </div>
 
 
@@ -111,7 +112,7 @@
 
         <div class="CardList">
 
-          <h2>Listen In The Room</h2>
+          <h2>3. Listen In Room</h2>
           <button id="convolve-btn" class="Button Button__large">
           <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
           </button>
@@ -119,21 +120,22 @@
           <button id="stop-btn" class="Button Button__large">
             <span style="font-family:Karla"> <i class="fas fa-stop"></i></span>
           </button>
-
+          <br>
+          <button class="Button" onclick="openFullscreen();">Open Fullscreen</button>
+          <button class="Button" onclick="closeFullscreen();">Close Fullscreen</button>
         </div>
 
       <div class="CardList">
       <div class="Head">
 
+        <a href="https://www.thresholdacoustics.com/" target="_blank">
         <img src="images/Threshold_Logo_Vector(3)-01.png" id="logo">
+        </a>
         <ul>
           <li>Supported Browsers: Chrome.</li>
           <li>For best results use wired headphones.</li>
           <li>Avoid bluetooth devices. They can force mono playback.</li>
         </ul>
-
-        <button class="Button" onclick="openFullscreen();">Open Fullscreen</button>
-        <button onclick="closeFullscreen();">Close Fullscreen</button>
 
 <script>
 var elem = document.documentElement;
