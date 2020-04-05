@@ -100,10 +100,10 @@ body {
 #subBody { /*background image*/
   width: auto;
   background-clip: 
-  background-image:url(images/0.jpg);
+  background-image: url(images/0.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 100%; 
+  background-size: 100%;
 }
 
 .App {
