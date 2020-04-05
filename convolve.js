@@ -9,11 +9,13 @@
 
   let selected_source = 1;
   let recording = false;
+  let fullscreen = false;
 
   let recordingAudioBuffer = null; // type AudioBuffer
   let have_recording = false;
   let impulseNode = null;
 
+  var elem = document.documentElement;
 
   const impulses = [
     'impulses/impulse0.m4a',
@@ -253,27 +255,45 @@
   document.getElementById('source-1').onclick = () => selectSource(1);
   document.getElementById('source-2').onclick = () => selectSource(2);
 
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { /* Firefox */
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE/Edge */
-    elem.msRequestFullscreen();
-  }
-}
+  document.getElementById('toggleFullscreen').onclick = handleToggleFullscreen;
 
-function closeFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if (document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) {
-    document.msExitFullscreen();
+  function enterFullscreen() {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari, & Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE, Edge */
+      elem.msRequestFullscreen();
+    }
+    fullscreen = true;
   }
-}
+
+  function closeFullscreen() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+    fullscreen = false;
+  }
+
+  function handleToggleFullscreen() {
+    if (!fullscreen) {
+      console.log('Enter Fullscreen!');
+      document.getElementById('toggleFullscreen').innerHTML = '<i class="fas fa-compress"></i>&nbsp;Exit Fullscreen';
+      enterFullscreen();
+    } else {
+      console.log('Close Fullscreen!');
+      document.getElementById('toggleFullscreen').innerHTML = '<i class="fas fa-expand"></i>&nbsp;Enter Fullscreen';
+      closeFullscreen();
+    }
+  }
+
+
 })();

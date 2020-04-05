@@ -17,34 +17,15 @@
      -->
   </head>
 
-
-
-
-<!--   <body data-theme="dark"> -->
   <body>
-<!-- 
-    <div>
-      &nbsp;
-    <img src="images/0.jpg" class="classImageViewer" id="imageViewer">
-    </div> -->
 
-<div id="bgnDiv"> <!-- background image -->
+    <div id="bgnDiv"><!-- contains background image -->
 
-
-    <!-- <div class="Head">
-
-        <img src="images/Threshold_Logo_Vector(3)-01.png" id="logo">
-        <ul>
-          <li>Supported Browsers: Chrome.</li>
-          <li>For best results use wired headphones.</li>
-          <li>Avoid bluetooth devices. They can force mono playback.</li>
-        </ul>
-    </div> -->
 
     <div class="App">
       <div class="AppContent">
 
-<!-- Select source ////////////////////////////////////////////////////////          -->
+  <!-- Select source ////////////////////////////////////////////////////////          -->
      
         <div class="CardList">
 
@@ -56,7 +37,6 @@
               <span style="font-family:Karla"> <i class="fas fa-microphone"></i></span>
               <span style="font-family:Arial Narrow"> Record</span>
             </button>
-
 
             &nbsp;
             
@@ -80,39 +60,36 @@
         </div>
 
 
-<!-- Select Impulse ////////////////////////////////////////////////////////          -->
+  <!-- Select Impulse ////////////////////////////////////////////////////////          -->
 
 
         <div class="CardList">
-
           <h2>2. Select Room Model</h2>
 
           <div id="impulse-0" class="Card Card__selected">
             <div class="Card__title">Fancy Room</div>
             <div class="Card__description">Anytown, USA</div>
-          </div>
+          </div> <!-- Card -->
 
           <div id="impulse-1" class="Card">
             <div class="Card__title">Old Fancy Room</div>
-            <div class="Card__description">
-              Bahamas, The World
-            </div>
-          </div>
+            <div class="Card__description">Bahamas, The World</div>
+          </div> <!-- Card -->
 
           <div id="impulse-2" class="Card">
             <div class="Card__title">House</div>
             <div class="Card__description">Somewhere</div>
-          </div>
+          </div> <!-- Card -->
 
-        </div>
+        </div> <!-- CardList -->
 
 
-<!-- Play Source in Room ////////////////////////////////////////////////////////          -->
+  <!-- Play Source in Room ////////////////////////////////////////////////////////          -->
 
 
         <div class="CardList">
-
           <h2>3. Listen In Room</h2>
+
           <button id="convolve-btn" class="Button Button__large">
           <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
           </button>
@@ -121,58 +98,31 @@
             <span style="font-family:Karla"> <i class="fas fa-stop"></i></span>
           </button>
           <br>
-          <button class="Button" onclick="openFullscreen();">Open Fullscreen</button>
-          <button class="Button" onclick="closeFullscreen();">Close Fullscreen</button>
-        </div>
+          <br>
+          <button class="Button" id="toggleFullscreen">Enter Fullscreen</button>
+        </div> <!-- CardList -->
 
-      <div class="CardList">
-      <h2> <br>
-        </h2>
-        
-      <div class="Head">
-        <a href="https://www.thresholdacoustics.com/" target="_blank">
-        <img src="images/Threshold_Logo_Vector(3)-01.png" id="logo">
-        </a>
-        <ul>
-          <li>Supported Browsers: Chrome.</li>
-          <li>For best results use wired headphones.</li>
-          <li>Avoid bluetooth devices. They can force mono playback.</li>
-        </ul>
+        <div class="CardList">
+          <h2><br></h2>       
 
-<script>
-var elem = document.documentElement;
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { /* Firefox */
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE/Edge */
-    elem.msRequestFullscreen();
-  }
-}
+            <div class="Head">
+              <a href="https://www.thresholdacoustics.com/" target="_blank"><img src="images/Threshold_Logo_Vector(3)-01.png" id="logo"></a>
+              <ul>
+                <li>Supported Browsers: Chrome.</li>
+                <li>For best results use wired headphones.</li>
+                <li>Avoid bluetooth devices. They can force mono playback.</li>
+              </ul>      
+            </div> <!-- Head -->
+        </div> <!-- CardList -->
 
-function closeFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if (document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) {
-    document.msExitFullscreen();
-  }
-}
-</script>
-      
-      </div>
-      </div>
+<!-- /////////////////////////////// -->
 
-    </div>
+      </div> <!-- AppContent -->
+    </div> <!-- App -->
   </div> <!-- bgnDiv -->
 
     <script src="vendor/reverb.js"></script>
     <script src="convolve.js"></script>
+
   </body>
 </html>
