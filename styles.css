@@ -100,7 +100,7 @@ body {
 #bgnDiv { /*background image*/
   /*width: auto;
   background-clip: 
-/**/  background-image: url(images/0.jpg);
+/* background-image: url(images/0.jpg);
   */
   background: url(images/0.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
