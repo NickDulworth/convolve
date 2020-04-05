@@ -8,8 +8,8 @@
   --bg-hover-color: #f2f2f2;
   --surface-hover-color: hsl(0, 0%, 98%);
 
-  --primary-font-color: black;
-  --secondary-font-color: rgba(0, 0, 0, 0.7);
+  --primary-font-color: white;
+  --secondary-font-color: black;
   --tertiary-font-color: rgba(0, 0, 0, 0.38);
 
   --brand-fb-blue: #4267b2;
@@ -68,15 +68,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 60%;
-/*  width: 700px;*/
   height: auto;
 }
 
 #bgnDiv { /*background image*/
-  /*width: auto;
-  background-clip: 
-/* background-image: url(images/0.jpg);
-  */
   background: url(images/0.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
