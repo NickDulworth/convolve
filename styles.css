@@ -87,6 +87,7 @@ body {
   color: var(--primary-font-color);
 }
 
+/* not used, use for non bgn image*/
 .classImageViewer {
   display: block;
   margin-left: auto;
@@ -107,8 +108,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-
 }
 
 .App {
@@ -121,11 +120,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-/*  background-image:url(images/0.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100%;*/
 }
 
 .AppContent {
