@@ -168,10 +168,12 @@
     if (!recording) {
       console.log('Start Recording!');
       document.getElementById('record').innerHTML = '<i class="fas fa-save"></i>&nbsp;Store';
+      document.getElementById('AppContentID').classList.add('AppContent__recording');
       startRecording();
     } else {
       console.log('Stop Recording!');
       document.getElementById('record').innerHTML = '<i class="fas fa-microphone"></i>&nbsp;Record';
+      document.getElementById('AppContentID').classList.remove('AppContent__recording');
       stopRecording();
     }
   }

@@ -1,9 +1,12 @@
 :root {
-  --primary-color: #eb212e; /* TA Red */
+  --primary-color: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
+
   --secondary-color: rgba(255, 255, 255, 0.5);
 
   --card-color: rgba(255, 255, 255, 0.75);
   --selected-card-color: rgba(0, 0, 0, .75);
+
+  --recording-color: rgba(235, 33, 46, 0.5);/*#eb212e; TA Red */
 
   --card-font-color: black;
   --selected-card-font-color: white;
@@ -154,6 +157,10 @@ ul {
 
 .AppContent > *:not(:last-child) {
   margin-right: 2rem;
+}
+
+.AppContent__recording {
+  background: var(--recording-color);
 }
 
 .CardList {
