@@ -235,6 +235,7 @@ h2 {
   text-align: center;
   color: var(--button-font-color);
   background: var(--card-color);
+  outline: none;
 /*  border: 4px solid var(--card-color);*/
   border: 0;
 
