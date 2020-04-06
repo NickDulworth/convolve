@@ -234,7 +234,6 @@
     else {}
   }
 
-
   function selectSource(source) {
     selected_source = source;
     document.getElementById('source-0').classList.remove('Card__selected');
@@ -243,19 +242,37 @@
     document.getElementById('source-' + source).classList.add('Card__selected');
   }
 
-  document.getElementById('play-recording-btn').onclick = handlePlayRecording;
-  document.getElementById('convolve-btn').onclick = handleConvolve;
-  document.getElementById('record').onclick = handleToggleRecording;
+  function handleStop() {
+    audioContext.suspend();
+  }
+
+// User Control //////////////////////////////////////////////////////////////////
   
+  // record / play dry recording
+  document.getElementById('record').onclick = handleToggleRecording;
+  document.getElementById('play-recording-btn').onclick = handlePlayRecording;
+
+  // convolve
+  document.getElementById('convolve-btn').onclick = handleConvolve;
+
+  // stop playback
+  document.getElementById('stop-btn').onclick = handleStop;
+  
+  // select impulse / image  
   document.getElementById('impulse-0').onclick = () => selectImpulse(0);
   document.getElementById('impulse-1').onclick = () => selectImpulse(1);
   document.getElementById('impulse-2').onclick = () => selectImpulse(2);
 
+  // select source
   document.getElementById('source-0').onclick = () => selectSource(0); // source-0 is user recording
   document.getElementById('source-1').onclick = () => selectSource(1);
   document.getElementById('source-2').onclick = () => selectSource(2);
 
-  document.getElementById('toggleFullscreen').onclick = handleToggleFullscreen;
+  // toggle full screen
+  document.getElementById('toggleFullscreen').onclick = handleToggleFullscreen; // toggle fullscreen
+
+
+// toggle fullscreen ////////////////////////////////////////////////////////////
 
   function enterFullscreen() {
     if (elem.requestFullscreen) {
