@@ -100,6 +100,8 @@
   }
 
   function startRecording() {
+    audioContext.suspend(); //nd
+    audioContext.resume(); //nd
     recordingAudioBuffer = null;
     recording = true;
   }
