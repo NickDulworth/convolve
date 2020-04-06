@@ -14,8 +14,9 @@
   let recordingAudioBuffer = null; // type AudioBuffer
   let have_recording = false;
   let impulseNode = null;
+  let recordingNode = null; //nd
 
-  var elem = document.documentElement;
+  var elem = document.documentElement; //fullscreen button related
 
   const impulses = [
     'impulses/impulse0.m4a',
@@ -173,18 +174,16 @@
   }
 
   function handleToggleRecording() {
-    if (!recording) {
+    if (!recording) { //if not recording then start
       console.log('Start Recording!');
       document.getElementById('record').innerHTML = '<i class="fas fa-save"></i>&nbsp;Store';
       document.getElementById('AppContentID').classList.add('AppContent__recording');
-      
-      startRecording();
-    } else {
+      startRecording(); //start recording
+    } else { //else if recording, then stop
       console.log('Stop Recording!');
       document.getElementById('record').innerHTML = '<i class="fas fa-microphone"></i>&nbsp;Record';
       document.getElementById('AppContentID').classList.remove('AppContent__recording');
-
-      stopRecording();
+      stopRecording(); //stop recording
     }
   }
 
@@ -202,6 +201,7 @@
     if (impulseNode) {
       impulseNode.disconnect(audioContext.destination);
     }
+
 
     let convolvedNode = null;
 
@@ -258,6 +258,8 @@
 
   function handleStop() {
     audioContext.suspend();
+
+    // audioContext.close();
   }
 
 // User Control //////////////////////////////////////////////////////////////////
