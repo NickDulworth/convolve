@@ -166,7 +166,7 @@
 
     // If currently recording, stop recording first...
     if (recording) {
-      handleToggleRecording()
+      handleToggleRecording();
     } 
 
     let recordingNode = createPlayableRecording();
@@ -290,9 +290,9 @@ function toggleConvolve() {
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     handleStop();
 
-  } else {
+  } else if (convolving) {
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
-    handleConvolve()
+    handleConvolve():
   }
 }
 
