@@ -286,7 +286,7 @@
 
 
 function toggleConvolve() {
-  if (!playing) { 
+  if (!convolving) { 
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
 
     handleStop();
