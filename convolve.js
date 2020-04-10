@@ -22,6 +22,8 @@
     'impulses/impulse0.m4a',
     'impulses/impulse1.m4a',
     'impulses/impulse2.m4a',
+    'impulses/impulse2.m4a',
+    'impulses/impulse2.m4a',
   ];
 
   // const images = [
@@ -37,6 +39,8 @@
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
     'sources/clarinet_solo.m4a',
+    'sources/StereoTest.m4a',
+    'sources/StereoTest.m4a',
     'sources/StereoTest.m4a',
     // 'sources/Violin_Bach_Partita No2-001.m4a'
     // 'http://nickdulworth.com/webaudio/sources/clarinet_solo.m4a',
@@ -177,12 +181,16 @@
     if (!recording) { //if not recording then start
       console.log('Start Recording!');
       document.getElementById('record').innerHTML = '<i class="fas fa-save"></i>&nbsp;Store';
-      document.getElementById('AppContentID').classList.add('AppContent__recording');
+      // document.getElementById('AppContentID').classList.add('AppContent__recording');
+      // document.getElementById('source-0').classList.add('card__recording');
+      document.documentElement.style.setProperty('--selected-card-color', 'rgba(235, 33, 46, .5)');
+
       startRecording(); //start recording
     } else { //else if recording, then stop
       console.log('Stop Recording!');
       document.getElementById('record').innerHTML = '<i class="fas fa-microphone"></i>&nbsp;Record';
-      document.getElementById('AppContentID').classList.remove('AppContent__recording');
+      // document.getElementById('source-0').classList.remove('card__recording');
+      document.documentElement.style.setProperty('--selected-card-color', 'rgba(0, 0, 0, .75)');
       stopRecording(); //stop recording
     }
   }

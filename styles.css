@@ -1,12 +1,16 @@
 :root {
   --primary-color: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
 
-  --secondary-color: rgba(255, 255, 255, 0.5);
+  --secondary-color: rgba(255, 255, 255, 0.0);
 
   --card-color: rgba(255, 255, 255, 0.75);
   --selected-card-color: rgba(0, 0, 0, .75);
 
-  --recording-color: rgba(235, 33, 46, 0.5);/*#eb212e; TA Red */
+/*  --card-color: rgba(0, 0, 0, 0.5);*/
+
+  --recording-color: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
+  --not-recording-color: rgba(0, 0, 0, .75);
+  --ta-red: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
 
   --card-font-color: black;
   --selected-card-font-color: white;
@@ -99,7 +103,7 @@ right: 10px;
 }
 
 .Head {
-  text-align-last: left;
+/*  text-align: right;*/
   padding: var(--spacing-sm);
   box-sizing: border-box;
   border-radius: var(--radius-md);
@@ -109,22 +113,39 @@ right: 10px;
   border: 4px solid transparent;
   background: var(--card-color);
   color: var(--card-font-color);
-  width: 400px;
+/*  width: 400px;*/
+
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
 }
 
 ul {
     padding: 1rem;
+    padding-top: 0;
     margin-bottom: 0;
-    padding-bottom: 0;
     margin-top: 0;
+
+    text-align: left;
   }
 
-#logo {
-  width: 200px;
+.logo {
+  width: 175px;
   display: block;
   margin-left: auto;
   margin-right: 0;
   margin-bottom: 0;
+  text-align: center;
+}
+
+
+#link {
+  font-style: oblique;
+  font-size: .8rem;
+  color: black;
+  text-decoration: none;
+  margin-right: 1rem;
 }
 
 .App {
@@ -135,37 +156,54 @@ ul {
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 100vh;
-  display: flex;
-  flex-direction: row;
+
+/*  display: flex;*/
+/*  flex-direction: row;
   align-items: bottom;
-  justify-content: center;
+  justify-content: left;*/
+
+/*  padding: 0;
+  margin: 0;*/
 }
 
 .AppContent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+/*  flex-direction: row;
+*/ 
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 
-  position: absolute;
+  /*position: absolute;
   bottom: 10px;
+*/
+
+/*  background: transparent;*/
 
   border-radius: var(--radius-md);
   background: var(--secondary-color);
   padding: 0;
-}
+  margin: 0;
 
-.AppContent > *:not(:last-child) {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+/*
+needed if columns accross bottom of page*/
+/*.AppContent > *:not(:last-child) {
   margin-right: 2rem;
-}
+}*/
 
-.AppContent__recording {
+.card__recording {
   background: var(--recording-color);
 }
 
 .CardList {
   display: inline-block;
   padding: 1rem;
+/*  padding-right: 0;*/
+  margin: 0;
   box-sizing: border-box;
   align-self: flex-start;
 
@@ -181,7 +219,7 @@ ul {
 }
 
 .Card {
-  width:300px;
+  width:270px;
   padding: var(--spacing-sm);
   box-sizing: border-box;
 
@@ -219,9 +257,10 @@ ul {
 
 h2 {
 /*  width: 100%;*/
-/*  text-shadow: 0px 0px 5px #000000;*/
+  text-shadow: 0px 0px 3px black;
   text-align: left;
   margin-top: 0;
+  color: white;
 }
 
 
@@ -248,7 +287,7 @@ h2 {
 }
 
 .Button__large {
-  min-width: 4rem;
+  width: 8rem;
 /*  font-weight: bold;*/
   line-height: 2.75rem;
   font-size: 1.5rem;
@@ -258,7 +297,7 @@ h2 {
 }
 
 /* Small Screens. */
-@media (max-width: 1100px) {
+/*@media (max-width: 1100px) {
   .App {
     padding-bottom: 1rem;
   }
@@ -268,7 +307,6 @@ h2 {
     background: transparent;
     top: 20px;
     left: 10px;
-/*    bottom: 20px;*/
   }
 
   .AppContent > *:not(:last-child) {
@@ -276,27 +314,30 @@ h2 {
     margin-bottom: 1rem;
   }
 
-  .CardList {
-/*    width: 100vw;*/
-  }
-
   .Head {
       width: 100%;
   }
-}
+}*/
 
 /* Phones only. */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .CardList {
     width: 100vw;
+    align-items: center;
+  }
+
+  body{
+    font-size: 1.7rem;
   }
 
   .Card {
     width: 75%;
     max-width: unset;
+/*    font-size: 1.8rem; */
   }
 
   .Button__large {
-    width: 100%;
+/*    width: 100%;*/
+/*  font-size: 3rem;*/
   }
 }
