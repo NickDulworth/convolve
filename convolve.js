@@ -22,8 +22,8 @@
     'impulses/impulse0.m4a',
     'impulses/impulse1.m4a',
     'impulses/impulse2.m4a',
-    'impulses/impulse2.m4a',
-    'impulses/impulse2.m4a',
+    'impulses/impulse3.m4a',
+    'impulses/impulse4.m4a',
   ];
 
   // const images = [
@@ -241,6 +241,8 @@
     document.getElementById('impulse-0').classList.remove('Card__selected');
     document.getElementById('impulse-1').classList.remove('Card__selected');
     document.getElementById('impulse-2').classList.remove('Card__selected');
+    document.getElementById('impulse-3').classList.remove('Card__selected');
+    document.getElementById('impulse-4').classList.remove('Card__selected');
     document.getElementById('impulse-' + impulse).classList.add('Card__selected');
 
     //images
@@ -253,6 +255,13 @@
     else if (impulse == 2) {
     document.getElementById("bgnDiv").style.backgroundImage = "url(images/2.jpg)";
     }
+    else if (impulse == 3) {
+    document.getElementById("bgnDiv").style.backgroundImage = "url(images/3.jpg)";
+    }
+    else if (impulse == 4) {
+    document.getElementById("bgnDiv").style.backgroundImage = "url(images/4.jpg)";
+    }
+
     else {}
   }
 
@@ -261,6 +270,8 @@
     document.getElementById('source-0').classList.remove('Card__selected');
     document.getElementById('source-1').classList.remove('Card__selected');
     document.getElementById('source-2').classList.remove('Card__selected');
+    document.getElementById('source-3').classList.remove('Card__selected');
+    document.getElementById('source-4').classList.remove('Card__selected');
     document.getElementById('source-' + source).classList.add('Card__selected');
   }
 
@@ -286,11 +297,15 @@
   document.getElementById('impulse-0').onclick = () => selectImpulse(0);
   document.getElementById('impulse-1').onclick = () => selectImpulse(1);
   document.getElementById('impulse-2').onclick = () => selectImpulse(2);
+  document.getElementById('impulse-3').onclick = () => selectImpulse(3);
+  document.getElementById('impulse-4').onclick = () => selectImpulse(4);
 
   // select source
   document.getElementById('source-0').onclick = () => selectSource(0); // source-0 is user recording
   document.getElementById('source-1').onclick = () => selectSource(1);
   document.getElementById('source-2').onclick = () => selectSource(2);
+  document.getElementById('source-3').onclick = () => selectSource(3);
+  document.getElementById('source-4').onclick = () => selectSource(4);
 
   // toggle full screen
   document.getElementById('toggleFullscreen').onclick = handleToggleFullscreen; // toggle fullscreen
