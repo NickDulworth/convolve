@@ -288,13 +288,11 @@
 function toggleConvolve() {
   if (!convolving) { 
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-
     handleStop();
 
   } else {
-    handleConvolve();
-
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+    handleConvolve()
   }
 }
 
