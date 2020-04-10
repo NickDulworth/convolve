@@ -10,6 +10,7 @@
   let selected_source = 1;
   let recording = false;
   let fullscreen = false;
+  let convolving = false;
 
   let recordingAudioBuffer = null; // type AudioBuffer
   let have_recording = false;
@@ -232,6 +233,7 @@
 
     convolvedNode.start();
     audioContext.resume();
+    convolving = true;
   }
 
   function selectImpulse(impulse) {
@@ -277,9 +279,24 @@
 
   function handleStop() {
     audioContext.suspend();
+    convolving = false;
 
     // audioContext.close();
   }
+
+
+function toggleConvolve() {
+  if (!playing) { 
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+
+    handleStop();
+
+  } else {
+    handleConvolve();
+
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+  }
+}
 
 // User Control //////////////////////////////////////////////////////////////////
   
@@ -288,10 +305,11 @@
   document.getElementById('play-recording-btn').onclick = handlePlayRecording;
 
   // convolve
-  document.getElementById('convolve-btn').onclick = handleConvolve;
+  // document.getElementById('convolve-btn').onclick = handleConvolve;
+  document.getElementById('convolve-btn').onclick = toggleConvolve;
 
-  // stop playback
-  document.getElementById('stop-btn').onclick = handleStop;
+  // // stop playback
+  // document.getElementById('stop-btn').onclick = handleStop;
   
   // select impulse / image  
   document.getElementById('impulse-0').onclick = () => selectImpulse(0);
