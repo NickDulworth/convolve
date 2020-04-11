@@ -292,7 +292,7 @@ function toggleConvolve() {
 
   } else if (convolving) {
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
-    handleConvolve():
+    handleConvolve();
   }
 }
 
