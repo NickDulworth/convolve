@@ -129,7 +129,7 @@ ul {
     margin-top: 0;
     text-align: left;
     padding-bottom: 0;
-    color: white
+    color: white;
   }
 
 a {
@@ -332,6 +332,7 @@ h2 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    width: 75%;
   }
 
   .stuff {
@@ -368,7 +369,40 @@ h2 {
 
   }
 
-/*same as "small screens above" ---------------------------------------------*/
+.roomDescription {
+    text-align: center;
+  /*  color: white;
+    width: 400px;*/
+    position: relative;
+    top: 0;
+    /*bottom: auto;
+    */
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  
+    width
+  }
+
+  .roomDescription {
+    text-align: center;
+  /*  color: white;
+    width: 400px;*/
+    position: relative;
+    top: 0;
+    /*bottom: auto;
+    */
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+  }
 
    .AppContent {
     padding: 0;
@@ -386,21 +420,7 @@ h2 {
       align-items: center;
   }
 
-  .roomDescription {
-    text-align: center;
-  /*  color: white;
-    width: 400px;*/
-    position: relative;
-    top: 0;
-    /*bottom: auto;
-    */
-    left: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
+/*room description class is different than small screens see aboev the line*/
 
   .stuff {
     width: 100vw;
