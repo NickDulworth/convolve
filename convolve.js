@@ -220,28 +220,25 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   function handleToggleRecording() {
     if (!recording) { //if not recording then start
       console.log('Start Recording!');
-      // document.getElementById('record').innerHTML = '<i class="fas fa-save"></i>&nbsp;Store';
+      // format button
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
       
-      document.getElementById('source-0').classList.add('Card__recording');
-      // document.documentElement.style.setProperty('--selected-card-color', 'rgba(235, 33, 46, .5)');
-
       startRecording(); //start recording
 
-      //format master stop button
+      //format master stop button and record card
+      document.getElementById('source-0').classList.add('Card__recording');
       document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
 
     } else { //else if recording, then stop
       console.log('Stop Recording!');
 
+      // format button
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
             
-      document.getElementById('source-0').classList.remove('Card__recording');
-      // document.documentElement.style.setProperty('--selected-card-color', 'rgba(0, 0, 0, .75)');
-      
       stopRecording(); //stop recording
       
-      //format master stop button
+      //format master stop button and record card
+      document.getElementById('source-0').classList.remove('Card__recording');
       document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     }
   }
@@ -341,8 +338,8 @@ function toggleConvolve() {
       document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
       console.log('stop recording!');
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
-      document.documentElement.style.setProperty('--selected-card-color', 'rgba(0, 0, 0, .75)');
       stopRecording(); //stop recording
+      document.getElementById('source-0').classList.remove('Card__recording');
   } 
   else {
     if (convolving == true) { 
@@ -358,6 +355,7 @@ function toggleConvolve() {
   }
 }
 
+
 // User Control //////////////////////////////////////////////////////////////////
   
   // record / play dry recording
@@ -370,7 +368,7 @@ function toggleConvolve() {
 
   // // stop playback
   // document.getElementById('stop-btn').onclick = handleStop;
-  
+
   // select impulse / image  
   document.getElementById('impulse-0').onclick = () => selectImpulse(0);
   document.getElementById('impulse-1').onclick = () => selectImpulse(1);

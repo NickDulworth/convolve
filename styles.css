@@ -8,7 +8,7 @@
 
 /*  --card-color: rgba(0, 0, 0, 0.5);*/
 
-  --recording-color: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
+  --recording-color: rgba(235, 33, 46, .6);/*#eb212e; TA Red */
   --not-recording-color: rgba(0, 0, 0, .75);
   --ta-red: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
 
@@ -52,6 +52,9 @@
   --danger: #eb212e;
 }
 
+#record {
+width: 87px;
+}
 
 html {
     background: black;
@@ -197,10 +200,6 @@ needed if columns accross bottom of page*/
   margin-right: 2rem;
 }*/
 
-.Card__recording {
-  background: var(--recording-color);
-}
-
 .CardList {
   display: inline-block;
 /*  padding: 1rem;*/
@@ -222,7 +221,7 @@ needed if columns accross bottom of page*/
 }
 
 .Card {
-  width:270px;
+  width:271px;
   padding: var(--spacing-sm);
   box-sizing: border-box;
 
@@ -239,6 +238,14 @@ needed if columns accross bottom of page*/
   border: 1px solid var(--primary-color);
 
   background: var(--selected-card-color);
+  color: var(--selected-card-font-color);
+  text-overflow: ellipsis;
+}
+
+.Card__recording {
+  border: 1px solid var(--primary-color);
+
+  background: var(--recording-color);
   color: var(--selected-card-font-color);
   text-overflow: ellipsis;
 }
