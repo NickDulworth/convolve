@@ -220,11 +220,11 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
 
   function handleToggleRecording() {
     
-    if (convolving) {
-    handleStop();
-    }
-    
     if (!recording) { //if not recording then start
+      if (convolving) {
+      handleStop();
+      }
+
       console.log('Start Recording!');
       // format button
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
