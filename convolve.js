@@ -215,7 +215,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
     // Play it.
     audioContext.resume();
     recordingNode.start();
-    console.log('Preview Recording');
+    console.log('Preview Recording!');
   }
 
   function handleToggleRecording() {
