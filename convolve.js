@@ -218,6 +218,11 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   }
 
   function handleToggleRecording() {
+    
+    // if (convolving) {
+
+    // }
+    
     if (!recording) { //if not recording then start
       console.log('Start Recording!');
       // format button
@@ -281,6 +286,9 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
     convolvedNode.start();
     audioContext.resume();
     convolving = true;
+
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+    console.log('convolving!');
   }
 
   function selectImpulse(impulse) {
@@ -327,7 +335,8 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   function handleStop() {
     audioContext.suspend();
     convolving = false;
-
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+    console.log('stop!');
     // audioContext.close();
   }
 
@@ -344,13 +353,13 @@ function toggleConvolve() {
   else {
     if (convolving == true) { 
       handleStop();
-      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-      console.log('stop!');
+      // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+      // console.log('stop!');
     } 
     else if (convolving == false) {
       handleConvolve();
-      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
-      console.log('convolving!');
+      // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+      // console.log('convolving!');
     }
   }
 }
