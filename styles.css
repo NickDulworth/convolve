@@ -94,7 +94,7 @@ body {
 #toggleFullscreen {
 position: absolute;
 top: 1rem;
-right: 1rem;
+left: 1rem;
 
 /*    position: absolute;
     top: 1rem;
