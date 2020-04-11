@@ -293,13 +293,15 @@
 
 
 function toggleConvolve() {
-  if (!convolving) { 
-    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+  if (convolving == true) { 
     handleStop();
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+    console.log('stop!');
 
-  } else if (convolving) {
-    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+  } else if (convolving == false) {
     handleConvolve();
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+    console.log('convolving!');
   }
 }
 
