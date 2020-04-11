@@ -333,14 +333,22 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
     document.getElementById('source-' + source).classList.add('Card__selected');
   }
 
+  // function handleStop() {
+  //   audioContext.suspend();
+  //   convolving = false;
+  //   document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+  //   console.log('stop!');
+  //   // audioContext.close();
+  // }
+
+
   function handleStop() {
-    audioContext.suspend();
+    impulseNode.disconnect(audioContext.destination);
     convolving = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('stop!');
     // audioContext.close();
   }
-
 
 function toggleConvolve() {
   if (recording == true) { // if recording, stop button stops recording and formats buttons
