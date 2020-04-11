@@ -190,6 +190,10 @@
       document.documentElement.style.setProperty('--selected-card-color', 'rgba(235, 33, 46, .5)');
 
       startRecording(); //start recording
+
+      //format master stop button
+      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+
     } else { //else if recording, then stop
       console.log('Stop Recording!');
 
@@ -200,6 +204,9 @@
       document.documentElement.style.setProperty('--selected-card-color', 'rgba(0, 0, 0, .75)');
       
       stopRecording(); //stop recording
+      
+      //format master stop button
+      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     }
   }
 
@@ -293,15 +300,25 @@
 
 
 function toggleConvolve() {
-  if (convolving == true) { 
-    handleStop();
-    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-    console.log('stop!');
+  if (recording == true) { // if recording, stop button stops recording and formats buttons
 
-  } else if (convolving == false) {
-    handleConvolve();
-    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
-    console.log('convolving!');
+      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+      console.log('stop recording!');
+      document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
+      document.documentElement.style.setProperty('--selected-card-color', 'rgba(0, 0, 0, .75)');
+      stopRecording(); //stop recording
+  } 
+  else {
+    if (convolving == true) { 
+      handleStop();
+      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+      console.log('stop!');
+    } 
+    else if (convolving == false) {
+      handleConvolve();
+      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+      console.log('convolving!');
+    }
   }
 }
 
