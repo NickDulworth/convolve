@@ -10,7 +10,7 @@
   let selected_source = 1;
   let recording = false;
   let fullscreen = false;
-  let convolving = false;
+  var convolving = false;
 
   let recordingAudioBuffer = null; // type AudioBuffer
   let have_recording = false;
