@@ -197,7 +197,7 @@ needed if columns accross bottom of page*/
   margin-right: 2rem;
 }*/
 
-.card__recording {
+.Card__recording {
   background: var(--recording-color);
 }
 
