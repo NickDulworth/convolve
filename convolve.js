@@ -221,7 +221,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   function handleToggleRecording() {
     
     if (!recording) { //if not recording then start
-      if (convolving) {
+      if (convolving == true) {
       handleStop();
       }
 
