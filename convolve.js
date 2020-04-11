@@ -14,7 +14,7 @@
 
   let recordingAudioBuffer = null; // type AudioBuffer
   let have_recording = false;
-  let impulseNode = null;
+  var impulseNode = null;
   let recordingNode = null; //nd
 
   var elem = document.documentElement; //fullscreen button related
@@ -343,7 +343,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
 
 
   function handleStop() {
-    audioContext.suspend();
+    // audioContext.suspend();
     if (impulseNode) {
       impulseNode.disconnect(audioContext.destination);
     }
