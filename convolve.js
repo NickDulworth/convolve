@@ -343,7 +343,10 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
 
 
   function handleStop() {
-    impulseNode.disconnect(audioContext.destination);
+    audioContext.suspend();
+    if (impulseNode) {
+      impulseNode.disconnect(audioContext.destination);
+    }
     convolving = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('stop!');
