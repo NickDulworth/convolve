@@ -319,8 +319,8 @@ h2 {
 }
 
 /* Small Screens. */
-/*@media (max-width: 1100px) {
-  .App {
+@media (max-width: 730px) {
+/*  .App {
     padding-bottom: 1rem;
   }
 
@@ -338,8 +338,8 @@ h2 {
 
   .Head {
       width: 100%;
-  }
-}*/
+  }*/
+}
 
 /* Phones only. */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {

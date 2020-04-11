@@ -181,7 +181,10 @@
   function handleToggleRecording() {
     if (!recording) { //if not recording then start
       console.log('Start Recording!');
-      document.getElementById('record').innerHTML = '<i class="fas fa-save"></i>&nbsp;Store';
+      // document.getElementById('record').innerHTML = '<i class="fas fa-save"></i>&nbsp;Store';
+      document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
+
+
       // document.getElementById('AppContentID').classList.add('AppContent__recording');
       // document.getElementById('source-0').classList.add('card__recording');
       document.documentElement.style.setProperty('--selected-card-color', 'rgba(235, 33, 46, .5)');
@@ -189,9 +192,13 @@
       startRecording(); //start recording
     } else { //else if recording, then stop
       console.log('Stop Recording!');
-      document.getElementById('record').innerHTML = '<i class="fas fa-microphone"></i>&nbsp;Record';
+
+      document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
+            
       // document.getElementById('source-0').classList.remove('card__recording');
+
       document.documentElement.style.setProperty('--selected-card-color', 'rgba(0, 0, 0, .75)');
+      
       stopRecording(); //stop recording
     }
   }
