@@ -337,13 +337,13 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
     document.getElementById('source-' + source).classList.add('Card__selected');
   }
 
-  // function handleStop() {
-  //   audioContext.suspend();
-  //   convolving = false;
-  //   document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-  //   console.log('stop!');
-  //   // audioContext.close();
-  // }
+  function handleStop() {
+    audioContext.suspend();
+    convolving = false;
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+    console.log('stop!');
+    // audioContext.close();
+  }
 
 
   // function handleStop() {
@@ -370,6 +370,7 @@ function toggleConvolve() {
     if (convolving == true) { 
       // stopCommand = true;
       // handleConvolve();
+      handleStop();
       let convolvedNode = null;
     } 
     else if (convolving == false) {
