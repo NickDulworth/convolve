@@ -172,17 +172,15 @@
   function handleToggleRecording() {
      
     if (recording == false){ //if not recording then start
-      // if (convolving == true) {
-      // handleStop();
-      // }
-
-      // format button
-      document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
+      if (convolving == true) {
+      handleStop();
+      }
       
       startRecording(); //start recording
       console.log('handleToggleRecording: Start Recording!');
-      
-      recording = true;
+
+      // format record button
+      document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
 
       //format master stop button and record card
       document.getElementById('source-0').classList.add('Card__recording');
