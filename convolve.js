@@ -267,10 +267,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
 
     // If we selected a preset source.
     if (selected_source > 0) {
-      [convolvedNode, impulseNode] = convolveImpulseAndSource(
-        impulses[selected_impulse],
-        sources[selected_source]
-      );
+      [convolvedNode, impulseNode] = convolveImpulseAndSource(impulses[selected_impulse],sources[selected_source]);
     }
 
     // If we selected to use our recording.
