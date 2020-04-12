@@ -371,7 +371,7 @@ function toggleConvolve() {
       // stopCommand = true;
       // handleConvolve();
       handleStop();
-      let convolvedNode = null;
+      selected_source = -1;
     } 
     else if (convolving == false) {
       handleConvolve();
