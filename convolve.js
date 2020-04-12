@@ -3,8 +3,6 @@
   let audioContext = new (window.AudioContext || window.webkitAudioContext)();
   reverbjs.extend(audioContext);
 
-  // let selected_impulse = -1;
-  // let selected_source = -1;
   let selected_impulse = 0;
 
   let selected_source = 1;
@@ -14,7 +12,7 @@
 
   let recordingAudioBuffer = null; // type AudioBuffer
   let have_recording = false;
-  var impulseNode = null;
+  let impulseNode = null;
   let recordingNode = null; //nd
 
   var elem = document.documentElement; //fullscreen button related
