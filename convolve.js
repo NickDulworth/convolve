@@ -241,10 +241,11 @@
 
   function selectImpulse(impulse) {
     
-    if (convolving) {
+    if (convolving) { //if convoling and impulse changes, stop convolving then start over with new impulse.
     handleStop();
     handleConvolve();
     }
+
     selected_impulse = impulse;
     document.getElementById('impulse-0').classList.remove('Card__selected');
     document.getElementById('impulse-1').classList.remove('Card__selected');
