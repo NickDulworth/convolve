@@ -368,6 +368,7 @@ function toggleConvolve() {
       document.getElementById('source-0').classList.remove('Card__recording');
   } 
   else {
+    stopCommand = true;
     handleConvolve();
     // if (convolving == true) { 
     //   handleStop();
