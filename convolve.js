@@ -26,54 +26,6 @@
     'impulses/impulse4.m4a',
   ];
 
-  // const images = [
-  //   // 'http://nickdulworth.com/webaudio/images/0.jpg',
-  //   // 'http://nickdulworth.com/webaudio/images/1.jpg',
-  //   // 'http://nickdulworth.com/webaudio/images/2.jpg',
-
-  //   'images/0.jpg',
-  //   'images/1.jpg',
-  //   'images/2.jpg',
-  // ];
-
-//Detect Browser
-// Opera 8.0+
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-
-// Firefox 1.0+
-var isFirefox = typeof InstallTrigger !== 'undefined';
-
-// Safari 3.0+ "[object HTMLElementConstructor]" 
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-
-// Internet Explorer 6-11
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
-
-// Edge 20+
-var isEdge = !isIE && !!window.StyleMedia;
-
-// Chrome 1 - 79
-var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-
-// Edge (based on chromium) detection
-var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
-
-// Blink engine detection
-var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-
-// var output = 'Detecting browsers by ducktyping:<hr>';
-// output += 'isFirefox: ' + isFirefox + '<br>';
-// output += 'isChrome: ' + isChrome + '<br>';
-// output += 'isSafari: ' + isSafari + '<br>';
-// output += 'isOpera: ' + isOpera + '<br>';
-// output += 'isIE: ' + isIE + '<br>';
-// output += 'isEdge: ' + isEdge + '<br>';
-// output += 'isEdgeChromium: ' + isEdgeChromium + '<br>';
-// output += 'isBlink: ' + isBlink + '<br>';
-// document.body.innerHTML = output;
-
-
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
     'sources/clarinet_solo.m4a',
@@ -91,7 +43,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   try {
     const constraints = { audio: true, video: false };
     const micStream = await window.navigator.mediaDevices.getUserMedia(constraints);
-    console.log('Got mic.');
+    console.log('try: Got mic.');
     initRecorder(micStream);
   } catch (err) {
     alert('Issue accessing microphone. Refresh page and grant microphone access.', err);
@@ -144,8 +96,8 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   }
 
   function startRecording() {
-    audioContext.suspend(); //nd
-    audioContext.resume(); //nd
+    // audioContext.suspend(); //nd
+    // audioContext.resume(); //nd
     recordingAudioBuffer = null;
     recording = true;
   }
@@ -214,28 +166,30 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
     // Play it.
     audioContext.resume();
     recordingNode.start();
-    console.log('Preview Recording!');
+    console.log('handlePlay Recording: Preview Recording!');
   }
 
   function handleToggleRecording() {
      
-    if (!recording) { //if not recording then start
+    if (recording == false){ //if not recording then start
       // if (convolving == true) {
       // handleStop();
       // }
 
-      console.log('Start Recording!');
       // format button
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
       
       startRecording(); //start recording
+      console.log('handleToggleRecording: Start Recording!');
+      
+      recording = true;
 
       //format master stop button and record card
       document.getElementById('source-0').classList.add('Card__recording');
-      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>hi hi hi';
+      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
 
-    } else { //else if recording, then stop
-      console.log('Stop Recording!');
+    } else{ //else if recording, then stop
+      console.log('handleToggleRecording: Stop Recording!');
 
       // format button
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
@@ -284,7 +238,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
     convolving = true;
 
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
-    console.log('convolving!');
+    console.log('handleConvolve: Convolving!');
   }
 
   function selectImpulse(impulse) {
@@ -319,7 +273,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   }
 
   function selectSource(source) {
-    handleStop();
+    // handleStop(); //ND - cannot have a handle stop here becuase it over
 
     selected_source = source;
     document.getElementById('source-0').classList.remove('Card__selected');
@@ -334,7 +288,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
     audioContext.suspend();
     convolving = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-    console.log('stop!');
+    console.log('handleStop: stop');
     // audioContext.close();
   }
 
@@ -354,7 +308,7 @@ function toggleConvolve() {
   if (recording == true) { // if recording, stop button stops recording and formats buttons
 
       document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-      console.log('stop recording!');
+      console.log('toggleConvolve: stop recording!');
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
       stopRecording(); //stop recording
       document.getElementById('source-0').classList.remove('Card__recording');
@@ -444,11 +398,11 @@ function toggleConvolve() {
 
   function handleToggleFullscreen() {
     if (!fullscreen) {
-      console.log('Enter Fullscreen!');
+      console.log('handleToggleFullscreen: Enter Fullscreen!');
       document.getElementById('toggleFullscreen').innerHTML = '<i class="fas fa-compress"></i>&nbsp;Exit Fullscreen';
       enterFullscreen();
     } else {
-      console.log('Close Fullscreen!');
+      console.log('handleToggleFullscreen: Exit Fullscreen!');
       document.getElementById('toggleFullscreen').innerHTML = '<i class="fas fa-expand"></i>&nbsp;Enter Fullscreen';
       closeFullscreen();
     }
