@@ -263,13 +263,6 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
       impulseNode.disconnect(audioContext.destination);
     }
 
-    if (stopCommand == true) {
-      convolving = false;
-      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-      console.log('stop!');
-      return;
-    }
-
     let convolvedNode = null;
 
     // If we selected a preset source.
