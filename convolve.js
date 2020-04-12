@@ -267,7 +267,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
       convolving = false;
       document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
       console.log('stop!');
-      return
+      return;
     }
 
     let convolvedNode = null;
