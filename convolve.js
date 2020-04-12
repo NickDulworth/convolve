@@ -288,7 +288,8 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   }
 
   function selectImpulse(impulse) {
-    // audioContext.suspend();
+    
+    handleStop();
 
     selected_impulse = impulse;
     document.getElementById('impulse-0').classList.remove('Card__selected');
@@ -318,6 +319,8 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   }
 
   function selectSource(source) {
+    handleStop();
+
     selected_source = source;
     document.getElementById('source-0').classList.remove('Card__selected');
     document.getElementById('source-1').classList.remove('Card__selected');
