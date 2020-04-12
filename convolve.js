@@ -218,7 +218,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   }
 
   function handleToggleRecording() {
-    
+     
     if (!recording) { //if not recording then start
       // if (convolving == true) {
       // handleStop();
@@ -232,7 +232,7 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
 
       //format master stop button and record card
       document.getElementById('source-0').classList.add('Card__recording');
-      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>hi hi hi';
 
     } else { //else if recording, then stop
       console.log('Stop Recording!');
