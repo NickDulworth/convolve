@@ -368,8 +368,13 @@ function toggleConvolve() {
       document.getElementById('source-0').classList.remove('Card__recording');
   } 
   else {
-    stopCommand = true;
-    handleConvolve();
+    if (convolving == true) { 
+      stopCommand = true;
+      handleConvolve();
+    } 
+    else if (convolving == false) {
+      handleConvolve();
+    }
     // if (convolving == true) { 
     //   handleStop();
     //   // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
