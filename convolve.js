@@ -364,7 +364,7 @@ function toggleConvolve() {
       // stopCommand = true;
       // handleConvolve();
       handleStop();
-      selected_source = -1;
+
     } 
     else if (convolving == false) {
       handleConvolve();
