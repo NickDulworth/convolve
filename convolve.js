@@ -9,6 +9,7 @@
   let recording = false;
   let fullscreen = false;
   var convolving = false;
+  var stopCommand = false;
 
   let recordingAudioBuffer = null; // type AudioBuffer
   let have_recording = false;
@@ -262,6 +263,12 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
       impulseNode.disconnect(audioContext.destination);
     }
 
+    if (stopCommand == true) {
+      convolving = false;
+      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+      console.log('stop!');
+      return
+    }
 
     let convolvedNode = null;
 
@@ -340,16 +347,16 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
   // }
 
 
-  function handleStop() {
-    // audioContext.suspend();
-    if (impulseNode) {
-      impulseNode.disconnect(audioContext.destination);
-    }
-    convolving = false;
-    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-    console.log('stop!');
-    // audioContext.close();
-  }
+  // function handleStop() {
+  //   // audioContext.suspend();
+  //   if (impulseNode) {
+  //     impulseNode.disconnect(audioContext.destination);
+  //   }
+  //   convolving = false;
+  //   document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+  //   console.log('stop!');
+  //   // audioContext.close();
+  // }
 
 function toggleConvolve() {
   if (recording == true) { // if recording, stop button stops recording and formats buttons
@@ -361,16 +368,17 @@ function toggleConvolve() {
       document.getElementById('source-0').classList.remove('Card__recording');
   } 
   else {
-    if (convolving == true) { 
-      handleStop();
-      // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-      // console.log('stop!');
-    } 
-    else if (convolving == false) {
-      handleConvolve();
-      // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
-      // console.log('convolving!');
-    }
+    handleConvolve();
+    // if (convolving == true) { 
+    //   handleStop();
+    //   // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+    //   // console.log('stop!');
+    // } 
+    // else if (convolving == false) {
+    //   handleConvolve();
+    //   // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+    //   // console.log('convolving!');
+    // }
   }
 }
 
