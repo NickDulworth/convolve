@@ -172,9 +172,9 @@
   function handleToggleRecording() {
      
     if (recording == false){ //if not recording then start
-      if (convolving == true) {
-      handleStop();
-      }
+      // if (convolving == true) {
+      // handleStop();
+      // }
       
       startRecording(); //start recording
       console.log('handleToggleRecording: Start Recording!');
@@ -241,8 +241,10 @@
 
   function selectImpulse(impulse) {
     
+    if (convolving) {
     handleStop();
-
+    handleConvolve();
+    }
     selected_impulse = impulse;
     document.getElementById('impulse-0').classList.remove('Card__selected');
     document.getElementById('impulse-1').classList.remove('Card__selected');
@@ -305,11 +307,13 @@
 function toggleConvolve() {
   if (recording == true) { // if recording, stop button stops recording and formats buttons
 
-      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-      console.log('toggleConvolve: stop recording!');
-      document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
       stopRecording(); //stop recording
-      document.getElementById('source-0').classList.remove('Card__recording');
+      console.log('toggleConvolve: stop recording!');
+
+      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+      document.getElementById('source-0').classList.remove('Card__recording'); 
+      document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
+
   } 
   else {
     if (convolving == true) { 
