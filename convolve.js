@@ -324,7 +324,6 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
     else if (impulse == 4) {
     document.getElementById("bgnDiv").style.backgroundImage = "url(images/4.jpg)";
     }
-
     else {}
   }
 
@@ -369,8 +368,9 @@ function toggleConvolve() {
   } 
   else {
     if (convolving == true) { 
-      stopCommand = true;
-      handleConvolve();
+      // stopCommand = true;
+      // handleConvolve();
+      let convolvedNode = null;
     } 
     else if (convolving == false) {
       handleConvolve();
