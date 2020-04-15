@@ -103,10 +103,8 @@
     recording = true;
 
     console.log('startRecording: Start Recording!');
-
     // format record button
     document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
-
     //format master stop button and record card
     document.getElementById('source-0').classList.add('Card__recording');
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
@@ -120,7 +118,7 @@
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     document.getElementById('source-0').classList.remove('Card__recording'); 
     document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
-    // return;
+    return;
   }
 
   /**
@@ -131,8 +129,6 @@
     // Load the impulse response; upon load, connect it to the audio output.
     const impulseNode = audioContext.createReverbFromUrl(impulseUrl, function() {
       impulseNode.connect(audioContext.destination);
-
-      // inpulseNode.channelInterpretation = 'discrete';
     });
 
     // Load a test sound; upon load, connect it to the reverb node.
@@ -171,10 +167,8 @@
     }
 
     let recordingNode = createPlayableRecording();
-    
      // Connect it to the audio output so we can play it.
     recordingNode.connect(audioContext.destination);
-
     // Play it.
     audioContext.resume();
     recordingNode.start();
@@ -209,7 +203,7 @@
     if (recording == false){ //if not recording then start
       startRecording(); //start recording
       console.log('handleToggleRecording: Start Recording!');
-    } else{ //else if recording, then stop
+    } else { //stop recording
       stopRecording(); //stop recording
       console.log('handleToggleRecording: Stop Recording!');
     }
@@ -234,13 +228,19 @@
 
     // If we selected a preset source.
     if (selected_source > 0) {
-      [convolvedNode, impulseNode] = convolveImpulseAndSource(impulses[selected_impulse],sources[selected_source]);
+      [convolvedNode, impulseNode] = convolveImpulseAndSource(
+        impulses[selected_impulse],
+        sources[selected_source]
+      );
     }
 
     // If we selected to use our recording.
     else {
       let recordingNode = createPlayableRecording();
-      [convolvedNode, impulseNode] = convolveImpulseAndRecording(impulses[selected_impulse],recordingNode);
+      [convolvedNode, impulseNode] = convolveImpulseAndRecording(
+        impulses[selected_impulse],
+        recordingNode
+      );
     }
 
     convolvedNode.start();
@@ -250,7 +250,7 @@
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
     console.log('handleConvolve: Convolving!');
 
-    //reset stop button 
+    //reset stop button at end of file
     convolvedNode.onended = function(event) {
       handleStop();
     }
