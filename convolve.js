@@ -15,6 +15,7 @@
   let have_recording = false;
   let impulseNode = null;
   let recordingNode = null; //nd
+  let previewingRecording = false;
 
   var elem = document.documentElement; //fullscreen button related
 
@@ -148,19 +149,12 @@
     return recordingNode;
   }
 
-  function handlePlayRecording() {
-    // // Alert if no recording
-    // if (!have_recording) {
-    //   return alert('Make a Recording First');
-    // }
-
-    // If currently recording, stop recording first...
-    if (recording) {
+  function handlePlayRecording() {         
+    if (recording) {   // If currently recording, stop recording first...
       handleToggleRecording();
-    } else if (!have_recording) { // Alert if no recording
+    } else if (!have_recording) { // otherwise if not recording and dont have a recording then Alert!
       return alert('Make a Recording First');
     }
-
 
     let recordingNode = createPlayableRecording();
     // Connect it to the audio output so we can play it.
@@ -169,11 +163,11 @@
     // Play it.
     audioContext.resume();
     recordingNode.start();
+    previewingRecording = true;
     console.log('handlePlay Recording: Preview Recording!');
   }
 
   function handleToggleRecording() {
-     
     if (recording == false){ //if not recording then start
       // if (convolving == true) {
       // handleStop();
@@ -317,15 +311,16 @@ function toggleConvolve() {
       document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
       document.getElementById('source-0').classList.remove('Card__recording'); 
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
-
-  } 
+  } else if (previewingRecording == true) {
+      recordingNode.stop();
+      console.log('toggleConvolve: stop previewing recording!');
+  }
   // if (previewRecording == true)
   else {
     if (convolving == true) { 
       // stopCommand = true;
       // handleConvolve();
       handleStop();
-
     } 
     else if (convolving == false) {
       handleConvolve();
