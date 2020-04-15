@@ -258,42 +258,44 @@
   }
 
   function selectImpulse(impulse) {
-    
-    if (convolving) { //if convoling and impulse changes, stop convolving then start over with new impulse.
-    handleStop();
-    handleConvolve();
-    }
+    if (recording == false) { // lock buttons if recording
 
-    selected_impulse = impulse;
-    document.getElementById('impulse-0').classList.remove('Card__selected');
-    document.getElementById('impulse-1').classList.remove('Card__selected');
-    document.getElementById('impulse-2').classList.remove('Card__selected');
-    document.getElementById('impulse-3').classList.remove('Card__selected');
-    document.getElementById('impulse-4').classList.remove('Card__selected');
-    document.getElementById('impulse-' + impulse).classList.add('Card__selected');
+      if (convolving) { //if convoling and impulse changes, stop convolving then start over with new impulse.
+      handleStop();
+      handleConvolve();
+      }
 
-    //images
-    if (impulse == 0){
-      document.getElementById("bgnDiv").style.backgroundImage = "url(images/0.jpg)";
+      selected_impulse = impulse;
+      document.getElementById('impulse-0').classList.remove('Card__selected');
+      document.getElementById('impulse-1').classList.remove('Card__selected');
+      document.getElementById('impulse-2').classList.remove('Card__selected');
+      document.getElementById('impulse-3').classList.remove('Card__selected');
+      document.getElementById('impulse-4').classList.remove('Card__selected');
+      document.getElementById('impulse-' + impulse).classList.add('Card__selected');
+
+      //images
+      if (impulse == 0){
+        document.getElementById("bgnDiv").style.backgroundImage = "url(images/0.jpg)";
+      }
+      else if (impulse == 1) {
+        document.getElementById("bgnDiv").style.backgroundImage = "url(images/1.jpg)";
+      }
+      else if (impulse == 2) {
+      document.getElementById("bgnDiv").style.backgroundImage = "url(images/2.jpg)";
+      }
+      else if (impulse == 3) {
+      document.getElementById("bgnDiv").style.backgroundImage = "url(images/3.jpg)";
+      }
+      else if (impulse == 4) {
+      document.getElementById("bgnDiv").style.backgroundImage = "url(images/4.jpg)";
+      }
+      else {}
     }
-    else if (impulse == 1) {
-      document.getElementById("bgnDiv").style.backgroundImage = "url(images/1.jpg)";
-    }
-    else if (impulse == 2) {
-    document.getElementById("bgnDiv").style.backgroundImage = "url(images/2.jpg)";
-    }
-    else if (impulse == 3) {
-    document.getElementById("bgnDiv").style.backgroundImage = "url(images/3.jpg)";
-    }
-    else if (impulse == 4) {
-    document.getElementById("bgnDiv").style.backgroundImage = "url(images/4.jpg)";
-    }
-    else {}
   }
 
   function selectSource(source) {
     // handleStop(); //ND - cannot have a handle stop here becuase it over
-  if (recording == false) {
+  if (recording == false) { // lock buttons if recording
       selected_source = source;
       document.getElementById('source-0').classList.remove('Card__selected');
       document.getElementById('source-1').classList.remove('Card__selected');
