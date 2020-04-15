@@ -259,10 +259,9 @@
 
   function selectImpulse(impulse) {
     if (recording == false) { // lock buttons if recording
-
-      if (convolving) { //if convoling and impulse changes, stop convolving then start over with new impulse.
+      
+      if (convolving) { //if impulse changes while convolving, stop convolving
       handleStop();
-      handleConvolve();
       }
 
       selected_impulse = impulse;
@@ -295,7 +294,12 @@
 
   function selectSource(source) {
     // handleStop(); //ND - cannot have a handle stop here becuase it over
-  if (recording == false) { // lock buttons if recording
+    if (recording == false) { // lock buttons if recording
+
+      if (convolving) { //if impulse changes while convolving, stop convolving
+        handleStop();
+      }
+
       selected_source = source;
       document.getElementById('source-0').classList.remove('Card__selected');
       document.getElementById('source-1').classList.remove('Card__selected');
