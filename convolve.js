@@ -98,7 +98,7 @@
 
   function startRecording() {
     // audioContext.suspend(); //nd
-    // audioContext.resume(); //nd
+    audioContext.resume(); //nd
     recordingAudioBuffer = null;
     recording = true;
 
@@ -304,9 +304,7 @@
   }
 
   function handleStop() {
-    // audioContext.suspend();
-    let convolvedNode = null;
-    convolvedNode.stop();
+    audioContext.suspend();
     convolving = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('handleStop: stop');
