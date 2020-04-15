@@ -251,15 +251,15 @@
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
     console.log('handleConvolve: Convolving!');
 
-    //reset stop button at end of file
-    convolvedNode.onended = function(event) {
-      handleStop();
-    }   
+    // //reset stop button at end of file
+    // convolvedNode.onended = function(event) {
+    //   handleStop();
+    // }   
   }
 
   function selectImpulse(impulse) {
     if (recording == false) { // lock buttons if recording
-      
+
       if (convolving) { //if impulse changes while convolving, stop convolving
       handleStop();
       }
