@@ -14,7 +14,7 @@
   let recordingAudioBuffer = null; // type AudioBuffer
   let have_recording = false;
   let impulseNode = null;
-  let recordingNode = null; //nd
+  let recordingNode = null;
   let previewingRecording = false;
 
   var elem = document.documentElement; //fullscreen button related
@@ -257,9 +257,9 @@
     console.log('handleConvolve: Convolving!');
 
     //reset stop button 
-    // convolvedNode.onended = function(event) {
-    //   handleStop();
-    // }
+    convolvedNode.onended = function(event) {
+      handleStop();
+    }
       
   }
 
@@ -338,33 +338,13 @@ function toggleConvolve() {
       document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
       document.getElementById('source-0').classList.remove('Card__recording'); 
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
-  } 
-  
-  // else if (previewingRecording == true) {
-  //     recordingNode.start();
-  //     console.log('toggleConvolve: stop previewing recording!');
-  // }
-  
-  // if (previewRecording == true)
-  else {
+  } else {
     if (convolving == true) { 
-      // stopCommand = true;
-      // handleConvolve();
       handleStop();
     } 
     else if (convolving == false) {
       handleConvolve();
     }
-    // if (convolving == true) { 
-    //   handleStop();
-    //   // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-    //   // console.log('stop!');
-    // } 
-    // else if (convolving == false) {
-    //   handleConvolve();
-    //   // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
-    //   // console.log('convolving!');
-    // }
   }
 }
 
