@@ -247,6 +247,7 @@
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
     console.log('handleConvolve: Convolving!');
 
+    //reset buttons when convoling ends
     convolvedNode.onended = handleStop();
 }
   }
