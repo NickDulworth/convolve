@@ -293,14 +293,15 @@
 
   function selectSource(source) {
     // handleStop(); //ND - cannot have a handle stop here becuase it over
-
-    selected_source = source;
-    document.getElementById('source-0').classList.remove('Card__selected');
-    document.getElementById('source-1').classList.remove('Card__selected');
-    document.getElementById('source-2').classList.remove('Card__selected');
-    document.getElementById('source-3').classList.remove('Card__selected');
-    document.getElementById('source-4').classList.remove('Card__selected');
-    document.getElementById('source-' + source).classList.add('Card__selected');
+  if (recording == false) {
+      selected_source = source;
+      document.getElementById('source-0').classList.remove('Card__selected');
+      document.getElementById('source-1').classList.remove('Card__selected');
+      document.getElementById('source-2').classList.remove('Card__selected');
+      document.getElementById('source-3').classList.remove('Card__selected');
+      document.getElementById('source-4').classList.remove('Card__selected');
+      document.getElementById('source-' + source).classList.add('Card__selected');
+    } 
   }
 
   function handleStop() {
