@@ -102,7 +102,7 @@
     recordingAudioBuffer = null;
     recording = true;
 
-    console.log('handleToggleRecording: Start Recording!');
+    console.log('startRecording: Start Recording!');
 
     // format record button
     document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
@@ -115,7 +115,7 @@
   function stopRecording() {
     have_recording = true;
     recording = false;
-    console.log('toggleConvolve: stop recording!');
+    console.log('stopRecording: stop recording!');
 
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     document.getElementById('source-0').classList.remove('Card__recording'); 
@@ -207,32 +207,11 @@
 
   function handleToggleRecording() {
     if (recording == false){ //if not recording then start
-      // if (convolving == true) {
-      // handleStop();
-      // }
-      
       startRecording(); //start recording
       console.log('handleToggleRecording: Start Recording!');
-
-      // // format record button
-      // document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
-
-      // //format master stop button and record card
-      // document.getElementById('source-0').classList.add('Card__recording');
-      // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
-
     } else{ //else if recording, then stop
-
-
-      // // format button
-      // document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
-            
       stopRecording(); //stop recording
       console.log('handleToggleRecording: Stop Recording!');
-      
-      // //format master stop button and record card
-      // document.getElementById('source-0').classList.remove('Card__recording');
-      // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     }
   }
 
