@@ -247,14 +247,14 @@
     audioContext.resume();
     convolving = true;
 
+    // set button
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
     console.log('handleConvolve: Convolving!');
 
     //reset stop button at end of file
     convolvedNode.onended = function(event) {
       handleStop();
-    }
-      
+    }   
   }
 
   function selectImpulse(impulse) {
