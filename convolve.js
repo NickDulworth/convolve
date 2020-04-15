@@ -101,11 +101,25 @@
     // audioContext.resume(); //nd
     recordingAudioBuffer = null;
     recording = true;
+
+    console.log('handleToggleRecording: Start Recording!');
+
+    // format record button
+    document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
+
+    //format master stop button and record card
+    document.getElementById('source-0').classList.add('Card__recording');
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
   }
 
   function stopRecording() {
     have_recording = true;
     recording = false;
+    console.log('toggleConvolve: stop recording!');
+
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+    document.getElementById('source-0').classList.remove('Card__recording'); 
+    document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
     return;
   }
 
@@ -200,24 +214,25 @@
       startRecording(); //start recording
       console.log('handleToggleRecording: Start Recording!');
 
-      // format record button
-      document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
+      // // format record button
+      // document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
 
-      //format master stop button and record card
-      document.getElementById('source-0').classList.add('Card__recording');
-      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+      // //format master stop button and record card
+      // document.getElementById('source-0').classList.add('Card__recording');
+      // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
 
     } else{ //else if recording, then stop
-      console.log('handleToggleRecording: Stop Recording!');
 
-      // format button
-      document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
+
+      // // format button
+      // document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
             
       stopRecording(); //stop recording
+      console.log('handleToggleRecording: Stop Recording!');
       
-      //format master stop button and record card
-      document.getElementById('source-0').classList.remove('Card__recording');
-      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+      // //format master stop button and record card
+      // document.getElementById('source-0').classList.remove('Card__recording');
+      // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     }
   }
 
@@ -333,11 +348,11 @@ function toggleConvolve() {
   if (recording == true) { // if recording, stop button stops recording and formats buttons
 
       stopRecording(); //stop recording
-      console.log('toggleConvolve: stop recording!');
+      // console.log('toggleConvolve: stop recording!');
 
-      document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-      document.getElementById('source-0').classList.remove('Card__recording'); 
-      document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
+      // document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+      // document.getElementById('source-0').classList.remove('Card__recording'); 
+      // document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
   } else {
     if (convolving == true) { 
       handleStop();
