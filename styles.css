@@ -234,6 +234,22 @@ needed if columns accross bottom of page*/
   color: var(--card-font-color);
 }
 
+/*same as .Card but narrower width*/
+.recordingCard { 
+  width:120px;
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: var(--card-color);
+  color: var(--card-font-color);
+}
+
+
 .Card__selected {
   border: 1px solid var(--primary-color);
 
