@@ -251,10 +251,12 @@
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
     console.log('handleConvolve: Convolving!');
 
-    // //reset stop button at end of file
-    // convolvedNode.onended = function(event) {
-    //   handleStop();
-    // }   
+    //reset stop button at end of file
+    if (convolving == true) {
+      convolvedNode.onended = function(event) {
+        handleStop();
+      }
+    }   
   }
 
   function selectImpulse(impulse) {
@@ -313,6 +315,7 @@
   function handleStop() {
     audioContext.suspend();
     convolving = false;
+    recording = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('handleStop: stop');
   }
