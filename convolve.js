@@ -149,7 +149,7 @@
     return recordingNode;
   }
 
-  function handlePlayRecording() {         
+  function handleTogglePreviewRecording() {         
     if (recording) {   // If currently recording, stop recording first...
       handleToggleRecording();
     } else if (!have_recording) { // otherwise if not recording and dont have a recording then Alert!
@@ -157,6 +157,8 @@
     }
 
     let recordingNode = createPlayableRecording();
+    
+    if (previewingRecording == false) {
     // Connect it to the audio output so we can play it.
     recordingNode.connect(audioContext.destination);
 
@@ -165,6 +167,19 @@
     recordingNode.start();
     previewingRecording = true;
     console.log('handlePlay Recording: Preview Recording!');
+    } else if (previewingRecording == true) {
+
+    // Play it.
+    // audioContext.suspend(); //is needed in lots of places?
+
+    // // Connect it to the audio output so we can play it.
+    audioContext.suspend();
+    recordingNode.disconnect(audioContext.destination);
+
+    // set state
+    previewingRecording = false;
+    console.log('handlePlay Recording: Stop Previewing Recording!');
+    }
   }
 
   function handleToggleRecording() {
@@ -222,10 +237,7 @@
     // If we selected to use our recording.
     else {
       let recordingNode = createPlayableRecording();
-      [convolvedNode, impulseNode] = convolveImpulseAndRecording(
-        impulses[selected_impulse],
-        recordingNode
-      );
+      [convolvedNode, impulseNode] = convolveImpulseAndRecording(impulses[selected_impulse],recordingNode);
     }
 
     convolvedNode.start();
@@ -311,10 +323,13 @@ function toggleConvolve() {
       document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
       document.getElementById('source-0').classList.remove('Card__recording'); 
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
-  } else if (previewingRecording == true) {
-      recordingNode.stop();
-      console.log('toggleConvolve: stop previewing recording!');
-  }
+  } 
+  
+  // else if (previewingRecording == true) {
+  //     recordingNode.start();
+  //     console.log('toggleConvolve: stop previewing recording!');
+  // }
+  
   // if (previewRecording == true)
   else {
     if (convolving == true) { 
@@ -343,7 +358,7 @@ function toggleConvolve() {
   
   // record / play dry recording
   document.getElementById('record').onclick = handleToggleRecording;
-  document.getElementById('play-recording-btn').onclick = handlePlayRecording;
+  // document.getElementById('play-recording-btn').onclick = handleTogglePreviewRecording;
 
   // convolve
   // document.getElementById('convolve-btn').onclick = handleConvolve;
