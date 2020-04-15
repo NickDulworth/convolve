@@ -304,7 +304,8 @@
   }
 
   function handleStop() {
-    // audioContext.suspend();
+    audioContext.suspend();
+    audioContext.resume();
     convolving = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('handleStop: stop');
