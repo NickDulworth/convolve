@@ -219,7 +219,6 @@
     }
 
     // Pause and clear anything we are currently playing.
-    audioContext.resume();
     audioContext.suspend();
     if (impulseNode) {
       impulseNode.disconnect(audioContext.destination);
@@ -305,7 +304,7 @@
   }
 
   function handleStop() {
-    audioContext.suspend();
+    // audioContext.suspend();
     convolving = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('handleStop: stop');
@@ -326,7 +325,6 @@
 
 function toggleConvolve() {
   if (recording == true) { // if recording, stop button stops recording and formats buttons
-
       stopRecording(); //stop recording
       // console.log('toggleConvolve: stop recording!');
 
