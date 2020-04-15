@@ -236,7 +236,7 @@ needed if columns accross bottom of page*/
 
 /*same as .Card but narrower width*/
 .recordingCard { 
-  width:120px;
+  width:271px;
   padding: var(--spacing-sm);
   box-sizing: border-box;
 
@@ -293,7 +293,8 @@ h2 {
 .Button {
   border-radius: var(--radius-md);
   padding: var(--spacing-xs) var(--spacing-md);
-  min-width: 3rem;
+/*  min-width: 3rem;*/
+/*  min-width: 100%;*/
   font-weight: bold;
   line-height: 1.2rem;
   font-size: 0.9rem;
@@ -307,6 +308,7 @@ h2 {
   }
 
 .Button__danger {
+  min-width: 100%;
   background: var(--danger);
 /*  border: 2px solid var(--danger);*/
   color: var(--button-font-color);
