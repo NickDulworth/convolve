@@ -304,11 +304,11 @@
   }
 
   function handleStop() {
-    audioContext.suspend();
+    // audioContext.suspend();
+    convolvedNode.stop();
     convolving = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('handleStop: stop');
-    // audioContext.close();
   }
 
 
@@ -331,7 +331,6 @@ function toggleConvolve() {
       handleStop();
     } 
     else if (convolving == false) { // start convolving
-      audioContext.resume();
       handleConvolve();
     }
   }
