@@ -305,6 +305,7 @@
 
   function handleStop() {
     // audioContext.suspend();
+    let convolvedNode = null;
     convolvedNode.stop();
     convolving = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
