@@ -158,8 +158,7 @@
 
     let recordingNode = createPlayableRecording();
     
-    if (previewingRecording == false) {
-    // Connect it to the audio output so we can play it.
+     // Connect it to the audio output so we can play it.
     recordingNode.connect(audioContext.destination);
 
     // Play it.
@@ -167,19 +166,29 @@
     recordingNode.start();
     previewingRecording = true;
     console.log('handlePlay Recording: Preview Recording!');
-    } else if (previewingRecording == true) {
 
-    // Play it.
-    // audioContext.suspend(); //is needed in lots of places?
-
+    // if (previewingRecording == false) {
     // // Connect it to the audio output so we can play it.
-    audioContext.suspend();
-    recordingNode.disconnect(audioContext.destination);
+    // recordingNode.connect(audioContext.destination);
 
-    // set state
-    previewingRecording = false;
-    console.log('handlePlay Recording: Stop Previewing Recording!');
-    }
+    // // Play it.
+    // audioContext.resume();
+    // recordingNode.start();
+    // previewingRecording = true;
+    // console.log('handlePlay Recording: Preview Recording!');
+    // } else if (previewingRecording == true) {
+
+    // // Play it.
+    // // audioContext.suspend(); //is needed in lots of places?
+
+    // // // Connect it to the audio output so we can play it.
+    // audioContext.suspend();
+    // recordingNode.disconnect(audioContext.destination);
+
+    // // set state
+    // previewingRecording = false;
+    // console.log('handlePlay Recording: Stop Previewing Recording!');
+    // }
   }
 
   function handleToggleRecording() {
