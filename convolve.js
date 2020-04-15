@@ -149,15 +149,18 @@
   }
 
   function handlePlayRecording() {
-    // Alert if no recording
-    if (!have_recording) {
-      return alert('Make a Recording First');
-    }
+    // // Alert if no recording
+    // if (!have_recording) {
+    //   return alert('Make a Recording First');
+    // }
 
     // If currently recording, stop recording first...
     if (recording) {
       handleToggleRecording();
-    } 
+    } else if (!have_recording) { // Alert if no recording
+      return alert('Make a Recording First');
+    }
+
 
     let recordingNode = createPlayableRecording();
     // Connect it to the audio output so we can play it.
@@ -316,6 +319,7 @@ function toggleConvolve() {
       document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
 
   } 
+  if (previewRecording == true)
   else {
     if (convolving == true) { 
       // stopCommand = true;
