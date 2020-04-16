@@ -174,7 +174,7 @@
     previewingRecording = true;
     console.log('handlePlay Recording: Preview Recording!');
 
-    // if (previewingRecording === false) {
+    // if (previewingRecording == false) {
     // // Connect it to the audio output so we can play it.
     // recordingNode.connect(audioContext.destination);
 
@@ -183,7 +183,7 @@
     // recordingNode.start();
     // previewingRecording = true;
     // console.log('handlePlay Recording: Preview Recording!');
-    // } else if (previewingRecording === true) {
+    // } else if (previewingRecording == true) {
 
     // // Play it.
     // // audioContext.suspend(); //is needed in lots of places?
@@ -199,7 +199,7 @@
   }
 
   function handleToggleRecording() {
-    if (convolving === true) { // do nothing if currently convolving
+    if (convolving) { // do nothing if currently convolving
       return;
     }
 
@@ -214,11 +214,11 @@
 
   function handleConvolve() {
 
-    if (selected_source === -1 || selected_impulse === -1) {
+    if (selected_source == -1 || selected_impulse == -1) {
       return alert('Select source and impulse.');
     }
 
-    if (selected_source === 0 && !have_recording) {
+    if (selected_source == 0 && !have_recording) {
       return alert("Record a clip first");
     }
 
@@ -274,7 +274,7 @@
     }
 
 
-    if (convolving === true) { //if impulse changes while convolving, stop convolving
+    if (convolving) { //if impulse changes while convolving, stop convolving
     handleStop();
     }
 
@@ -320,7 +320,7 @@
       }
     }
 
-    if (convolving === true) { //if impulse changes while convolving, stop convolving
+    if (convolving) { //if impulse changes while convolving, stop convolving
       handleStop();
     }
 
