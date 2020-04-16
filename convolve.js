@@ -223,12 +223,15 @@
       return alert("Record a clip first");
     }
 
-    // Pause ..... and clear anything we are currently playing.
+    // Pause ..... 
     audioContext.suspend();
-    if (impulseNode) {
+    
+    if (impulseNode) { // ...   and clear anything we are currently playing.
       impulseNode.disconnect(audioContext.destination);
+
     } else if (convolveStopCommand == true) { //stop and clear convolution if told to stop by handleStop
       impulseNode.disconnect(audioContext.destination);
+      console.log('handleConvolve: stop');
       return;
     }
 
@@ -260,12 +263,12 @@
     console.log('handleConvolve: Convolving!');
 
     //reset stop button at end of file
-    if (convolving == true) {
+    // if (convolving == true) {
       convolvedNode.onended = function(event) {
         // handleStop(); handlestop makes playback weird later on
         handleStop_noSuspend();
       }
-    }   
+    //}   
   }
 
   function selectImpulse(impulse) {
@@ -346,9 +349,9 @@
   function handleStop() {
     // audioContext.suspend();
     convolveStopCommand = true;
-    handleConvolve();
     convolving = false;
     recording = false;
+    handleConvolve();
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('handleStop: stop');
   }
