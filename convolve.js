@@ -375,6 +375,7 @@ function toggleConvolve() {
  
       convolveStopCommand = true;
       handleConvolve();
+      handleStop();
       convolving = false;
     } 
     else if (convolving == false) { // start convolving
