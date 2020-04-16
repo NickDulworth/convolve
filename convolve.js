@@ -231,9 +231,9 @@
 
     // Pause and clear anything we are currently playing.
     audioContext.suspend();
-    // if (impulseNode) {
-    //   impulseNode.disconnect(audioContext.destination);
-    // }
+    if (impulseNode) {
+      impulseNode.disconnect(audioContext.destination);
+    }
 
     let convolvedNode = null;
 
