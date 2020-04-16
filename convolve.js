@@ -199,7 +199,7 @@
   }
 
   function handleToggleRecording() {
-    if (convolving) { // do nothing if currently convolving
+    if (convolving === true) { // do nothing if currently convolving
       return;
     }
 
@@ -274,7 +274,7 @@
     }
 
 
-    if (convolving) { //if impulse changes while convolving, stop convolving
+    if (convolving === true) { //if impulse changes while convolving, stop convolving
     handleStop();
     }
 
@@ -320,7 +320,7 @@
       }
     }
 
-    if (convolving) { //if impulse changes while convolving, stop convolving
+    if (convolving === true) { //if impulse changes while convolving, stop convolving
       handleStop();
     }
 
