@@ -8,8 +8,7 @@
   let selected_source = 1;
   let recording = false;
   let fullscreen = false;
-  var convolving = false;
-  var convolveStopCommand = false; // eventually remove and use "convolving" above
+  let convolving = false;
 
   let recordingAudioBuffer = null; // type AudioBuffer
   let have_recording = false;
@@ -229,7 +228,7 @@
     if (impulseNode) { // ...   and clear anything we are currently playing.
       impulseNode.disconnect(audioContext.destination);
 
-    } else if (convolveStopCommand == true) { //stop and clear convolution if told to stop by handleStop
+    } else if (convolving == true) { //stop and clear convolution if told to stop by handleStop
       impulseNode.disconnect(audioContext.destination);
       console.log('handleConvolve: stop');
       return;
@@ -258,17 +257,15 @@
     audioContext.resume();
     convolving = true;
 
-    // set button
+    // set toggle convolve button
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
     console.log('handleConvolve: Convolving!');
 
-    //reset stop button at end of file
-    // if (convolving == true) {
-      convolvedNode.onended = function(event) {
-        // handleStop(); handlestop makes playback weird later on
-        handleStop_noSuspend();
-      }
-    //}   
+    //reset toggle Convolve button at end of file
+    convolvedNode.onended = function(event) {
+      handleStop_noSuspend();
+    }
+
   }
 
   function selectImpulse(impulse) {
@@ -317,8 +314,6 @@
   }
 
   function selectSource(source) {
-    // handleStop(); //ND - cannot have a handle stop here becuase? 
-
     if (recording == true) { // lock other buttons if recording
       if (source > 0) {
       return;
@@ -348,10 +343,9 @@
 
   function handleStop() {
     // audioContext.suspend();
-    convolveStopCommand = true;
     convolving = false;
     recording = false;
-    handleConvolve();
+    handleConvolve(); //if convolving = false then handlConvolve will stop
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('handleStop: stop');
   }
@@ -384,10 +378,7 @@ function toggleConvolve() {
       handleStop();
     } 
     else if (convolving == false) { // start convolving
-      convolveStopCommand = false;
-      
       handleConvolve();
-      convolving = true;
     }
   }
 }
