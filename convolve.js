@@ -228,7 +228,7 @@
     if (impulseNode) { // ...   and clear anything we are currently playing.
       impulseNode.disconnect(audioContext.destination);
 
-    } else if (convolving == true) { //stop and clear convolution if told to stop by handleStop
+    } else if (convolving == false) { //stop and clear convolution if told to stop by handleStop
       impulseNode.disconnect(audioContext.destination);
       console.log('handleConvolve: stop');
       return;
