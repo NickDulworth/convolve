@@ -373,11 +373,12 @@ function toggleConvolve() {
     if (convolving == true) { //stop convolving
       // handleStop();
       // convolving = false;
-      convolveStopCommand = 1;
+      convolveStopCommand = true;
       handleConvolve();
+      handleStop_noSuspend();
     } 
     else if (convolving == false) { // start convolving
-      convolveStopCommand = 0;
+      convolveStopCommand = false;
       
       handleConvolve();
       convolving = true;
