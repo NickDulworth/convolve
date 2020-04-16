@@ -264,51 +264,53 @@
   }
 
   function selectImpulse(impulse) {
-    if (recording == false) { // lock buttons if recording
-
-      if (convolving) { //if impulse changes while convolving, stop convolving
-      handleStop();
-      }
-
-      //impulses
-      selected_impulse = impulse;
-      document.getElementById('impulse-0').classList.remove('Card__selected');
-      document.getElementById('impulse-1').classList.remove('Card__selected');
-      document.getElementById('impulse-2').classList.remove('Card__selected');
-      document.getElementById('impulse-3').classList.remove('Card__selected');
-      document.getElementById('impulse-4').classList.remove('Card__selected');
-      document.getElementById('impulse-' + impulse).classList.add('Card__selected');
-
-      //images
-      if (impulse == 0){
-        document.getElementById("bgnDiv").style.backgroundImage = "url(images/0.jpg)";
-      }
-      else if (impulse == 1) {
-        document.getElementById("bgnDiv").style.backgroundImage = "url(images/1.jpg)";
-      }
-      else if (impulse == 2) {
-      document.getElementById("bgnDiv").style.backgroundImage = "url(images/2.jpg)";
-      }
-      else if (impulse == 3) {
-      document.getElementById("bgnDiv").style.backgroundImage = "url(images/3.jpg)";
-      }
-      else if (impulse == 4) {
-      document.getElementById("bgnDiv").style.backgroundImage = "url(images/4.jpg)";
-      }
-
-      //room description - enter text in html file
-      document.getElementById('roomDescription-0').style.display = "none";
-      document.getElementById('roomDescription-1').style.display = "none";
-      document.getElementById('roomDescription-2').style.display = "none";
-      document.getElementById('roomDescription-3').style.display = "none";
-      document.getElementById('roomDescription-4').style.display = "none";
-      document.getElementById('roomDescription-' + impulse).style.display = "inline";
+    if (recording == true) { // lock buttons if recording
+      return;
     }
+
+    if (convolving) { //if impulse changes while convolving, stop convolving
+    handleStop();
+    }
+
+    //impulses
+    selected_impulse = impulse;
+    document.getElementById('impulse-0').classList.remove('Card__selected');
+    document.getElementById('impulse-1').classList.remove('Card__selected');
+    document.getElementById('impulse-2').classList.remove('Card__selected');
+    document.getElementById('impulse-3').classList.remove('Card__selected');
+    document.getElementById('impulse-4').classList.remove('Card__selected');
+    document.getElementById('impulse-' + impulse).classList.add('Card__selected');
+
+    //images
+    if (impulse == 0){
+      document.getElementById("bgnDiv").style.backgroundImage = "url(images/0.jpg)";
+    }
+    else if (impulse == 1) {
+      document.getElementById("bgnDiv").style.backgroundImage = "url(images/1.jpg)";
+    }
+    else if (impulse == 2) {
+    document.getElementById("bgnDiv").style.backgroundImage = "url(images/2.jpg)";
+    }
+    else if (impulse == 3) {
+    document.getElementById("bgnDiv").style.backgroundImage = "url(images/3.jpg)";
+    }
+    else if (impulse == 4) {
+    document.getElementById("bgnDiv").style.backgroundImage = "url(images/4.jpg)";
+    }
+
+    //room description - enter text in html file
+    document.getElementById('roomDescription-0').style.display = "none";
+    document.getElementById('roomDescription-1').style.display = "none";
+    document.getElementById('roomDescription-2').style.display = "none";
+    document.getElementById('roomDescription-3').style.display = "none";
+    document.getElementById('roomDescription-4').style.display = "none";
+    document.getElementById('roomDescription-' + impulse).style.display = "inline";
   }
 
   function selectSource(source) {
-    // handleStop(); //ND - cannot have a handle stop here becuase it over
-    if (recording == false) { // lock buttons if recording
+    // handleStop(); //ND - cannot have a handle stop here becuase? 
+
+    if (recording == true) { // lock buttons if recording
       return;
     }
 
