@@ -229,9 +229,9 @@
       impulseNode.disconnect(audioContext.destination);
 
     } else if (convolving === false) { //stop and clear convolution if told to stop by handleStop
-      impulseNode.disconnect(audioContext.destination);
-      console.log('handleConvolve: stop');
-      return;
+      // impulseNode.disconnect(audioContext.destination);
+      // console.log('handleConvolve: stop');
+      // return;
     }
 
     let convolvedNode = null;
