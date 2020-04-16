@@ -338,8 +338,18 @@
     document.getElementById('source-' + source).classList.add('Card__selected'); 
   }
 
+  // function handleStop() {
+  //   audioContext.suspend();
+  //   convolving = false;
+  //   recording = false;
+  //   document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+  //   console.log('handleStop: stop');
+  // }
+
   function handleStop() {
-    audioContext.suspend();
+    // audioContext.suspend();
+    convolveStopCommand = true;
+    handleConvolve();
     convolving = false;
     recording = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
@@ -371,12 +381,7 @@ function toggleConvolve() {
       // selectImpulse(0); //select recording as source
   } else {
     if (convolving == true) { //stop convolving
-      // handleStop();
- 
-      convolveStopCommand = true;
-      handleConvolve();
       handleStop();
-      convolving = false;
     } 
     else if (convolving == false) { // start convolving
       convolveStopCommand = false;
