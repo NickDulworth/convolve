@@ -102,17 +102,17 @@
     recording = true;
 
     console.log('startRecording: Start Recording!');
-    // format record button
-    document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i classList="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
-    //format master stop button and record card
+
+    //format master stop button and record card and record button
     document.getElementById('source-0').classList.add('Card__recording');
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+    document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Save</span>';
   }
 
   function stopRecording() {
     have_recording = true;
     recording = false;
-    console.log('stopRecording: stop recording!');
+    console.log('stopRecording: Stop Recording!');
 
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     document.getElementById('source-0').classList.remove('Card__recording'); 
@@ -228,7 +228,7 @@
     if (convolving === false) { //...  clear convolution IF told to stop by handleStop
       impulseNode.disconnect(audioContext.destination);
       impulseNode = null;
-      console.log('handleConvolve: stop');
+      console.log('handleConvolve: Stop Convolving!');
       return;
     }
     if (impulseNode) { // ...   and clear anything we are currently playing.
@@ -343,16 +343,17 @@
   function handleStop() {
     if (convolving === true) {
     convolving = false;
+    console.log('handleStop_noSuspend: Stop Convolving!');
     }
     
     if (recording === true) {
     recording = false;
+    console.log('handleStop_noSuspend: Stop Recording!');
     }
-    
+
     handleConvolve(); //if convolving = false then handlConvolve will stop
     
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-    console.log('handleStop: stop');
   }
 
   function handleStop_noSuspend() {
@@ -361,13 +362,15 @@
 
     if (convolving === true) {
     convolving = false;
+    console.log('handleStop_noSuspend: Stop Convolving!');
     }
     
     if (recording === true) {
     recording = false;
+    console.log('handleStop_noSuspend: Stop Recording!');
     }
+
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-    console.log('handleStop_noSuspend: stop');
   }
 
 
