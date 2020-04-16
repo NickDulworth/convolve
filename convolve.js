@@ -228,10 +228,10 @@
     if (impulseNode) { // ...   and clear anything we are currently playing.
       impulseNode.disconnect(audioContext.destination);
 
-    } else if (convolving === false) { //stop and clear convolution if told to stop by handleStop
-      // impulseNode.disconnect(audioContext.destination);
-      // console.log('handleConvolve: stop');
-      // return;
+    } else if (convolving === false) { //...     clear convolution if told to stop by handleStop
+      impulseNode.disconnect(audioContext.destination);
+      console.log('handleConvolve: stop');
+      return;
     }
 
     let convolvedNode = null;
@@ -269,10 +269,9 @@
   }
 
   function selectImpulse(impulse) {
-    if (recording === true) { // lock buttons if recording
+    if (recording === true) { // lock impulse buttons if recording
       return;
     }
-
 
     if (convolving === true) { //if impulse changes while convolving, stop convolving
     handleStop();
@@ -314,8 +313,8 @@
   }
 
   function selectSource(source) {
-    if (recording === true) { // lock other buttons if recording
-      if (source > 0) {
+    if (recording === true) { // lock souce buttons if recording
+      if (source > 0) { // except source 0 (record yourself)
       return;
       }
     }
