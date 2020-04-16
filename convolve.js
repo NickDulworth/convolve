@@ -390,11 +390,7 @@ function toggleConvolve() {
   // document.getElementById('play-recording-btn').onclick = handleTogglePreviewRecording;
 
   // convolve
-  // document.getElementById('convolve-btn').onclick = handleConvolve;
   document.getElementById('convolve-btn').onclick = toggleConvolve;
-
-  // // stop playback
-  // document.getElementById('stop-btn').onclick = handleStop;
 
   // select impulse / image / room description
   document.getElementById('impulse-0').onclick = () => selectImpulse(0);
@@ -414,8 +410,8 @@ function toggleConvolve() {
   document.getElementById('toggleFullscreen').onclick = handleToggleFullscreen; // toggle fullscreen
 
 
-// toggle fullscreen ////////////////////////////////////////////////////////////
 
+// toggle fullscreen ////////////////////////////////////////////////////////////
   function enterFullscreen() {
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
