@@ -309,19 +309,20 @@
   function selectSource(source) {
     // handleStop(); //ND - cannot have a handle stop here becuase it over
     if (recording == false) { // lock buttons if recording
+      return;
+    }
 
-      if (convolving) { //if impulse changes while convolving, stop convolving
-        handleStop();
-      }
+    if (convolving) { //if impulse changes while convolving, stop convolving
+      handleStop();
+    }
 
-      selected_source = source;
-      document.getElementById('source-0').classList.remove('Card__selected');
-      document.getElementById('source-1').classList.remove('Card__selected');
-      document.getElementById('source-2').classList.remove('Card__selected');
-      document.getElementById('source-3').classList.remove('Card__selected');
-      document.getElementById('source-4').classList.remove('Card__selected');
-      document.getElementById('source-' + source).classList.add('Card__selected');
-    } 
+    selected_source = source;
+    document.getElementById('source-0').classList.remove('Card__selected');
+    document.getElementById('source-1').classList.remove('Card__selected');
+    document.getElementById('source-2').classList.remove('Card__selected');
+    document.getElementById('source-3').classList.remove('Card__selected');
+    document.getElementById('source-4').classList.remove('Card__selected');
+    document.getElementById('source-' + source).classList.add('Card__selected'); 
   }
 
   function handleStop() {
