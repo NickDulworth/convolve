@@ -258,7 +258,8 @@
     //reset stop button at end of file
     if (convolving == true) {
       convolvedNode.onended = function(event) {
-        handleStop();
+        // handleStop(); handlestop makes playback weird later on
+        handleStop_noSuspend();
       }
     }   
   }
@@ -332,6 +333,13 @@
 
   function handleStop() {
     audioContext.suspend();
+    convolving = false;
+    recording = false;
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
+    console.log('handleStop: stop');
+  }
+
+  function handleStop_noSuspend() {
     convolving = false;
     recording = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
