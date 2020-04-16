@@ -104,7 +104,7 @@
 
     console.log('startRecording: Start Recording!');
     // format record button
-    document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
+    document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i classList="fas fa-save"></i></span><span style="font-family:Arial Narrow"> Store</span>';
     //format master stop button and record card
     document.getElementById('source-0').classList.add('Card__recording');
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
@@ -200,6 +200,10 @@
   }
 
   function handleToggleRecording() {
+    if (convolving == true) { // do nothing if currently convolving
+      return;
+    }
+
     if (recording == false){ //if not recording then start
       startRecording(); //start recording
       console.log('handleToggleRecording: Start Recording!');
@@ -346,9 +350,11 @@ function toggleConvolve() {
   } else {
     if (convolving == true) { //stop convolving
       handleStop();
+      convolving = false;
     } 
     else if (convolving == false) { // start convolving
       handleConvolve();
+      convolving = true;
     }
   }
 }
@@ -373,14 +379,6 @@ function toggleConvolve() {
   document.getElementById('impulse-2').onclick = () => selectImpulse(2);
   document.getElementById('impulse-3').onclick = () => selectImpulse(3);
   document.getElementById('impulse-4').onclick = () => selectImpulse(4);
-
-  // //default room decription
-  // document.getElementById('roomDescription-0').style.display = "inline";
-  // document.getElementById('roomDescription-1').style.display = "none";
-  // document.getElementById('roomDescription-2').style.display = "none";
-  // document.getElementById('roomDescription-3').style.display = "none";
-  // document.getElementById('roomDescription-4').style.display = "none";
-
 
   // select source
   document.getElementById('source-0').onclick = () => selectSource(0); // source-0 is user recording
