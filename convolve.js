@@ -341,17 +341,31 @@
   // }
 
   function handleStop() {
-    // audioContext.suspend();
+    if (convolving === true) {
     convolving = false;
+    }
+    
+    if (recording === true) {
     recording = false;
+    }
+    
     handleConvolve(); //if convolving = false then handlConvolve will stop
+    
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('handleStop: stop');
   }
 
   function handleStop_noSuspend() {
+    // convolving = false;
+    // recording = false;
+
+    if (convolving === true) {
     convolving = false;
+    }
+    
+    if (recording === true) {
     recording = false;
+    }
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     console.log('handleStop_noSuspend: stop');
   }
