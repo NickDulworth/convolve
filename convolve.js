@@ -223,14 +223,13 @@
       return alert("Record a clip first");
     }
 
-    // Pause ..... 
+    // Pause ..... and clear anything we are currently playing.
     audioContext.suspend();
-
-    if (convolveStopCommand == true) { //stop and clear convolution
+    if (impulseNode) {
+      impulseNode.disconnect(audioContext.destination);
+    } else if (convolveStopCommand == true) { //stop and clear convolution if told to stop by handleStop
       impulseNode.disconnect(audioContext.destination);
       return;
-    } else if (impulseNode) { //       ..... and clear anything we are currently playing.
-      impulseNode.disconnect(audioContext.destination);
     }
 
     let convolvedNode = null;
