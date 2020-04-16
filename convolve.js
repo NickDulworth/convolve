@@ -9,7 +9,7 @@
   let recording = false;
   let fullscreen = false;
   var convolving = false;
-  var stopCommand = false;
+  var convolveStopCommand = false; // eventually remove and use "convolving" above
 
   let recordingAudioBuffer = null; // type AudioBuffer
   let have_recording = false;
@@ -214,12 +214,19 @@
   }
 
   function handleConvolve() {
+
     if (selected_source == -1 || selected_impulse == -1) {
       return alert('Select source and impulse.');
     }
 
     if (selected_source == 0 && !have_recording) {
       return alert("Record a clip first");
+    }
+
+    if (convolveStopCommand == true) { //stop and clear convolution
+      audioContext.suspend();
+      impulseNode.disconnect(audioContext.destination);
+      return;
     }
 
     // Pause and clear anything we are currently playing.
@@ -343,7 +350,7 @@
     convolving = false;
     recording = false;
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
-    console.log('handleStop: stop');
+    console.log('handleStop_noSuspend: stop');
   }
 
 
@@ -364,10 +371,14 @@ function toggleConvolve() {
       // selectImpulse(0); //select recording as source
   } else {
     if (convolving == true) { //stop convolving
-      handleStop();
-      convolving = false;
+      // handleStop();
+      // convolving = false;
+      convolveStopCommand = 1;
+      handleConvolve();
     } 
     else if (convolving == false) { // start convolving
+      convolveStopCommand = 0;
+      
       handleConvolve();
       convolving = true;
     }
