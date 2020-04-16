@@ -311,8 +311,10 @@
   function selectSource(source) {
     // handleStop(); //ND - cannot have a handle stop here becuase? 
 
-    if (recording == true) { // lock buttons if recording
+    if (recording == true) { // lock other buttons if recording
+      if (source > 0) {
       return;
+      }
     }
 
     if (convolving) { //if impulse changes while convolving, stop convolving
@@ -351,6 +353,7 @@
 function toggleConvolve() {
   if (recording == true) { // if recording, stop button stops recording and formats buttons
       stopRecording(); //stop recording
+      // selectImpulse(0); //select recording as source
   } else {
     if (convolving == true) { //stop convolving
       handleStop();
