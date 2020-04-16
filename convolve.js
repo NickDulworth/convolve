@@ -372,10 +372,10 @@ function toggleConvolve() {
   } else {
     if (convolving == true) { //stop convolving
       // handleStop();
-      // convolving = false;
+ 
       convolveStopCommand = true;
       handleConvolve();
-      handleStop_noSuspend();
+      convolving = false;
     } 
     else if (convolving == false) { // start convolving
       convolveStopCommand = false;
