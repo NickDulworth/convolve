@@ -372,12 +372,12 @@
 function toggleConvolve() {
   if (recording == true) { // if recording, stop button stops recording and formats buttons
       stopRecording(); //stop recording
-      // selectImpulse(0); //select recording as source
   } else {
     if (convolving == true) { //stop convolving
       handleStop();
     } 
-    else if (convolving == false) { // start convolving
+    else { // start convolving
+      convolving = true;
       handleConvolve();
     }
   }
