@@ -199,7 +199,8 @@
   }
 
   function handleToggleRecording() {
-    if (convolving === true) { // do nothing if currently convolving
+    if (convolving === true) { // stop convolving if currently convolving
+      handleStop();
       return;
     }
 
