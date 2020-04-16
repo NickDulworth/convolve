@@ -266,6 +266,7 @@
       handleStop();
       }
 
+      //impulses
       selected_impulse = impulse;
       document.getElementById('impulse-0').classList.remove('Card__selected');
       document.getElementById('impulse-1').classList.remove('Card__selected');
@@ -290,7 +291,14 @@
       else if (impulse == 4) {
       document.getElementById("bgnDiv").style.backgroundImage = "url(images/4.jpg)";
       }
-      else {}
+
+      //room description - enter text in html file
+      document.getElementById('roomDescription-0').style.display = "none";
+      document.getElementById('roomDescription-1').style.display = "none";
+      document.getElementById('roomDescription-2').style.display = "none";
+      document.getElementById('roomDescription-3').style.display = "none";
+      document.getElementById('roomDescription-4').style.display = "none";
+      document.getElementById('roomDescription-' + impulse).style.display = "inline";
     }
   }
 
@@ -359,12 +367,20 @@ function toggleConvolve() {
   // // stop playback
   // document.getElementById('stop-btn').onclick = handleStop;
 
-  // select impulse / image  
+  // select impulse / image / room description
   document.getElementById('impulse-0').onclick = () => selectImpulse(0);
   document.getElementById('impulse-1').onclick = () => selectImpulse(1);
   document.getElementById('impulse-2').onclick = () => selectImpulse(2);
   document.getElementById('impulse-3').onclick = () => selectImpulse(3);
   document.getElementById('impulse-4').onclick = () => selectImpulse(4);
+
+  // //default room decription
+  // document.getElementById('roomDescription-0').style.display = "inline";
+  // document.getElementById('roomDescription-1').style.display = "none";
+  // document.getElementById('roomDescription-2').style.display = "none";
+  // document.getElementById('roomDescription-3').style.display = "none";
+  // document.getElementById('roomDescription-4').style.display = "none";
+
 
   // select source
   document.getElementById('source-0').onclick = () => selectSource(0); // source-0 is user recording
