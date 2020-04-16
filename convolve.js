@@ -174,7 +174,7 @@
     previewingRecording = true;
     console.log('handlePlay Recording: Preview Recording!');
 
-    // if (previewingRecording == false) {
+    // if (previewingRecording === false) {
     // // Connect it to the audio output so we can play it.
     // recordingNode.connect(audioContext.destination);
 
@@ -183,7 +183,7 @@
     // recordingNode.start();
     // previewingRecording = true;
     // console.log('handlePlay Recording: Preview Recording!');
-    // } else if (previewingRecording == true) {
+    // } else if (previewingRecording === true) {
 
     // // Play it.
     // // audioContext.suspend(); //is needed in lots of places?
@@ -199,11 +199,11 @@
   }
 
   function handleToggleRecording() {
-    if (convolving) { // do nothing if currently convolving
+    if (convolving === true) { // do nothing if currently convolving
       return;
     }
 
-    if (recording == false){ //if not recording then start
+    if (recording === false){ //if not recording then start
       startRecording(); //start recording
       console.log('handleToggleRecording: Start Recording!');
     } else { //stop recording
@@ -214,11 +214,11 @@
 
   function handleConvolve() {
 
-    if (selected_source == -1 || selected_impulse == -1) {
+    if (selected_source === -1 || selected_impulse === -1) {
       return alert('Select source and impulse.');
     }
 
-    if (selected_source == 0 && !have_recording) {
+    if (selected_source === 0 && !have_recording) {
       return alert("Record a clip first");
     }
 
@@ -228,7 +228,7 @@
     if (impulseNode) { // ...   and clear anything we are currently playing.
       impulseNode.disconnect(audioContext.destination);
 
-    } else if (convolving == false) { //stop and clear convolution if told to stop by handleStop
+    } else if (convolving === false) { //stop and clear convolution if told to stop by handleStop
       impulseNode.disconnect(audioContext.destination);
       console.log('handleConvolve: stop');
       return;
@@ -269,12 +269,12 @@
   }
 
   function selectImpulse(impulse) {
-    if (recording == true) { // lock buttons if recording
+    if (recording === true) { // lock buttons if recording
       return;
     }
 
 
-    if (convolving) { //if impulse changes while convolving, stop convolving
+    if (convolving === true) { //if impulse changes while convolving, stop convolving
     handleStop();
     }
 
@@ -288,19 +288,19 @@
     document.getElementById('impulse-' + impulse).classList.add('Card__selected');
 
     //images
-    if (impulse == 0){
+    if (impulse === 0){
       document.getElementById("bgnDiv").style.backgroundImage = "url(images/0.jpg)";
     }
-    else if (impulse == 1) {
+    else if (impulse === 1) {
       document.getElementById("bgnDiv").style.backgroundImage = "url(images/1.jpg)";
     }
-    else if (impulse == 2) {
+    else if (impulse === 2) {
     document.getElementById("bgnDiv").style.backgroundImage = "url(images/2.jpg)";
     }
-    else if (impulse == 3) {
+    else if (impulse === 3) {
     document.getElementById("bgnDiv").style.backgroundImage = "url(images/3.jpg)";
     }
-    else if (impulse == 4) {
+    else if (impulse === 4) {
     document.getElementById("bgnDiv").style.backgroundImage = "url(images/4.jpg)";
     }
 
@@ -314,13 +314,13 @@
   }
 
   function selectSource(source) {
-    if (recording == true) { // lock other buttons if recording
+    if (recording === true) { // lock other buttons if recording
       if (source > 0) {
       return;
       }
     }
 
-    if (convolving) { //if impulse changes while convolving, stop convolving
+    if (convolving === true) { //if impulse changes while convolving, stop convolving
       handleStop();
     }
 
@@ -370,10 +370,10 @@
   // }
 
 function toggleConvolve() {
-  if (recording == true) { // if recording, stop button stops recording and formats buttons
+  if (recording === true) { // if recording, stop button stops recording and formats buttons
       stopRecording(); //stop recording
   } else {
-    if (convolving == true) { //stop convolving
+    if (convolving === true) { //stop convolving
       handleStop();
     } 
     else { // start convolving
