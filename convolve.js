@@ -16,6 +16,7 @@
   let recordingNode = null;
   let previewingRecording = false;
 
+
   var elem = document.documentElement; //fullscreen button related
 
   const impulses = [
@@ -467,6 +468,8 @@ function toggleConvolve() {
       closeFullscreen();
     }
   }
+
+
 
 
 })();

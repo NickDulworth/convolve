@@ -21,95 +21,120 @@
   <body>
     <div id="bgnDiv"><!-- contains background image -->
 
+
 	    <button id="toggleFullscreen" class="Button">
 	            <span style="font-family:Karla"> <i class="fas fa-expand"></i></span>&nbsp;Enter Fullscreen
 	    </button>
- 
+
+
  <!-- Audto control //////////////////////////////////////////////////////////////////////////////////////////////-->
     <div class="App">
-      <div class="AppContent" id="AppContentID">
+      <div class="AppContent" id="AppContentID">	
 
-  	<!-- Select source ////////////////////////////////////////////////////////-->   
-        <div class="CardList">
-          <h2>1. Select Source</h2>
-          <div id="source-0" class="recordingCard">
-            <div class="Card__title">Record Yourself</div>
-            <div style="height: 8px"></div>
-            <button id="record" class="Button Button__danger">
-              <span style="font-family:Karla"> <i class="fas fa-microphone"></i></span>
-              <span style="font-family:Arial Narrow"> Record</span>
-            </button>
-
-<!-- ///// hid preview button for now - also commented out .onclick line in user control section of js /////
-            &nbsp;
-            
-            <button id="play-recording-btn" class="Button">
-              <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
-              <span style="font-family:Arial Narrow">Preview Recording</span>
-            </button> -->
-
-          </div> <!-- Card -->
-          
-          <div id="source-1" class="Card Card__selected">
-            <div class="Card__title">Clarinet</div>
-            <div class="Card__description">"Sweet Child O' Mine" by Johann Sebastian Bach</div>
-          </div> <!-- Card -->
-          
-          <div id="source-2" class="Card">
-            <div class="Card__title">Violin</div>
-            <div class="Card__description">by DJ Mozart</div>
-          </div> <!-- Card -->
-		  
-		  <div id="source-3" class="Card">
-            <div class="Card__title">Monologue</div>
-            <div class="Card__description">"Sweet Child O' Mine" by Johann Sebastian Bach</div>
-          </div> <!-- Card -->
-          
-          <div id="source-4" class="Card">
-            <div class="Card__title">Stereo Test</div>
-            <div class="Card__description">by DJ Mozart</div>
-          </div> <!-- Card -->
-
-        </div> <!-- CardList -->
+  	
 
 
   <!-- Select Impulse ////////////////////////////////////////////////////////          -->
 
 
         <div class="CardList">
-          <h2>2. Select Room Model</h2>
+          <h2>Room</h2>
 
-          <div id="impulse-0" class="Card Card__selected">
-            <div class="Card__title">Fancy Room in a swamp with opera</div>
-            <div class="Card__description">Anytown, USA</div>
-          </div> <!-- Card -->
+          <div class="dropup">
+		  	<button class="dropbtn">Dropup</button>
+		  	<div class="dropup-content">
 
-          <div id="impulse-1" class="Card">
-            <div class="Card__title">Fancy Room in a swamp with opera</div>
-            <div class="Card__description"> but curtains for some reason| Bahamas, The World</div>
-          </div> <!-- Card -->
+	          <div id="impulse-0" class="Card Card__selected">
+	            <div class="Card__title">Fancy Room in a swamp with opera</div>
+	            <div class="Card__description">Anytown, USA</div>
+	          </div> <!-- Card -->
 
-          <div id="impulse-2" class="Card">
-            <div class="Card__title">Music Room with no windows</div>
-            <div class="Card__description">Somewhere</div>
-          </div> <!-- Card -->
+	          <div id="impulse-1" class="Card">
+	            <div class="Card__title">Fancy Room in a swamp with opera</div>
+	            <div class="Card__description"> but curtains for some reason| Bahamas, The World</div>
+	          </div> <!-- Card -->
 
-          <div id="impulse-3" class="Card">
-            <div class="Card__title">Wmusic Room with no windows</div>
-            <div class="Card__description">oh no! the walls are closing in!</div>
-          </div> <!-- Card -->
+	          <div id="impulse-2" class="Card">
+	            <div class="Card__title">Music Room with no windows</div>
+	            <div class="Card__description">Somewhere</div>
+	          </div> <!-- Card -->
 
-          <div id="impulse-4" class="Card">
-            <div class="Card__title">Small Theatre of the Frozen North</div>
-            <div class="Card__description">Somewhere</div>
-          </div> <!-- Card -->
+	          <div id="impulse-3" class="Card">
+	            <div class="Card__title">Wmusic Room with no windows</div>
+	            <div class="Card__description">oh no! the walls are closing in!</div>
+	          </div> <!-- Card -->
+
+	          <div id="impulse-4" class="Card">
+	            <div class="Card__title">Small Theatre of the Frozen North</div>
+	            <div class="Card__description">Somewhere</div>
+	          </div> <!-- Card -->
+
+
+            </div> <!-- dropup-content -->
+		</div> <!-- dropup -->
+    </div> <!-- CardList -->
+
+
+<!-- Select source ////////////////////////////////////////////////////////-->   
+        <div class="CardList">
+          <h2>Source</h2>
+
+
+		<div class="dropup">
+		  <button class="dropbtn">Dropup</button>
+		  <div class="dropup-content">
+
+	          <div id="source-0" class="recordingCard">
+	            <div class="Card__title">Record Yourself</div>
+	            <div style="height: 8px"></div>
+	            <button id="record" class="Button Button__danger">
+	              <span style="font-family:Karla"> <i class="fas fa-microphone"></i></span>
+	              <span style="font-family:Arial Narrow"> Record</span>
+	            </button>
+
+	<!-- ///// hid preview button for now - also commented out .onclick line in user control section of js /////
+	            &nbsp;
+	            
+	            <button id="play-recording-btn" class="Button">
+	              <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
+	              <span style="font-family:Arial Narrow">Preview Recording</span>
+	            </button> -->
+
+
+
+	          </div> <!-- Card --> 
+	          <div id="source-1" class="Card Card__selected">
+	            <div class="Card__title">Clarinet</div>
+	            <div class="Card__description">"Sweet Child O' Mine" by Johann Sebastian Bach</div>
+	          </div> <!-- Card -->
+	          
+	          <div id="source-2" class="Card">
+	            <div class="Card__title">Violin</div>
+	            <div class="Card__description">by DJ Mozart</div>
+	          </div> <!-- Card -->
+			  
+			  <div id="source-3" class="Card">
+	            <div class="Card__title">Monologue</div>
+	            <div class="Card__description">"Sweet Child O' Mine" by Johann Sebastian Bach</div>
+	          </div> <!-- Card -->
+	          
+	          <div id="source-4" class="Card">
+	            <div class="Card__title">Stereo Test</div>
+	            <div class="Card__description">by DJ Mozart</div>
+	          </div> <!-- Card -->
+
+
+            </div> <!-- dropup-content -->
+		</div> <!-- dropup -->
         </div> <!-- CardList -->
+
+
 
   <!-- Play Source in Room ////////////////////////////////////////////////////////          -->
 
 
         <div class="CardList">
-          <h2>3. Listen In Room</h2>
+          <h2>Listen</h2>
 
           <button id="convolve-btn" class="Button Button__large">
           <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
@@ -132,6 +157,16 @@
 
     <!-- Room 0 Description  ////////////////////////////////////////////////////////          -->
     <div class="stuff">
+
+	    <div class="dropdown">
+  			<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  			<div id="myDropdown" class="dropdown-content">
+   				<a href="#home">Home</a>
+    			<a href="#about">About</a>
+    			<a href="#contact">Contact</a>
+  			</div> <!-- dropdown-content -->
+		</div> <!-- dropdown -->
+ 
 		<div class="roomDescription">
 			<div id="roomDescription-0" style="display: inline">
 				<h2>Room 0</h2>
@@ -274,6 +309,28 @@
 
     <script src="vendor/reverb.js"></script>
     <script src="convolve.js"></script>
+
+    <script> //drop down
+		/* When the user clicks on the button, 
+		toggle between hiding and showing the dropdown content */
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
+		}
+	</script>
 
   </body>
 </html>

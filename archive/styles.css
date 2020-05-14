@@ -1,0 +1,449 @@
+:root {
+  --primary-color: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
+
+  --secondary-color: rgba(255, 255, 255, 0.0);
+
+  --card-color: rgba(255, 255, 255, 0.6);
+  --selected-card-color: rgba(0, 0, 0, .6);
+
+/*  --card-color: rgba(0, 0, 0, 0.5);*/
+
+  --recording-color: rgba(235, 33, 46, .6);/*#eb212e; TA Red */
+  --not-recording-color: rgba(0, 0, 0, .75);
+  --ta-red: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
+
+  --card-font-color: black;
+  --selected-card-font-color: white;
+
+  --surface-color: white;
+  --bg-hover-color: #f2f2f2;
+  --surface-hover-color: hsl(0, 0%, 98%);
+
+  --primary-font-color: black;
+  --secondary-font-color: black;
+  --button-font-color: black;
+
+  --on-background: rgba(255, 255, 255, 0.87);
+  --on-surface: rgba(255, 255, 255, 0.6);
+  --on-primary: #fff;
+  --on-secondary: #000;
+
+  /* spacing t-shirt sizes */
+  --spacing-none: 0;
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+  --spacing-xxxl: 48px;
+  --spacing-xxxxl: 64px;
+
+  /* radii */
+  --radius-sm: 0.1rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
+  --radius-xxl: 2rem;
+  --radius-circle: 50%;
+
+/*  --danger: #f53d4e;*/
+  --danger: #eb212e;
+}
+
+#record {
+width: 87px;
+}
+
+html {
+    background: black;
+}
+
+/*@import url(//db.onlinewebfonts.com/c/85aa81413708ebb77a4ed7712511b8aa?family=Univers);
+
+@font-face {font-family: "Univers"; src: url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.eot"); src: url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.woff") format("woff"), url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.svg#Univers") format("svg"); }
+
+*/
+
+
+body {
+  padding: 0;
+  margin: 0;
+
+/*  font-family: 'Karla', sans-serif;*/
+/*  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  font-family: Arial Narrow, sans-serif; 
+  color: var(--primary-font-color);
+}
+
+/* not used, use for non bgn image*/
+.classImageViewer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+  height: auto;
+}
+
+p {
+  margin-top: 0;
+}
+
+#bgnDiv { /*background image*/
+  background: url(images/0.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#toggleFullscreen {
+position: absolute;
+top: 1rem;
+left: 1rem;
+
+/*    position: absolute;
+    top: 1rem;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+*/
+}
+
+.roomDescription {
+  text-align: right;
+  color: white;
+  width: 300px;
+
+  position: absolute;
+  top: 4rem;
+  /*bottom: auto;
+  */
+  right: 1rem;
+  margin-top: 1rem;
+
+}
+
+ul {
+    padding: 1rem;
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+    padding-bottom: 0;
+    color: white;
+  }
+
+a {
+  color: white  
+}
+
+.taLink {
+/*  text-align: right;*/
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border: 4px solid transparent;
+  background: var(--card-color);
+  color: var(--card-font-color);
+/*  width: 400px;*/
+
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.logo {
+  width: 175px;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#link {
+  font-style: oblique;
+  font-size: .8rem;
+  color: black;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.App {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+
+  padding: 0;
+  margin: 0;
+}
+
+.AppContent {
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+  margin: 1rem;
+  margin-top: 5rem;
+ }
+
+/*
+needed if columns accross bottom of page*/
+/*.AppContent > *:not(:last-child) {
+  margin-right: 2rem;
+}*/
+
+.CardList {
+  display: inline-block;
+/*  padding: 1rem;*/
+  margin: 0;
+  margin-bottom: 1rem;
+
+  box-sizing: border-box;
+  align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+}
+
+/*margin between sub cards*/
+.CardList > *:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.Card {
+  width:271px;
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: var(--card-color);
+  color: var(--card-font-color);
+}
+
+/*same as .Card but narrower width*/
+.recordingCard { 
+  width:271px;
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: var(--card-color);
+  color: var(--card-font-color);
+}
+
+
+.Card__selected {
+  border: 1px solid var(--primary-color);
+
+  background: var(--selected-card-color);
+  color: var(--selected-card-font-color);
+  text-overflow: ellipsis;
+}
+
+.Card__recording {
+  border: 1px solid var(--primary-color);
+
+  background: var(--recording-color);
+  color: var(--selected-card-font-color);
+  text-overflow: ellipsis;
+}
+
+.Card__play {
+  border: 1px solid var(--primary-color);
+
+  background: var(--selected-card-color);
+  color: var(--selected-card-font-color);
+  text-overflow: ellipsis;
+}
+
+.Card__title {
+  font-weight: bold;
+}
+.Card__description {
+/*  color: var(--primary-font-color);*/
+}
+
+h2 {
+/*  width: 100%;*/
+  text-shadow: 0px 0px 3px black;
+/*  text-align: left;*/
+  margin-top: 0;
+  color: white;
+}
+
+
+.Button {
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xs) var(--spacing-md);
+/*  min-width: 3rem;*/
+/*  min-width: 100%;*/
+  font-weight: bold;
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--button-font-color);
+  background: var(--card-color);
+  outline: none;
+/*  border: 4px solid var(--card-color);*/
+  border: 0;
+
+  }
+
+.Button__danger {
+  min-width: 100%;
+  background: var(--danger);
+/*  border: 2px solid var(--danger);*/
+  color: var(--button-font-color);
+}
+
+.Button__large {
+  width: 8rem;
+/*  font-weight: bold;*/
+  line-height: 2.75rem;
+  font-size: 1.5rem;
+  background: var(--selected-card-color);
+  color: var(--selected-card-font-color);
+  border: 1px solid var(--primary-color);
+}
+
+/* Small Screens. */
+@media (max-width: 700px) {
+
+  .AppContent {
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    margin: 0rem;
+    margin-top: 5rem;
+   }
+
+  .CardList {
+      width: 100vw;
+      align-items: center;
+  }
+
+  .roomDescription {
+    text-align: center;
+  /*  color: white;
+    width: 400px;*/
+    position: relative;
+    top: 0;
+    /*bottom: auto;
+    */
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+  }
+
+  .stuff {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .taLink {
+  position: relative;
+  bottom: 0rem;
+  right: 0rem;
+  margin-bottom: 1rem;
+  }
+}
+
+/* Phones only. */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+/*  .CardList {
+    width: 100vw;
+    align-items: center;
+  }
+*/
+  body{
+    font-size: 1.8em;
+  }
+
+
+  .Card {
+    width: 60%;
+    max-width: unset;
+
+  }
+
+  .roomDescription {
+    text-align: center;
+  /*  color: white;
+    width: 400px;*/
+    position: relative;
+    top: 0;
+    /*bottom: auto;
+    */
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+  }
+
+   .AppContent {
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    margin: 0rem;
+    margin-top: 5rem;
+   }
+
+  .CardList {
+      width: 100vw;
+      align-items: center;
+  }
+
+/*room description class is different than small screens see aboev the line*/
+
+  .stuff {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .taLink {
+  position: relative;
+  bottom: 0rem;
+  right: 0rem;
+  margin-bottom: 1rem;
+  }
+
+
+}
+}
