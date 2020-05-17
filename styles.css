@@ -289,8 +289,8 @@ needed if columns accross bottom of page*/
 /*  border: 1px solid var(--primary-color);*/
 
   border: 1px solid transparent;
-
-  background: var(--recording-color);
+/*
+  background: var(--recording-color);*/
   color: var(--selected-card-font-color);
   text-overflow: ellipsis;
 }
@@ -339,6 +339,7 @@ h2 {
   outline: none;
 /*  border: 4px solid var(--card-color);*/
   border: 0;
+      cursor: pointer;
 
   }
 
@@ -352,16 +353,27 @@ h2 {
 }
 
 .Button__large {
+
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xs) var(--spacing-md);
+/*  min-width: 3rem;*/
+/*  min-width: 100%;*/
+  font-weight: bold;
+  line-height: 1.2rem;
+  outline: none;
+/*  border: 4px solid var(--card-color);*/
+
   width: 6rem;
 /*  font-weight: bold;*/
 /*  line-height: 2.75rem;*/
   height: 3.5rem;
   font-size: 1.5rem;
-  background: var(--card-color);
+/*  background: var(--card-color);*/
   color: var(--card-font-color);
 /*  border: 1px solid var(--primary-color);*/
 
   border: 1px solid transparent;
+    cursor: pointer;
 }
 
 
