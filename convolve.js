@@ -108,7 +108,7 @@
     document.getElementById('source-0').classList.add('Card__recording');
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
     document.getElementById('record').innerHTML = '<span style="font-family:Karla;"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow;"> Save</span>';
-	document.documentElement.style.setProperty('--card-color', "rgba(255, 255, 255, 0.95)";
+	document.documentElement.style.setProperty('--card-color', 'rgba(255, 255, 255, 0.95)';
 
   }
 
@@ -120,7 +120,7 @@
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     document.getElementById('source-0').classList.remove('Card__recording'); 
     document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
-    document.documentElement.style.setProperty('--card-color', "rgba(235, 33, 46, .95)";
+    document.documentElement.style.setProperty('--card-color', 'rgba(235, 33, 46, .95)';
     return;
   }
 
