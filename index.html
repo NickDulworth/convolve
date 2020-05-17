@@ -31,17 +31,39 @@
     <div class="App">
       <div class="AppContent" id="AppContentID">	
 
-  	
+ 
+
+   <!-- Play Source in Room ////////////////////////////////////////////////////////          -->
+
+
+        <div class="CardList">
+<!--           <h2>Listen</h2> -->
+
+          <button id="convolve-btn" class="Button Button__large">
+          <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
+          </button>
+
+
+	    	<!-- <ul>
+	           <li>Supported Browsers: Chrome.</li>
+	           <li>For best results use wired headphones.</li>
+	           <li>Avoid bluetooth devices as they can force mono playback.</li>
+	        </ul>
+ -->
+        </div> <!-- CardList -->
+
+
+<!-- /////////////////////////////// -->
 
 
   <!-- Select Impulse ////////////////////////////////////////////////////////          -->
 
 
         <div class="CardList">
-          <h2>Room</h2>
+<!--           <h2>Room</h2> -->
 
           <div class="dropup">
-		  	<button class="dropbtn">Dropup</button>
+		  	<button class="dropbtn">Pick a Room Model</button>
 		  	<div class="dropup-content">
 
 	          <div id="impulse-0" class="Card Card__selected">
@@ -77,11 +99,10 @@
 
 <!-- Select source ////////////////////////////////////////////////////////-->   
         <div class="CardList">
-          <h2>Source</h2>
-
+<!--           <h2>Source</h2> -->
 
 		<div class="dropup">
-		  <button class="dropbtn">Dropup</button>
+		  <button class="card dropbtn">Pick a Source or Make a Recording</button>
 		  <div class="dropup-content">
 
 	          <div id="source-0" class="recordingCard">
@@ -130,27 +151,7 @@
 
 
 
-  <!-- Play Source in Room ////////////////////////////////////////////////////////          -->
 
-
-        <div class="CardList">
-          <h2>Listen</h2>
-
-          <button id="convolve-btn" class="Button Button__large">
-          <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
-          </button>
-
-
-	    	<ul>
-	           <li>Supported Browsers: Chrome.</li>
-	           <li>For best results use wired headphones.</li>
-	           <li>Avoid bluetooth devices as they can force mono playback.</li>
-	        </ul>
-
-        </div> <!-- CardList -->
-
-
-<!-- /////////////////////////////// -->
 
   </div> <!-- AppContent -->
 
@@ -158,142 +159,21 @@
     <!-- Room 0 Description  ////////////////////////////////////////////////////////          -->
     <div class="stuff">
 
-	    <div class="dropdown">
-  			<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  			<div id="myDropdown" class="dropdown-content">
-   				<a href="#home">Home</a>
-    			<a href="#about">About</a>
-    			<a href="#contact">Contact</a>
-  			</div> <!-- dropdown-content -->
-		</div> <!-- dropdown -->
- 
-		<div class="roomDescription">
-			<div id="roomDescription-0" style="display: inline">
-				<h2>Room 0</h2>
-				<p> In a hole in the ground there lived a hobbit. Not 
-					a nasty, dirty, wet hole, filled with the ends of 
-					worms and an oozy smell, nor yet a dry, bare, 
-					sandy hole with nothing in it to sit down on or to 
-					eat: it was a hobbit-hole, and that means 
-					comfort. 
-				</p>
-				<p>
-					Owner: <a href="https://arts.brown.edu/" target="_blank">Brown Arts Initiative</a>
-					<br>
-					Architect: <a href="https://rex-ny.com/" target="_blank">RE&thinsp;X</a>
-					<br>
-					Theatre Consultant: <a href="http://theatreprojects.com/" target="_blank">Theatre Projects Consultants</a>
-					<br>
-					Acoustician: <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">Threshold Acoustics</a>
-				</p>
+		    <!-- <div class="dropdown">
+	  			<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+	  			<div id="myDropdown" class="dropdown-content">
+	   				<a href="#home">Home</a>
+	    			<a href="#about">About</a>
+	    			<a href="#contact">Contact</a>
+	  			</div>
+			</div>
 
-				<p>
-					For more information visit <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">thresholdacoustics.com/brown-pac</a>.
-				</p>
-			</div> <!-- id = room description X -->
+			 -->
 
-			<div id="roomDescription-1" style="display: none">
-				<h2>Room 1</h2>
-				<p> It is a period of civil wars in the galaxy. A brave alliance of underground freedom fighters has challenged the tyranny and oppression of the awesome GALACTIC EMPIRE.</p>
-				
-				<p>Striking from a fortress hidden among the billion stars of the galaxy, rebel spaceships have won their first victory in a battle with the powerful Imperial Starfleet. The EMPIRE fears that another defeat could bring a thousand more solar systems into the rebellion, and Imperial control over the galaxy would be lost forever.</p>
-
-				<p>To crush the rebellion once and for all, the EMPIRE is constructing a sinister new battle station. Powerful enough to destroy an entire planet, its completion spells certain doom for the champions of freedom.</p>
-
-				<p>
-					Owner: <a href="https://arts.brown.edu/" target="_blank">Brown Arts Initiative</a>
-					<br>
-					Architect: <a href="https://rex-ny.com/" target="_blank">RE&thinsp;X</a>
-					<br>
-					Theatre Consultant: <a href="http://theatreprojects.com/" target="_blank">Theatre Projects Consultants</a>
-					<br>
-					Acoustician: <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">Threshold Acoustics</a>
-				</p>
-
-				<p>
-					For more information visit <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">thresholdacoustics.com/brown-pac</a>.
-				</p>
-			</div> <!-- id = room description X -->
-
-			<div id="roomDescription-2" style="display: none">
-				<h2>Room 2</h2>
-				<p> In a hole in the ground there lived a hobbit. Not 
-					a nasty, dirty, wet hole, filled with the ends of 
-					worms and an oozy smell, nor yet a dry, bare, 
-					sandy hole with nothing in it to sit down on or to 
-					eat: it was a hobbit-hole, and that means 
-					comfort. 
-				</p>
-				<p>
-					Owner: <a href="https://arts.brown.edu/" target="_blank">Brown Arts Initiative</a>
-					<br>
-					Architect: <a href="https://rex-ny.com/" target="_blank">RE&thinsp;X</a>
-					<br>
-					Theatre Consultant: <a href="http://theatreprojects.com/" target="_blank">Theatre Projects Consultants</a>
-					<br>
-					Acoustician: <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">Threshold Acoustics</a>
-				</p>
-
-				<p>
-					For more information visit <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">thresholdacoustics.com/brown-pac</a>.
-				</p>
-			</div> <!-- id = room description X -->
-
-
-			<div id="roomDescription-3" style="display: none">
-				<h2>Room 3</h2>
-				<p> In a hole in the ground there lived a hobbit. Not 
-					a nasty, dirty, wet hole, filled with the ends of 
-					worms and an oozy smell, nor yet a dry, bare, 
-					sandy hole with nothing in it to sit down on or to 
-					eat: it was a hobbit-hole, and that means 
-					comfort. 
-				</p>
-				<p>
-					Owner: <a href="https://arts.brown.edu/" target="_blank">Brown Arts Initiative</a>
-					<br>
-					Architect: <a href="https://rex-ny.com/" target="_blank">RE&thinsp;X</a>
-					<br>
-					Theatre Consultant: <a href="http://theatreprojects.com/" target="_blank">Theatre Projects Consultants</a>
-					<br>
-					Acoustician: <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">Threshold Acoustics</a>
-				</p>
-
-				<p>
-					For more information visit <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">thresholdacoustics.com/brown-pac</a>.
-				</p>
-			</div> <!-- id = room description X -->
-
-
-			<div id="roomDescription-4" style="display: none">
-				<h2>Room 4</h2>
-				<p> In a hole in the ground there lived a hobbit. Not 
-					a nasty, dirty, wet hole, filled with the ends of 
-					worms and an oozy smell, nor yet a dry, bare, 
-					sandy hole with nothing in it to sit down on or to 
-					eat: it was a hobbit-hole, and that means 
-					comfort. 
-				</p>
-				<p>
-					Owner: <a href="https://arts.brown.edu/" target="_blank">Brown Arts Initiative</a>
-					<br>
-					Architect: <a href="https://rex-ny.com/" target="_blank">RE&thinsp;X</a>
-					<br>
-					Theatre Consultant: <a href="http://theatreprojects.com/" target="_blank">Theatre Projects Consultants</a>
-					<br>
-					Acoustician: <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">Threshold Acoustics</a>
-				</p>
-
-				<p>
-					For more information visit <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">thresholdacoustics.com/brown-pac</a>.
-				</p>
-			</div> <!-- id = room description X -->
-        </div> <!-- room descriptions -->
-	</div>
 
 
     <!-- TA link ////////////////////////////////////////////////////////          -->
-    <div class="CardList">   
+<!--     <div class="CardList">    -->
 	    <div class="taLink">
 	      	<div class="logo">
 	          	<a href="https://www.thresholdacoustics.com/" target="_blank"><img src="images/Threshold_Logo_Vector(3)-01.png" class="logo"></a>    
@@ -302,7 +182,13 @@
 	          	<a href="https://www.thresholdacoustics.com/" target="_blank" id="link">&copy;2020, Threshold Acoustics, LLC</a>
 				</div> <!-- logo -->
 		</div> <!-- Head -->
-    </div> <!-- CardList -->
+<!--     </div>  --><!-- CardList -->
+
+
+
+
+
+
     </div> <!-- App -->
 
   </div> <!-- bgnDiv -->

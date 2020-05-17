@@ -3,13 +3,13 @@
 
   --secondary-color: rgba(255, 255, 255, 0.0);
 
-  --card-color: rgba(255, 255, 255, 0.6);
-  --selected-card-color: rgba(0, 0, 0, .6);
+  --card-color: rgba(255, 255, 255, 0.95);
+  --selected-card-color: rgba(0, 0, 0, .95);
 
 /*  --card-color: rgba(0, 0, 0, 0.5);*/
 
-  --recording-color: rgba(235, 33, 46, .6);/*#eb212e; TA Red */
-  --not-recording-color: rgba(0, 0, 0, .75);
+  --recording-color: rgba(235, 33, 46, .95);/*#eb212e; TA Red */
+  --not-recording-color: rgba(0, 0, 0, .95);
   --ta-red: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
 
   --card-font-color: black;
@@ -58,6 +58,7 @@ width: 87px;
 
 html {
     background: black;
+
 }
 
 /*@import url(//db.onlinewebfonts.com/c/85aa81413708ebb77a4ed7712511b8aa?family=Univers);
@@ -70,6 +71,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+
 
 /*  font-family: 'Karla', sans-serif;*/
 /*  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;*/
@@ -102,6 +104,8 @@ p {
 position: absolute;
 top: 1rem;
 right: 1rem;
+
+  cursor: pointer;
 
 /*    position: absolute;
     top: 1rem;
@@ -143,7 +147,7 @@ a {
 /*  text-align: right;*/
   padding: var(--spacing-sm);
   box-sizing: border-box;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-sizing: border-box;
 
@@ -155,6 +159,8 @@ a {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+
+    cursor: pointer;
 }
 
 .logo {
@@ -191,9 +197,9 @@ a {
   justify-content: center;
 
   margin: 1rem;
-  margin-top: 5rem;
+/*  margin-top: 5rem;*/
 
-    position: fixed;
+  position: fixed;
   bottom: 0;
   left: 0;
  }
@@ -207,8 +213,9 @@ needed if columns accross bottom of page*/
 .CardList {
   display: inline-block;
 /*  padding: 1rem;*/
-  margin: 0;
-  margin-bottom: 1rem;
+  margin: 0rem;
+  margin-right: 1rem;
+/*  margin-bottom: 1rem;*/
 
   box-sizing: border-box;
   align-self: flex-start;
@@ -216,7 +223,7 @@ needed if columns accross bottom of page*/
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: left;
+  align-items: center;
 }
 
 /*margin between sub cards*/
@@ -225,37 +232,52 @@ needed if columns accross bottom of page*/
 }
 
 .Card {
-  width:271px;
+  min-width:271px;
+  min-height: 3.5rem;
+  text-align: center;
   padding: var(--spacing-sm);
   box-sizing: border-box;
 
   overflow: hidden;
   box-sizing: border-box;
 
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   border: 1px solid transparent;
+  
+  /*border: 1px solid black;
+  */
   background: var(--card-color);
   color: var(--card-font-color);
+
+  margin-bottom: 0.5rem;
 }
 
 /*same as .Card but narrower width*/
 .recordingCard { 
-  width:271px;
+  min-width:271px;
+
+  text-align: center;
   padding: var(--spacing-sm);
   box-sizing: border-box;
 
   overflow: hidden;
   box-sizing: border-box;
 
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   border: 1px solid transparent;
   background: var(--card-color);
   color: var(--card-font-color);
+
+  margin-bottom: 0.5rem;
+
+    cursor: pointer;
 }
 
 
 .Card__selected {
-  border: 1px solid var(--primary-color);
+/*  border: 1px solid var(--primary-color);*/
+
+  border: 1px solid transparent;
 
   background: var(--selected-card-color);
   color: var(--selected-card-font-color);
@@ -263,7 +285,9 @@ needed if columns accross bottom of page*/
 }
 
 .Card__recording {
-  border: 1px solid var(--primary-color);
+/*  border: 1px solid var(--primary-color);*/
+
+  border: 1px solid transparent;
 
   background: var(--recording-color);
   color: var(--selected-card-font-color);
@@ -271,7 +295,9 @@ needed if columns accross bottom of page*/
 }
 
 .Card__play {
-  border: 1px solid var(--primary-color);
+/*  border: 1px solid var(--primary-color);*/
+
+  border: 1px solid transparent;
 
   background: var(--selected-card-color);
   color: var(--selected-card-font-color);
@@ -295,7 +321,7 @@ h2 {
 
 
 .Button {
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: var(--spacing-xs) var(--spacing-md);
 /*  min-width: 3rem;*/
 /*  min-width: 100%;*/
@@ -316,16 +342,21 @@ h2 {
   background: var(--danger);
 /*  border: 2px solid var(--danger);*/
   color: var(--button-font-color);
+
+    cursor: pointer;
 }
 
 .Button__large {
-  width: 8rem;
+  width: 6rem;
 /*  font-weight: bold;*/
-  line-height: 2.75rem;
+/*  line-height: 2.75rem;*/
+  height: 3.5rem;
   font-size: 1.5rem;
-  background: var(--selected-card-color);
-  color: var(--selected-card-font-color);
-  border: 1px solid var(--primary-color);
+  background: var(--card-color);
+  color: var(--card-font-color);
+/*  border: 1px solid var(--primary-color);*/
+
+  border: 1px solid transparent;
 }
 
 
@@ -340,20 +371,25 @@ h2 {
   font-size: 16px;
   border: none;*/
   cursor: pointer;
-  font-size: 16px;
-  padding: 16px;
+  font-size: 1.2rem;
+/*  padding: 16px;*/
 
-  width:271px;
+
+  height: 3.5rem;
+
+  min-width:271px;
 /*  padding: var(--spacing-sm);*/
   box-sizing: border-box;
 
   overflow: hidden;
   box-sizing: border-box;
 
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   border: 1px solid transparent;
   background: var(--card-color);
   color: var(--card-font-color);
+
+    font-family: Arial Narrow, sans-serif; 
 }
 
 
@@ -368,18 +404,19 @@ h2 {
         .dropup-content {
           display: none;
           position: absolute;
-          bottom: 50px;
+          bottom: 3.5rem;
 /*          background-color: #f1f1f1;*/
-          min-width: 160px;
+/*          min-width: 160px;*/
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
           z-index: 1;
           cursor: pointer;
+
         }
 
         /* Links inside the dropup */
         .dropup-content a {
           color: black;
-          padding: 12px 16px;
+          padding: 12px 16px; 
           text-decoration: none;
           display: block;
         }
@@ -394,42 +431,10 @@ h2 {
 
         /* Change the background color of the dropup button when the dropup content is shown */
         .dropup:hover .dropbtn {
-          background-color: #2980B9;
+/*          background-color: #2980B9;*/
+/*          background: var(--card-color);*/
         }
 
-
-
-/* Drop down ------------ */
-
-        .dropbtn:hover, .dropbtn:focus {
-          background-color: #2980B9;
-        }
-
-        .dropdown {
-          position: relative;
-          display: inline-block;
-        }
-
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f1f1f1;
-          min-width: 160px;
-          overflow: auto;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
-        }
-
-        .dropdown-content a {
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-        }
-
-        .dropdown a:hover {background-color: #ddd;}
-
-        .show {display: block;}
 
 
 
@@ -449,7 +454,7 @@ h2 {
 /* Small Screens. */
 @media (max-width: 700px) {
 
-  .AppContent {
+/*  .AppContent {
     padding: 0;
 
     display: flex;
@@ -467,12 +472,8 @@ h2 {
 
   .roomDescription {
     text-align: center;
-  /*  color: white;
-    width: 400px;*/
     position: relative;
     top: 0;
-    /*bottom: auto;
-    */
     left: 0;
 
     display: flex;
@@ -495,7 +496,7 @@ h2 {
   bottom: 0rem;
   right: 0rem;
   margin-bottom: 1rem;
-  }
+  }*/
 }
 
 /* Phones only. */
@@ -505,7 +506,7 @@ h2 {
     align-items: center;
   }
 */
-  body{
+/*  body{
     font-size: 1.8em;
   }
 
@@ -518,12 +519,9 @@ h2 {
 
   .roomDescription {
     text-align: center;
-  /*  color: white;
-    width: 400px;*/
     position: relative;
     top: 0;
-    /*bottom: auto;
-    */
+
     left: 0;
 
     display: flex;
@@ -549,8 +547,6 @@ h2 {
       align-items: center;
   }
 
-/*room description class is different than small screens see aboev the line*/
-
   .stuff {
     width: 100vw;
     display: flex;
@@ -564,7 +560,7 @@ h2 {
   bottom: 0rem;
   right: 0rem;
   margin-bottom: 1rem;
-  }
+  }*/
 
 
 }
