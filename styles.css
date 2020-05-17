@@ -295,6 +295,10 @@ needed if columns accross bottom of page*/
   text-overflow: ellipsis;
 }
 
+.Card__red {
+background: var(--recording-color);
+}
+
 .Card__play {
 /*  border: 1px solid var(--primary-color);*/
 
