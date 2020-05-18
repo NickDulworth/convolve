@@ -309,13 +309,13 @@
     document.getElementById("bgnDiv").style.backgroundImage = "url(images/4.jpg)";
     }
 
-    //room description - enter text in html file
-    document.getElementById('roomDescription-0').style.display = "none";
-    document.getElementById('roomDescription-1').style.display = "none";
-    document.getElementById('roomDescription-2').style.display = "none";
-    document.getElementById('roomDescription-3').style.display = "none";
-    document.getElementById('roomDescription-4').style.display = "none";
-    document.getElementById('roomDescription-' + impulse).style.display = "inline";
+    //room Info - enter text in html file
+    document.getElementById('roomInfo-0').style.display = "none";
+    document.getElementById('roomInfo-1').style.display = "none";
+    document.getElementById('roomInfo-2').style.display = "none";
+    document.getElementById('roomInfo-3').style.display = "none";
+    document.getElementById('roomInfo-4').style.display = "none";
+    document.getElementById('roomInfo-' + impulse).style.display = "inline";
   }
 
   function selectSource(source) {
@@ -415,7 +415,7 @@ function toggleConvolve() {
   // convolve
   document.getElementById('convolve-btn').onclick = toggleConvolve;
 
-  // select impulse / image / room description
+  // select impulse / image / room Info
   document.getElementById('impulse-0').onclick = () => selectImpulse(0);
   document.getElementById('impulse-1').onclick = () => selectImpulse(1);
   document.getElementById('impulse-2').onclick = () => selectImpulse(2);
@@ -432,6 +432,11 @@ function toggleConvolve() {
   // toggle full screen
   document.getElementById('toggleFullscreen').onclick = handleToggleFullscreen; // toggle fullscreen
 
+  // toggle room info
+  document.getElementById('toggleRoomInfo').onclick = handleToggleRoomInfo; // toggle room info
+
+  // close intro
+  document.getElementById('closeIntro').onclick = handleCloseIntro; // close intro block
 
 
 // toggle fullscreen ////////////////////////////////////////////////////////////
@@ -473,6 +478,30 @@ function toggleConvolve() {
     }
   }
 
+
+
+// toggle roomInfo ////////////////////////////////////////////////////////////
+function handleToggleRoomInfo() {
+  var x = document.getElementById("roomInfo");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.getElementById('toggleRoomInfo').innerHTML = '<span style="font-family:Karla"></span>Hide Room Info &nbsp;<i class="fas fa-chevron-up"></i>';
+   } else {
+    x.style.display = "none";
+    document.getElementById('toggleRoomInfo').innerHTML = '<span style="font-family:Karla"></span>Show Room Info &nbsp;<i class="fas fa-chevron-down"></i>';
+  }
+}
+
+
+// toggle roomInfo ////////////////////////////////////////////////////////////
+function handleCloseIntro() {
+  var x = document.getElementById("intro");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 
 
 

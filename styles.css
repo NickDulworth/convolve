@@ -3,13 +3,13 @@
 
   --secondary-color: rgba(255, 255, 255, 0.0);
 
-  --card-color: rgba(255, 255, 255, 0.95);
-  --selected-card-color: rgba(0, 0, 0, .95);
+  --card-color: rgba(255, 255, 255, 0.9);
+  --selected-card-color: rgba(0, 0, 0, .9);
 
 /*  --card-color: rgba(0, 0, 0, 0.5);*/
 
-  --recording-color: rgba(235, 33, 46, .95);/*#eb212e; TA Red */
-  --not-recording-color: rgba(0, 0, 0, .95);
+  --recording-color: rgba(235, 33, 46, .9);/*#eb212e; TA Red */
+  --not-recording-color: rgba(0, 0, 0, .9);
   --ta-red: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
 
   --card-font-color: black;
@@ -30,15 +30,12 @@
 
   /* spacing t-shirt sizes */
   --spacing-none: 0;
-  --spacing-xxs: 2px;
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-xxl: 40px;
-  --spacing-xxxl: 48px;
-  --spacing-xxxxl: 64px;
+  --spacing-xxs: .125rem;
+  --spacing-xs: .25rem;
+  --spacing-sm: .5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
 
   /* radii */
   --radius-sm: 0.1rem;
@@ -106,42 +103,63 @@ position: absolute;
 top: 1rem;
 right: 1rem;
 
-  cursor: pointer;
-
-/*    position: absolute;
-    top: 1rem;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-*/
+cursor: pointer;
 }
 
-.roomDescription {
+#toggleRoomInfo {
+position: absolute;
+top: 1rem;
+left: 1rem;
+
+cursor: pointer;
+}
+
+
+#roomInfo {
   text-align: left;
   color: white;
-  width: 300px;
+  width: 400px;
 
   position: absolute;
-  top: 4rem;
+  top: 3.8rem;
   /*bottom: auto;
   */
   left: 1rem;
-  margin-top: 1rem;
+
+  padding: var(--spacing-md);
+
+
+
+
+
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  
+  /*border: 1px solid black;
+  */
+  background: var(--card-color);
+  color: var(--card-font-color);
+
 
 }
 
 ul {
-    padding: 1rem;
+    padding: var(--spacing-md);
     padding-top: 0;
     margin-bottom: 0;
     margin-top: 0;
     text-align: left;
-    padding-bottom: 0;
-    color: white;
+
   }
 
 a {
-  color: white  
+  color: black;  
 }
 
 .taLink {
@@ -161,7 +179,7 @@ a {
   bottom: 1rem;
   right: 1rem;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .logo {
@@ -175,7 +193,7 @@ a {
 
 #link {
   font-style: oblique;
-  font-size: .8rem;
+  font-size: .75rem;
   color: black;
   text-decoration: none;
   margin-right: 1rem;
@@ -312,16 +330,17 @@ background: var(--recording-color);
 .Card__title {
   font-weight: bold;
 }
-.Card__description {
+.Card__Info {
 /*  color: var(--primary-font-color);*/
 }
 
 h2 {
 /*  width: 100%;*/
-  text-shadow: 0px 0px 3px black;
+/*  text-shadow: 0px 0px 3px black;*/
 /*  text-align: left;*/
-  margin-top: 0;
-  color: white;
+  margin: 0;
+  margin-bottom: 0.5rem;
+
 }
 
 
@@ -332,14 +351,18 @@ h2 {
 /*  min-width: 100%;*/
   font-weight: bold;
   line-height: 1.2rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
   color: var(--button-font-color);
-  background: var(--card-color);
+/*  background: var(--card-color);*/
   outline: none;
 /*  border: 4px solid var(--card-color);*/
   border: 0;
       cursor: pointer;
+
+
+
+  font-family: Arial Narrow, sans-serif; 
 
   }
 
@@ -373,7 +396,7 @@ h2 {
 /*  border: 1px solid var(--primary-color);*/
 
   border: 1px solid transparent;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 
@@ -458,11 +481,37 @@ h2 {
 
 
 
+.Card__intro {
+   width: 30rem;
+
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -15rem;
+   margin-top: -10%;
+
+   
+   text-align: center;
+
+   z-index: 2;
 
 
+  padding: var(--spacing-md);
 
 
+  border-radius: var(--radius-lg);
+  
+  background: var(--card-color);
+  color: var(--card-font-color);
 
+  align-content: right;
+}
+
+
+#closeIntro {
+  position: relative;
+
+}
 
 
 
@@ -486,7 +535,7 @@ h2 {
       align-items: center;
   }
 
-  .roomDescription {
+  .roomInfo {
     text-align: center;
     position: relative;
     top: 0;
@@ -533,7 +582,7 @@ h2 {
 
   }
 
-  .roomDescription {
+  .roomInfo {
     text-align: center;
     position: relative;
     top: 0;
