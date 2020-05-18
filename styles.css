@@ -428,7 +428,7 @@ h2 {
   border-radius: var(--radius-lg);
   border: 1px solid transparent;
   background: var(--card-color);
-  color: var(--card-font-color);
+/*  color: var(--card-font-color);*/
 
     font-family: Arial Narrow, sans-serif; 
 }
