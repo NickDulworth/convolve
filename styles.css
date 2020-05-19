@@ -121,7 +121,7 @@ cursor: pointer;
   width: 400px;
 
   position: absolute;
-  top: 3.8rem;
+  top: 3.2rem;
   /*bottom: auto;
   */
   left: 1rem;
@@ -251,7 +251,7 @@ needed if columns accross bottom of page*/
 }
 
 .Card {
-  min-width:271px;
+  min-width:20rem;
   min-height: 3.5rem;
   text-align: center;
   padding: var(--spacing-sm);
@@ -418,7 +418,9 @@ h2 {
 
   height: 3.5rem;
 
-  min-width:271px;
+  padding: 1  rem;
+
+  min-width:20rem;
 /*  padding: var(--spacing-sm);*/
   box-sizing: border-box;
 
