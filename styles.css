@@ -347,18 +347,25 @@ h2 {
 .Button {
   border-radius: var(--radius-lg);
   padding: var(--spacing-xs) var(--spacing-md);
-/*  min-width: 3rem;*/
-/*  min-width: 100%;*/
+
   font-weight: bold;
   line-height: 1.2rem;
   font-size: 1rem;
   text-align: center;
-  color: var(--button-font-color);
-/*  background: var(--card-color);*/
+
+
+
+/*  color: var(--button-font-color);*/
+  background: rgba(255, 255, 255, 1);
+
+  opacity: .9;
+  
+
+
   outline: none;
-/*  border: 4px solid var(--card-color);*/
+
   border: 0;
-      cursor: pointer;
+  cursor: pointer;
 
 
 
@@ -397,6 +404,8 @@ h2 {
 
   border: 1px solid transparent;
   cursor: pointer;
+
+    opacity: .9;
 }
 
 
