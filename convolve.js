@@ -237,6 +237,7 @@
       console.log('handleConvolve: Stop Convolving!');
       return;
     }
+  
     if (impulseNode) { // ...   and clear anything we are currently playing.
       impulseNode.disconnect(audioContext.destination);
     } 
@@ -244,13 +245,16 @@
 
 
     let convolvedNode = null;
+    
     // If we selected a preset source.
     if (selected_source > 0) {
       [convolvedNode, impulseNode] = convolveImpulseAndSource(
         impulses[selected_impulse],
         sources[selected_source]
       );
-    } // If we selected to use our recording.
+    } 
+
+    // If we selected to use our recording.
     else {
       let recordingNode = createPlayableRecording();
       [convolvedNode, impulseNode] = convolveImpulseAndRecording(
@@ -269,7 +273,8 @@
 
     //reset toggle Convolve button at end of file
     convolvedNode.onended = function(event) {
-      handleStop_noSuspend();
+      handleStop();
+      // handleStop_noSuspend();
     }
 
   }
@@ -363,9 +368,6 @@
   }
 
   function handleStop_noSuspend() {
-    // convolving = false;
-    // recording = false;
-
     if (convolving === true) {
     convolving = false;
     console.log('handleStop_noSuspend: Stop Convolving!');
