@@ -16,6 +16,8 @@
   let recordingNode = null;
   let previewingRecording = false;
 
+  let convolvedNode = null;
+
 
   var elem = document.documentElement; //fullscreen button related
 
@@ -244,7 +246,7 @@
     
 
 
-    let convolvedNode = null;
+    convolvedNode = null; ////////// deleted "let"
     
     // If we selected a preset source.
     if (selected_source > 0) {
