@@ -115,16 +115,21 @@
   }
 
   function stopRecording() {
-    have_recording = true;
-    recording = false;
-    console.log('stopRecording: Stop Recording!');
+
+    // delay stop recording to catch phrase end
+    setTimeout(function(){  
+    
+      have_recording = true;
+      recording = false;
+      console.log('stopRecording: Stop Recording!');
+
+    }, 500); // end of: delay stop recording to catch phrase end
+
 
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     document.getElementById('source-0').classList.remove('Card__recording'); 
     document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
     document.getElementById('convolve-btn').classList.remove('Card__red'); 
-
-    return;
   }
 
   /**
@@ -234,6 +239,8 @@
     audioContext.suspend();
     
     if (convolving === false) { //...  clear convolution IF told to stop by handleStop
+      // Overwrite the onend handler for the OLD convolved node.
+      convolvedNode.onended = () => {};
       impulseNode.disconnect(audioContext.destination);
       impulseNode = null;
       console.log('handleConvolve: Stop Convolving!');
@@ -275,8 +282,9 @@
 
     //reset toggle Convolve button at end of file
     convolvedNode.onended = function(event) {
-      handleStop();
-      // handleStop_noSuspend();
+      console.log('convolve node ended...');
+      // handleStop();
+      handleStop_noSuspend(); // use "...._noSuspend();" otherwise a second recording is not possible
     }
 
   }
