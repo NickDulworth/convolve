@@ -329,6 +329,7 @@ background: var(--recording-color);
 
 .Card__title {
   font-weight: bold;
+  /* font-size: 1.1rem; */
 }
 .Card__Info {
 /*  color: var(--primary-font-color);*/
@@ -420,14 +421,14 @@ h2 {
   font-size: 16px;
   border: none;*/
   cursor: pointer;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 1.1rem;
 /*  padding: 16px;*/
 
 
   height: 3.5rem;
 
-  padding: 1  rem;
+  padding: 1rem;
 
   min-width:20rem;
 /*  padding: var(--spacing-sm);*/
@@ -483,6 +484,7 @@ h2 {
         .dropup:hover .dropbtn {
 /*          background-color: #2980B9;*/
 /*          background: var(--card-color);*/
+  
         }
 
 
@@ -516,6 +518,7 @@ h2 {
   color: var(--card-font-color);
 
   align-content: right;
+
 }
 
 
@@ -523,8 +526,6 @@ h2 {
   position: relative;
 
 }
-
-
 
 
 /* Small Screens. */

@@ -331,6 +331,23 @@
     document.getElementById('roomInfo-3').style.display = "none";
     document.getElementById('roomInfo-4').style.display = "none";
     document.getElementById('roomInfo-' + impulse).style.display = "inline";
+
+    //button text
+    if (impulse === 0){
+      document.getElementById('room-btn').innerHTML = '<div class="Card__title">Opera Theatre <span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></div><div class="Card__Info">Drapery Retracted</div>';
+    }
+    else if (impulse === 1) {
+      document.getElementById('room-btn').innerHTML = '<div class="Card__title">Opera Theatre <span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></div><div class="Card__Info">Drapery Deployed</div>';
+    }
+    else if (impulse === 2) {
+      document.getElementById('room-btn').innerHTML = '<div class="Card__title">Concert Hall <span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></div><div class="Card__Info">Drapery Retracted</div>';
+    }
+    else if (impulse === 3) {
+      document.getElementById('room-btn').innerHTML = '<div class="Card__title">Modular Hall <span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></div><div class="Card__Info">Orchestra Configuration Retracted</div>';
+    }
+    else if (impulse === 4) {
+      document.getElementById('room-btn').innerHTML = '<div class="Card__title">Modular Hall <span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></div><div class="Card__Info">Recital Configuration Retracted</div>';
+    }
   }
 
   function selectSource(source) {
@@ -507,6 +524,8 @@ function handleToggleRoomInfo() {
 
 // toggle roomInfo ////////////////////////////////////////////////////////////
 function handleCloseIntro() {
+
+  handleToggleRoomInfo();
   var x = document.getElementById("intro");
   if (x.style.display === "none") {
     x.style.display = "block";
