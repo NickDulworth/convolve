@@ -117,7 +117,6 @@ cursor: pointer;
 
 #roomInfo {
   text-align: left;
-  color: white;
   width: 400px;
 
   position: absolute;
@@ -128,33 +127,26 @@ cursor: pointer;
 
   padding: var(--spacing-md);
 
-
-
-
-
-
   box-sizing: border-box;
 
   overflow: hidden;
 
-
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   border: 1px solid transparent;
   
-  /*border: 1px solid black;
-  */
   background: var(--card-color);
   color: var(--card-font-color);
-
-
 }
 
 ul {
-    padding: var(--spacing-md);
-    padding-top: 0;
-    margin-bottom: 0;
-    margin-top: 0;
-    text-align: left;
+
+  margin: 0;
+  margin-bottom: var(--spacing-md);
+  
+  padding: var(--spacing-sm);
+  padding-left: 1.5rem;
+
+  text-align: left;
 
   }
 
@@ -166,7 +158,7 @@ a {
 /*  text-align: right;*/
   padding: var(--spacing-sm);
   box-sizing: border-box;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   overflow: hidden;
   box-sizing: border-box;
 
@@ -251,7 +243,7 @@ needed if columns accross bottom of page*/
 }
 
 .Card {
-  min-width:20rem;
+  /* min-width:20rem; */
   min-height: 3.5rem;
   text-align: center;
   padding: var(--spacing-sm);
@@ -260,7 +252,7 @@ needed if columns accross bottom of page*/
   overflow: hidden;
   box-sizing: border-box;
 
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   border: 1px solid transparent;
   
   /*border: 1px solid black;
@@ -269,6 +261,8 @@ needed if columns accross bottom of page*/
   color: var(--card-font-color);
 
   margin-bottom: 0.5rem;
+
+
 }
 
 /*same as .Card but narrower width*/
@@ -282,7 +276,7 @@ needed if columns accross bottom of page*/
   overflow: hidden;
   box-sizing: border-box;
 
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   border: 1px solid transparent;
   background: var(--card-color);
   color: var(--card-font-color);
@@ -336,17 +330,13 @@ background: var(--recording-color);
 }
 
 h2 {
-/*  width: 100%;*/
-/*  text-shadow: 0px 0px 3px black;*/
-/*  text-align: left;*/
   margin: 0;
   margin-bottom: 0.5rem;
-
 }
 
 
 .Button {
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: var(--spacing-xs) var(--spacing-md);
 
   font-weight: bold;
@@ -385,7 +375,7 @@ h2 {
 
 .Button__large {
 
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: var(--spacing-xs) var(--spacing-md);
 /*  min-width: 3rem;*/
 /*  min-width: 100%;*/
@@ -406,7 +396,7 @@ h2 {
   border: 1px solid transparent;
   cursor: pointer;
 
-    opacity: .9;
+  opacity: .9;
 }
 
 
@@ -415,116 +405,162 @@ h2 {
 /* all drop buttons --------------   */
 
 .dropbtn {
-/*  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;*/
+
   cursor: pointer;
-  /* font-weight: bold; */
-  font-size: 1.1rem;
-/*  padding: 16px;*/
-
-
-  height: 3.5rem;
 
   padding: 1rem;
 
-  min-width:20rem;
-/*  padding: var(--spacing-sm);*/
-  box-sizing: border-box;
+  height: 3.5rem;
+
+  /* box-sizing: border-box; */
+
+  width: 20rem;
 
   overflow: hidden;
-  box-sizing: border-box;
 
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   border: 1px solid transparent;
   background: var(--card-color);
-/*  color: var(--card-font-color);*/
 
-    font-family: Arial Narrow, sans-serif; 
+  font-family: Arial Narrow, sans-serif; 
+  font-size: 1.1rem;
+
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+
 }
 
 
 
-        /* The container <div> - needed to position the dropup content */
-        .dropup {
-          position: relative;
-          display: inline-block;
-        }
+/* The container <div> - needed to position the dropup content */
+.dropup {
+  position: relative;
+  display: inline-block;
+}
 
-        /* Dropup content (Hidden by Default) */
-        .dropup-content {
-          display: none;
-          position: absolute;
-          bottom: 3.5rem;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
-          cursor: pointer;
+/* Dropup content (Hidden by Default) */
+.dropup-content {
+  display: none;
+  position: absolute;
+  /* width: 100%; */
+  bottom: 3.5rem;
+  z-index: 1;
+  cursor: pointer;
+}
 
-        }
+/* Links inside the dropup */
+.dropup-content a {
+  color: black;
+  padding: 12px 16px; 
+  text-decoration: none;
+  display: block;
+}
 
-        /* Links inside the dropup */
-        .dropup-content a {
-          color: black;
-          padding: 12px 16px; 
-          text-decoration: none;
-          display: block;
-        }
+/* Change color of dropup links on hover */
+.dropup-content a:hover {background-color: #ddd}
 
-        /* Change color of dropup links on hover */
-        .dropup-content a:hover {background-color: #ddd}
+/* Show the dropup menu on hover */
+.dropup:hover .dropup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  width: 100%;
+  /* justify-content: center;
+  align-items: center;
+  align-content: center; */
+}
 
-        /* Show the dropup menu on hover */
-        .dropup:hover .dropup-content {
-          display: block;
-        }
-
-        /* Change the background color of the dropup button when the dropup content is shown */
-        .dropup:hover .dropbtn {
+/* Change the background color of the dropup button when the dropup content is shown */
+.dropup:hover .dropbtn {
 /*          background-color: #2980B9;*/
 /*          background: var(--card-color);*/
+
+}
+
+
+
+
+.cardContainer {
+  display: flex;
+  direction: row;
+/* width: 100%; */
+  justify-content: space-around;
+}
+
+
+/* The Modal (background) */
+.modal {
   
-        }
+  display: flex;
+  
+  /* Hidden by default */
+  /* display: none;  */
+  
 
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  
+  
+  position: fixed; /* Stay in place */
 
+  z-index: 1; /* Sit on top */
 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  /* background-image: linear-gradient(to bottom right, rgba(255,200,255,0.6), rgba(200,255,255,0.0)); Standard syntax (must be last) */
+  background: radial-gradient(circle, rgba(255,255,255,.5 ) 80%, rgba(0, 0, 255, 0.1) 100%);
+}
 
-
-
-
-
-.Card__intro {
+.Card__introContent {
 /*   width: 25rem;*/
 
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   margin-left: -10rem;
-   margin-top: -5%;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  /* margin-left: -10rem;
+  margin-top: -5%; */
+  
 
-   
-   text-align: center;
 
-   z-index: 2;
+  width: auto; 
+  text-align: center;
+
+  /* z-index: 2; */
 
 
   padding: var(--spacing-md);
-
-
-  border-radius: var(--radius-lg);
-  
+  border-radius: var(--radius-xl);
   background: var(--card-color);
   color: var(--card-font-color);
-
-  align-content: right;
-
+  /* align-content: right; */
+/* padding: var(--spacing-lg); */
 }
 
 
 #closeIntro {
-  position: relative;
 
+  cursor: pointer;
+  padding: 1rem;
+  height: 3.5rem;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  background: var(--card-color);
+
+  font-size: 1.3rem;
+  font-family: Arial Narrow, sans-serif; 
+  
 }
 
 

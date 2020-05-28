@@ -334,19 +334,19 @@
 
     //button text
     if (impulse === 0){
-      document.getElementById('room-btn').innerHTML = '<div class="Card__title">Opera Theatre <span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></div><div class="Card__Info">Drapery Retracted</div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Opera Theatre</span>&nbsp;Drapery Retracted&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 1) {
-      document.getElementById('room-btn').innerHTML = '<div class="Card__title">Opera Theatre <span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></div><div class="Card__Info">Drapery Deployed</div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Opera Theatre</span>&nbsp;Drapery Deployed&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 2) {
-      document.getElementById('room-btn').innerHTML = '<div class="Card__title">Concert Hall <span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></div><div class="Card__Info">Drapery Retracted</div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Concert Hall</span>&nbsp;Drapery Retracted&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 3) {
-      document.getElementById('room-btn').innerHTML = '<div class="Card__title">Modular Hall <span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></div><div class="Card__Info">Orchestra Configuration Retracted</div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Modular Hall</span>&nbsp;Orchestra&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 4) {
-      document.getElementById('room-btn').innerHTML = '<div class="Card__title">Modular Hall <span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></div><div class="Card__Info">Recital Configuration Retracted</div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Modular Hall</span>&nbsp;Recital&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
   }
 
@@ -459,13 +459,13 @@ function toggleConvolve() {
   document.getElementById('source-4').onclick = () => selectSource(4);
 
   // toggle full screen
-  document.getElementById('toggleFullscreen').onclick = handleToggleFullscreen; // toggle fullscreen
+  document.getElementById('toggleFullscreen').onclick = handleToggleFullscreen; 
 
   // toggle room info
-  document.getElementById('toggleRoomInfo').onclick = handleToggleRoomInfo; // toggle room info
+  document.getElementById('toggleRoomInfo').onclick = handleToggleRoomInfo;
 
   // close intro
-  document.getElementById('closeIntro').onclick = handleCloseIntro; // close intro block
+  // document.getElementById('closeIntro').onclick = handleCloseIntro; 
 
 
 // toggle fullscreen ////////////////////////////////////////////////////////////
@@ -522,7 +522,7 @@ function handleToggleRoomInfo() {
 }
 
 
-// toggle roomInfo ////////////////////////////////////////////////////////////
+//toggle intro ////////////////////////////////////////////////////////////
 function handleCloseIntro() {
 
   handleToggleRoomInfo();
@@ -531,6 +531,33 @@ function handleCloseIntro() {
     x.style.display = "block";
   } else {
     x.style.display = "none";
+  }
+}
+
+
+// Get the modal
+let modal = document.getElementById("intro");
+
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+let span = document.getElementById("closeIntro");
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 }
 

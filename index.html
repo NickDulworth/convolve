@@ -20,36 +20,32 @@
 
   <body>
 
+	<div id="intro" class="modal">
+		<div class="Card__introContent">
+			<h2>Auralization</h2>
+			<ul>
+				<li>Supported browsers: Chrome</li>
+				<li>Use wired headphones for the best experience</li>
+				<li>Avoid bluetooth devices as they may force monophonic playback</li>
+			</ul>
+			<button id="closeIntro" class="Button">
+				Begin&nbsp;<span style="font-family:Karla"> <i class="fas fa-check"></i></span>
+			</button>
+		</div>		
+	</div>
+
+	<button id="toggleFullscreen" class="Button">
+			<span style="font-family:Karla"> <i class="fas fa-expand"></i></span>&nbsp;Enter Fullscreen
+	</button>
+
+	<button id="toggleRoomInfo" class="Button">
+			<span style="font-family:Karla"></span>Hide Room Info &nbsp;<i class="fas fa-chevron-up"></i>
+	</button>
+
+
+
+	
     <div id="bgnDiv"><!-- contains background image -->
-
-
-	   <div id="intro" class="Card__intro">
-		   <h2>Auralization</h2>
-		   	<ul>
-		           <li>Supported Browsers: Chrome.</li>
-		           <li>For best results use wired headphones.</li>
-		           <li>Avoid bluetooth devices as they can force mono playback.</li>
-		    </ul>
-	    <button id="closeIntro" class="Button">
-	       Ready...set...click here to begin!&nbsp;<span style="font-family:Karla"> <i class="fas fa-smile"></i></span>
-	    </button>
-	   </div>
-
-
-
-	    <button id="toggleFullscreen" class="Button">
-	            <span style="font-family:Karla"> <i class="fas fa-expand"></i></span>&nbsp;Enter Fullscreen
-	    </button>
-
-	    <button id="toggleRoomInfo" class="Button">
-	            <span style="font-family:Karla"></span>Hide Room Info &nbsp;<i class="fas fa-chevron-up"></i>
-	    </button>
-
-
-
-
-
-
 
 
 <!-- Room 0 Info  ////////////////////////////////////////////////////////          -->
@@ -208,33 +204,42 @@
 
 
 <!-- Select source ////////////////////////////////////////////////////////-->   
-<div class="CardList">
+		<div class="CardList">
 	<!--           <h2>Source</h2> -->
 	
 			<div class="dropup">
 			  <button class="card dropbtn">Make a Recording or Choose Source&nbsp;<span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></button>
 			  <div class="dropup-content">
-	
+   
+				<div class="cardContainer">
 					<div id="source-4" class="Card">
 							<div class="Card__title">Stereo Test</div>
 							<div class="Card__Info">by DJ Mozart</div>
 					</div> <!-- Card -->
-	
+				</div>
+
+				<div class="cardContainer">
 					<div id="source-3" class="Card">
 						<div class="Card__title">Monologue</div>
 						<div class="Card__Info">"Sweet Child O' Mine" by Johann Sebastian Bach</div>
 					</div> <!-- Card -->
-					
+				</div>
+
+				<div class="cardContainer">
 					<div id="source-2" class="Card">
 						<div class="Card__title">Violin</div>
 						<div class="Card__Info">by DJ Mozart</div>
 					</div> <!-- Card -->
-		
+				</div>
+
+				<div class="cardContainer">
 					<div id="source-1" class="Card Card__selected">
 						<div class="Card__title">Clarinet</div>
 						<div class="Card__Info">"Sweet Child O' Mine" by Johann Sebastian Bach</div>
 					</div> <!-- Card -->
-	
+				</div>
+				
+				<div class="cardContainer">
 					<div id="source-0" class="recordingCard">
 						<div class="Card__title">Record Yourself</div>
 						<div style="height: 8px"></div>
@@ -243,54 +248,55 @@
 						  <span style="font-family:Arial Narrow"> Record</span>
 						</button>
 					</div> <!-- Card --> 
-					
-			<!-- ///// hid preview button for now - also commented out .onclick line in user control section of js /////
-						&nbsp;
-						
-						<button id="play-recording-btn" class="Button">
-						  <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
-						  <span style="font-family:Arial Narrow">Preview Recording</span>
-						</button> -->
-	
+				</div>
 				</div> <!-- dropup-content -->
 			</div> <!-- dropup -->
-			</div> <!-- CardList -->
+		</div> <!-- CardList -->
+
+
+
+
+
 
   <!-- Select Impulse ////////////////////////////////////////////////////////          -->
 
 
-        <div class="CardList">
+	<div class="CardList">
 <!--           <h2>Room</h2> -->
 
           <div class="dropup">
-		  	<button id="room-btn" class="dropbtn">Choose Room Model&nbsp;<span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></button>
+		  	<button id="room-btn" class="card dropbtn"> <span class="Card__title">Opera Theatre</span>&nbsp;Drapery Retracted&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></button>
 		  	<div class="dropup-content">
 
-			  <div id="impulse-4" class="Card">
-				<div class="Card__title">Modular Hall</div>
-				<div class="Card__Info">Recital Configuration</div>
-			  </div> <!-- Card -->
+			<div class="cardContainer">
+				<div id="impulse-4" class="Card">
+					<div class="Card__title">Modular Hall</div>
+					<div class="Card__Info">Recital</div>
+				</div> <!-- Card -->
 
-	          <div id="impulse-3" class="Card">
-	            <div class="Card__title">Modular Hall</div>
-	            <div class="Card__Info">Orchestra Configuration</div>
-			  </div> <!-- Card -->	          
-			  
+				<div id="impulse-3" class="Card">
+					<div class="Card__title">Modular Hall</div>
+					<div class="Card__Info">Orchestra</div>
+				</div> <!-- Card -->	          
+			</div> 
+
+			<div class="cardContainer">
 			  <div id="impulse-2" class="Card">
 	            <div class="Card__title">Concert Hall</div>
 	            <div class="Card__Info">Drapery Retracted</div>
 			  </div> <!-- Card -->
-			  
-	          <div id="impulse-1" class="Card">
-	            <div class="Card__title">Opera Theatre</div>
-	            <div class="Card__Info">Drapery Deployed</div>
-	          </div> <!-- Card -->
+			</div> 
+			  <div class="cardContainer">
+				<div id="impulse-1" class="Card">
+					<div class="Card__title">Opera Theatre</div>
+					<div class="Card__Info">Drapery Deployed</div>
+				</div> <!-- Card -->
 
-	          <div id="impulse-0" class="Card Card__selected">
-	            <div class="Card__title">Opera Theatre</div>
-	            <div class="Card__Info">Drapery Retracted</div>
-	          </div> <!-- Card -->
-
+				<div id="impulse-0" class="Card Card__selected">
+					<div class="Card__title">Opera Theatre</div>
+					<div class="Card__Info">Drapery Retracted</div>
+				</div> <!-- Card -->
+			</div>
             </div> <!-- dropup-content -->
 		</div> <!-- dropup -->
     </div> <!-- CardList -->
@@ -341,7 +347,7 @@
   </div> <!-- bgnDiv -->
 
     <script src="vendor/reverb.js"></script>
-    <script src="convolve.js"></script>
+	<script src="convolve.js"></script>
 
     <script> //drop down
 		/* When the user clicks on the button, 
