@@ -559,12 +559,12 @@ function toggleConvolve() {
 // toggle roomInfo ////////////////////////////////////////////////////////////
 function handleToggleRoomInfo() {
   var x = document.getElementById("roomInfo");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    document.getElementById('toggleRoomInfo').innerHTML = '<span style="font-family:Karla"></span>Hide Room Info &nbsp;<i class="fas fa-chevron-up"></i>';
-   } else {
+  if (x.style.display === "block") {
     x.style.display = "none";
     document.getElementById('toggleRoomInfo').innerHTML = '<span style="font-family:Karla"></span>Show Room Info &nbsp;<i class="fas fa-chevron-down"></i>';
+   } else {
+    x.style.display = "block";
+    document.getElementById('toggleRoomInfo').innerHTML = '<span style="font-family:Karla"></span>Hide Room Info &nbsp;<i class="fas fa-chevron-up"></i>';
   }
 }
 

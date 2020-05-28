@@ -49,9 +49,9 @@
   --danger: #eb212e;
 }
 
-#record {
+/* #record {
 width: 87px;
-}
+} */
 
 html {
     background: black;
@@ -116,6 +116,7 @@ cursor: pointer;
 
 
 #roomInfo {
+  display: none;
   text-align: left;
   width: 400px;
 
@@ -424,7 +425,7 @@ h2 {
   outline: none;
 /*  border: 4px solid var(--card-color);*/
 
-  width: 6rem;
+  width: 3.5rem;
 /*  font-weight: bold;*/
 /*  line-height: 2.75rem;*/
   height: 3.5rem;
