@@ -108,9 +108,17 @@
 
     //format master stop button and record card and record button
     document.getElementById('source-0').classList.add('Card__recording');
-    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-save"></i>';
-    document.getElementById('record').innerHTML = '<span style="font-family:Karla;"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow;"> Stop Recording</span>';
+    document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
+    // document.getElementById('record').innerHTML = '<span style="font-family:Karla;"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow;"></span>';
     document.getElementById('convolve-btn').classList.add('Card__red'); 
+    document.getElementById('record').classList.add('Card__red'); 
+    document.getElementById('source-0').classList.add('Card__red'); 
+
+    // document.getElementById('source-btn').classList.remove('dropbtn'); 
+    // document.getElementById('source-btn').classList.add('dropbtn_red'); 
+
+
+    // document.getElementById('source-btn').style.background = "rgba(235, 33, 46, .9)";
 
   }
 
@@ -128,8 +136,15 @@
 
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-play"></i>';
     document.getElementById('source-0').classList.remove('Card__recording'); 
-    document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"> Record</span>';
+    document.getElementById('record').innerHTML = '<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span><span style="font-family:Arial Narrow"></span>';
     document.getElementById('convolve-btn').classList.remove('Card__red'); 
+    document.getElementById('record').classList.remove('Card__red'); 
+    document.getElementById('source-0').classList.remove('Card__red'); 
+
+    // document.getElementById('source-btn').classList.remove('dropbtn_red');
+    // document.getElementById('source-btn').classList.add('dropbtn'); 
+
+ 
   }
 
   /**
@@ -218,6 +233,7 @@
 
     if (recording === false){ //if not recording then start
       startRecording(); //start recording
+      selectSource(0);
       console.log('handleToggleRecording: Start Recording!');
     } else { //stop recording
       stopRecording(); //stop recording
@@ -368,7 +384,28 @@
     document.getElementById('source-3').classList.remove('Card__selected');
     document.getElementById('source-4').classList.remove('Card__selected');
     document.getElementById('source-' + source).classList.add('Card__selected'); 
+
+
+    //button text
+    if (source === 0){
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Recording</span>&nbsp;By User&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+    }
+    else if (source === 1) {
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 1</span>&nbsp;By Bach&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+    }
+    else if (source === 2) {
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 2</span>&nbsp;By Mozart&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+    }
+    else if (source === 3) {
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 3</span>&nbsp;By Brahms&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+    }
+    else if (source === 4) {
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 4</span>&nbsp;By Smeagol&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+    }
   }
+  
+
+  
 
   // function handleStop() {
   //   audioContext.suspend();

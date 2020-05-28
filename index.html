@@ -190,14 +190,16 @@
    <!-- Play Source in Room ////////////////////////////////////////////////////////          -->
 
         <div class="CardList">
-<!--           <h2>Listen</h2> -->
-
           <button id="convolve-btn" class="Button__large">
-          <span style="font-family:Karla"> <i class="fas fa-play"></i></span>
+          	<span style="font-family:Karla"> <i class="fas fa-play"></i></span>
           </button>
-
         </div> <!-- CardList -->
 
+        <div class="CardList">
+			<button id="record" class="Button__large">
+				<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span>
+			</button>
+		</div> <!-- CardList -->
 
 <!-- /////////////////////////////// -->
 
@@ -208,7 +210,8 @@
 	<!--           <h2>Source</h2> -->
 	
 			<div class="dropup">
-			  <button class="card dropbtn">Make a Recording or Choose Source&nbsp;<span style="font-family:Karla"> <i class="fas fa-chevron-up"></i></span></button>
+			  <button id="source-btn" class="dropbtn"> <span class="Card__title">Clarinet</span>&nbsp;JS Bach&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></button> 
+			 
 			  <div class="dropup-content">
    
 				<div class="cardContainer">
@@ -238,8 +241,16 @@
 						<div class="Card__Info">"Sweet Child O' Mine" by Johann Sebastian Bach</div>
 					</div> <!-- Card -->
 				</div>
-				
+
+
 				<div class="cardContainer">
+					<div id="source-0" class="Card">
+						<div class="Card__title">Recording</div>
+						<div class="Card__Info">by User</div>
+					</div> <!-- Card -->
+				</div>
+				
+				<!-- <div class="cardContainer">
 					<div id="source-0" class="recordingCard">
 						<div class="Card__title">Record Yourself</div>
 						<div style="height: 8px"></div>
@@ -247,8 +258,9 @@
 						  <span style="font-family:Karla"> <i class="fas fa-microphone"></i></span>
 						  <span style="font-family:Arial Narrow"> Record</span>
 						</button>
-					</div> <!-- Card --> 
-				</div>
+					</div> 
+				</div> -->
+				
 				</div> <!-- dropup-content -->
 			</div> <!-- dropup -->
 		</div> <!-- CardList -->
@@ -265,7 +277,7 @@
 <!--           <h2>Room</h2> -->
 
           <div class="dropup">
-		  	<button id="room-btn" class="card dropbtn"> <span class="Card__title">Opera Theatre</span>&nbsp;Drapery Retracted&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></button>
+		  	<button id="room-btn" class="dropbtn Card__red"> <span class="Card__title">Opera Theatre</span>&nbsp;Drapery Retracted&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></button>
 		  	<div class="dropup-content">
 
 			<div class="cardContainer">

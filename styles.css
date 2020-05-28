@@ -300,15 +300,16 @@ needed if columns accross bottom of page*/
 .Card__recording {
 /*  border: 1px solid var(--primary-color);*/
 
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
 /*
   background: var(--recording-color);*/
-  color: var(--selected-card-font-color);
-  text-overflow: ellipsis;
+  /* color: var(--selected-card-font-color); */
+  /* text-overflow: ellipsis; */
 }
 
 .Card__red {
 background: var(--recording-color);
+color: var(--card-font-color);
 }
 
 .Card__play {
@@ -431,6 +432,33 @@ h2 {
 
 }
 
+.dropbtn__red {
+
+  cursor: pointer;
+
+  padding: 1rem;
+
+  height: 3.5rem;
+
+  /* box-sizing: border-box; */
+
+  width: 20rem;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  background: var(--recording-card-color);
+
+  font-family: Arial Narrow, sans-serif; 
+  font-size: 1.1rem;
+
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+
+}
+
 
 
 /* The container <div> - needed to position the dropup content */
@@ -515,7 +543,7 @@ h2 {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   /* background-image: linear-gradient(to bottom right, rgba(255,200,255,0.6), rgba(200,255,255,0.0)); Standard syntax (must be last) */
-  background: radial-gradient(circle, rgba(255,255,255,.5 ) 80%, rgba(0, 0, 255, 0.1) 100%);
+  background: radial-gradient(circle, rgba(255,255,255,.5 ) 0%, rgba(240, 240, 255, 0.2) 100%);
 }
 
 .Card__introContent {
