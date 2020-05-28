@@ -356,22 +356,22 @@
 
     //button text
     if (impulse === 0){
-      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Opera Theatre</span>&nbsp;Drapery Retracted&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Brockman Hall for Opera</span>&nbsp;Drapery Retracted&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 1) {
-      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Opera Theatre</span>&nbsp;Drapery Deployed&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Brockman Hall for Opera</span>&nbsp;Drapery Deployed&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 2) {
-      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Drama Theatre</span>&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Writers&#39; Theatre</span>&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 3) {
-      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Modular Hall</span>&nbsp;Orchestra&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Brown PAC</span>&nbsp;Orchestra&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 4) {
-      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Modular Hall</span>&nbsp;Recital&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Brown PAC</span>&nbsp;Recital&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 5) {
-      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Concert Hall</span>&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Wheaton Concert Hall</span>&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
   }
 
