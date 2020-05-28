@@ -27,6 +27,7 @@
     'impulses/impulse2.m4a',
     'impulses/impulse3.m4a',
     'impulses/impulse4.m4a',
+    'impulses/impulse5.m4a',
   ];
 
   const sources = [
@@ -321,6 +322,7 @@
     document.getElementById('impulse-2').classList.remove('Card__selected');
     document.getElementById('impulse-3').classList.remove('Card__selected');
     document.getElementById('impulse-4').classList.remove('Card__selected');
+    document.getElementById('impulse-5').classList.remove('Card__selected');
     document.getElementById('impulse-' + impulse).classList.add('Card__selected');
 
     //images
@@ -339,6 +341,9 @@
     else if (impulse === 4) {
     document.getElementById("bgnDiv").style.backgroundImage = "url(images/4.jpg)";
     }
+    else if (impulse === 5) {
+      document.getElementById("bgnDiv").style.backgroundImage = "url(images/5.jpg)";
+      }
 
     //room Info - enter text in html file
     document.getElementById('roomInfo-0').style.display = "none";
@@ -346,6 +351,7 @@
     document.getElementById('roomInfo-2').style.display = "none";
     document.getElementById('roomInfo-3').style.display = "none";
     document.getElementById('roomInfo-4').style.display = "none";
+    document.getElementById('roomInfo-5').style.display = "none";
     document.getElementById('roomInfo-' + impulse).style.display = "inline";
 
     //button text
@@ -356,13 +362,16 @@
       document.getElementById('room-btn').innerHTML = '<span class="Card__title">Opera Theatre</span>&nbsp;Drapery Deployed&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 2) {
-      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Drama Theatre</span>&nbsp;&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Drama Theatre</span>&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 3) {
       document.getElementById('room-btn').innerHTML = '<span class="Card__title">Modular Hall</span>&nbsp;Orchestra&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 4) {
       document.getElementById('room-btn').innerHTML = '<span class="Card__title">Modular Hall</span>&nbsp;Recital&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+    }
+    else if (impulse === 5) {
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Concert Hall</span>&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
   }
 
@@ -487,6 +496,7 @@ function toggleConvolve() {
   document.getElementById('impulse-2').onclick = () => selectImpulse(2);
   document.getElementById('impulse-3').onclick = () => selectImpulse(3);
   document.getElementById('impulse-4').onclick = () => selectImpulse(4);
+  document.getElementById('impulse-5').onclick = () => selectImpulse(5);
 
   // select source
   document.getElementById('source-0').onclick = () => selectSource(0); // source-0 is user recording
