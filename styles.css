@@ -543,7 +543,8 @@ h2 {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   /* background-image: linear-gradient(to bottom right, rgba(255,200,255,0.6), rgba(200,255,255,0.0)); Standard syntax (must be last) */
-  background: radial-gradient(circle, rgba(255,255,255,.5 ) 0%, rgba(240, 240, 255, 0.2) 100%);
+  /* background: radial-gradient(circle, rgba(255,255,255,.5 ) 0%, rgba(240, 240, 255, 0.2) 100%); */
+  background: radial-gradient(circle, rgba(10,0,0,.8 ) 0%, rgba(0, 0, 10 , 0.7) 100%);
 }
 
 .Card__introContent {
