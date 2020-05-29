@@ -177,7 +177,7 @@ a {
 
 .title {  
     position: absolute;
-    bottom: 1.6rem;
+    bottom: .7rem;
     right: 1rem;
     text-align: right;
     text-decoration: none;
@@ -627,12 +627,12 @@ h2 {
 
 
 /* Small Screens. */
-@media (max-width: 1440px) {
+@media (max-width: 1241px) {
 
 
 
   .title {  
-    width: 40%;
+    display: none;
 
   }
 
