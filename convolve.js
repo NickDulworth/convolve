@@ -40,12 +40,11 @@
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
     'sources/clarinet_solo.m4a',
-    'sources/Violin_Bach_Partita No2-001.m4a'
+    // 'sources/Violin_Bach_Partita No2-001.m4a',
 
     // 'sources/StereoTest.m4a',
     // 'sources/StereoTest.m4a',
     // 'sources/StereoTest.m4a',
-    'sources/Violin_Bach_Partita No2-001.m4a'
     // 'http://nickdulworth.com/webaudio/sources/clarinet_solo.m4a',
     // 'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
     // // 'http://nickdulworth.com/webaudio/sources/StereoTest.m4a',
@@ -417,7 +416,7 @@
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Clarinet Solo</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 2) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Violin Partita No. 2</span>&nbsp;J.S. Bach&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 2</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 3) {
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 3</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
