@@ -22,21 +22,30 @@
   var elem = document.documentElement; //fullscreen button related
 
   const impulses = [
-    'impulses/impulse0.m4a',
-    'impulses/impulse1.m4a',
-    'impulses/impulse2.m4a',
-    'impulses/impulse3.m4a',
-    'impulses/impulse4.m4a',
-    'impulses/impulse5.m4a',
+    // 'impulses/impulse0.m4a',
+    // 'impulses/impulse1.m4a',
+    // 'impulses/impulse2.m4a',
+    // 'impulses/impulse3.m4a',
+    // 'impulses/impulse4.m4a',
+    // 'impulses/impulse5.m4a',
+
+    'impulses/impulse0.wav',
+    'impulses/impulse1.wav',
+    'impulses/impulse2.wav',
+    'impulses/impulse3.wav',
+    'impulses/impulse4.wav',
+    'impulses/impulse5.wav',
   ];
 
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
     'sources/clarinet_solo.m4a',
-    'sources/StereoTest.m4a',
-    'sources/StereoTest.m4a',
-    'sources/StereoTest.m4a',
-    // 'sources/Violin_Bach_Partita No2-001.m4a'
+    'sources/Violin_Bach_Partita No2-001.m4a'
+
+    // 'sources/StereoTest.m4a',
+    // 'sources/StereoTest.m4a',
+    // 'sources/StereoTest.m4a',
+    'sources/Violin_Bach_Partita No2-001.m4a'
     // 'http://nickdulworth.com/webaudio/sources/clarinet_solo.m4a',
     // 'http://reverbjs.org/Library/SampleBachCMinorPrelude.m4a',
     // // 'http://nickdulworth.com/webaudio/sources/StereoTest.m4a',
@@ -106,6 +115,7 @@
     recording = true;
 
     console.log('startRecording: Start Recording!');
+    console.log(audioContext.sampleRate);
 
     //format master stop button and record card and record button
     document.getElementById('source-0').classList.add('Card__recording');
@@ -227,6 +237,7 @@
   }
 
   function handleToggleRecording() {
+
     if (convolving === true) { // stop convolving if currently convolving
       handleStop();
       return;
@@ -244,6 +255,7 @@
 
   function handleConvolve() {
 
+    
     if (selected_source == -1 || selected_impulse == -1) {
       return alert('Select source and impulse.');
     }
@@ -292,6 +304,8 @@
     convolvedNode.start();
     audioContext.resume();
     convolving = true;
+
+    console.log(audioContext.sampleRate);
 
     // set toggle convolve button
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
@@ -356,10 +370,10 @@
 
     //button text
     if (impulse === 0){
-      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Brockman Hall for Opera</span>&nbsp;Drapery Retracted&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Brockman Hall for Opera</span>&nbsp;Configured for Opera&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 1) {
-      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Brockman Hall for Opera</span>&nbsp;Drapery Deployed&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('room-btn').innerHTML = '<span class="Card__title">Brockman Hall for Opera</span>&nbsp;Orchestra Shell Deployed&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (impulse === 2) {
       document.getElementById('room-btn').innerHTML = '<span class="Card__title">Writers&#39; Theatre</span>&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
@@ -400,16 +414,16 @@
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Recording</span>&nbsp;By User&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 1) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 1</span>&nbsp;By Bach&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Clarinet Solo</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 2) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 2</span>&nbsp;By Mozart&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Violin Partita No. 2</span>&nbsp;J.S. Bach&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 3) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 3</span>&nbsp;By Brahms&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 3</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 4) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 4</span>&nbsp;By Smeagol&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 4</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
   }
   
@@ -427,12 +441,12 @@
   function handleStop() {
     if (convolving === true) {
     convolving = false;
-    console.log('handleStop_noSuspend: Stop Convolving!');
+    console.log('handleStop: Stop Convolving!');
     }
     
     if (recording === true) {
     recording = false;
-    console.log('handleStop_noSuspend: Stop Recording!');
+    console.log('handleStop: Stop Recording!');
     }
 
     handleConvolve(); //if convolving = false then handlConvolve will stop

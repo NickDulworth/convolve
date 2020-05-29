@@ -175,28 +175,12 @@ a {
   cursor: pointer;
 }
 
-.title {
-  /*  text-align: right;*/
-    /* padding: var(--spacing-sm); */
-    /* box-sizing: border-box;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-sizing: border-box; */
-  
-    /* border: 4px solid transparent;
-    background: var(--card-color);
-    color: var(--card-font-color); */
-  /*  width: 400px;*/
-  
+.title {  
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-/*   
-    cursor: pointer; */
-    /* padding: 0;
-    margin: 0;
-   */
     text-align: right;
+    text-decoration: none;
   }
 
   .title_text1 {
@@ -643,7 +627,14 @@ h2 {
 
 
 /* Small Screens. */
-@media (max-width: 700px) {
+@media (max-width: 1440px) {
+
+
+
+  .title {  
+    width: 40%;
+
+  }
 
 /*  .AppContent {
     padding: 0;
