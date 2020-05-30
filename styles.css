@@ -49,6 +49,17 @@
   --danger: #eb212e;
 }
 
+
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 /* #record {
 width: 87px;
 } */
@@ -68,6 +79,8 @@ html {
 body {
   padding: 0;
   margin: 0;
+
+
 
 
 /*  font-family: 'Karla', sans-serif;*/
@@ -153,6 +166,11 @@ ul {
 
 a {
   color: black;  
+  transition: .3s;
+}
+
+a:hover {
+  transform: scale(1.05,1.05); /* Standard syntax */
 }
 
 .taLink {
@@ -264,6 +282,13 @@ needed if columns accross bottom of page*/
 
 .tile {
 /* max-width: 7rem; */
+
+
+}
+.Card:hover {
+  
+    /* border: 1px solid black; */
+    transform: scale(1.05,1.05); /* Standard syntax */
 }
 
 .Card {
@@ -292,6 +317,9 @@ needed if columns accross bottom of page*/
   align-content: center; */
   justify-content: center;
 
+  transition: .3s;
+
+
 }
 
 /*same as .Card but narrower width*/
@@ -312,7 +340,7 @@ needed if columns accross bottom of page*/
 
   margin-bottom: 0.5rem;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 
@@ -374,6 +402,8 @@ h2 {
   font-size: 1rem;
   text-align: center;
 
+  transition: .3s;
+
 
 
 /*  color: var(--button-font-color);*/
@@ -392,6 +422,10 @@ h2 {
 
   font-family: Arial Narrow, sans-serif; 
 
+  }
+
+  .Button:hover {
+    transform: scale(1.05,1.05); /* Standard syntax */
   }
 
 .Button__danger {
@@ -427,6 +461,12 @@ h2 {
   cursor: pointer;
 
   opacity: .9;
+
+  transition: .3s;
+}
+
+.Button__large:hover {
+  transform: scale(1.05,1.05); /* Standard syntax */
 }
 
 
@@ -506,17 +546,6 @@ h2 {
   cursor: pointer;
 }
 
-/* Links inside the dropup */
-.dropup-content a {
-  color: black;
-  padding: 12px 16px; 
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropup links on hover */
-.dropup-content a:hover {background-color: #ddd}
-
 /* Show the dropup menu on hover */
 .dropup:hover .dropup-content {
   display: flex;
@@ -526,6 +555,7 @@ h2 {
   /* justify-content: center;
   align-items: center;
   align-content: center; */
+
 }
 
 /* Change the background color of the dropup button when the dropup content is shown */
@@ -574,6 +604,9 @@ h2 {
   /* background-image: linear-gradient(to bottom right, rgba(255,200,255,0.6), rgba(200,255,255,0.0)); Standard syntax (must be last) */
   /* background: radial-gradient(circle, rgba(255,255,255,.5 ) 0%, rgba(240, 240, 255, 0.2) 100%); */
   background: radial-gradient(circle, rgba(10,0,0,.8 ) 0%, rgba(0, 0, 20 , 0.9) 100%);
+  
+  transition: .3s;
+
 }
 
 .Card__introContent {
@@ -593,7 +626,7 @@ h2 {
 
   /* z-index: 2; */
 
-  width: 27rem;
+  width: 30rem;
 
   padding: var(--spacing-md);
   border-radius: var(--radius-xl);
@@ -628,12 +661,8 @@ h2 {
 
 /* Small Screens. */
 @media (max-width: 1241px) {
-
-
-
   .title {  
     display: none;
-
   }
 
 /*  .AppContent {
