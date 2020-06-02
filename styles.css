@@ -30,20 +30,26 @@
 
   /* spacing t-shirt sizes */
   --spacing-none: 0;
-  --spacing-xxs: .125rem;
-  --spacing-xs: .25rem;
-  --spacing-sm: .5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 4rem;
+  --spacing-xs: .125rem;
+  --spacing-sm: .25rem;
+  --spacing-md: .5rem;
+  --spacing-lg: .7rem;
+  --spacing-xl: 2.5rem;
 
   /* radii */
-  --radius-sm: 0.1rem;
-  --radius-md: 0.25rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 1rem;
-  --radius-xxl: 2rem;
+
+  --radius-md: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.7rem;
+  --radius-xxl: 1rem;
   --radius-circle: 50%;
+
+  /* radii */
+  --font-sm: 0.8rem;
+  --font-md: .9rem;
+  --font-lg: 1.1rem;
+  --font-xl: 1.5rem;
+  --font-xxl: 2rem;
 
 /*  --danger: #f53d4e;*/
   --danger: #eb212e;
@@ -51,14 +57,6 @@
 
 
 
-@-webkit-keyframes fadeIn {
-  from { opacity: 0; }
-    to { opacity: 1; }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-    to { opacity: 1; }
-}
 
 /* #record {
 width: 87px;
@@ -79,15 +77,11 @@ html {
 body {
   padding: 0;
   margin: 0;
-
-
-
-
 /*  font-family: 'Karla', sans-serif;*/
 /*  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;*/
   font-family: Arial Narrow, sans-serif; 
   color: var(--primary-font-color);
-  font-size: 1rem;
+  font-size: var(--font-md);
 }
 
 /* not used, use for non bgn image*/
@@ -113,16 +107,16 @@ p {
 
 #toggleFullscreen {
 position: absolute;
-top: 1rem;
-right: 1rem;
+top: var(--spacing-md);
+right: var(--spacing-md);
 
 cursor: pointer;
 }
 
 #toggleRoomInfo {
 position: absolute;
-top: 1rem;
-left: 1rem;
+top: var(--spacing-md);
+left: var(--spacing-md);
 
 cursor: pointer;
 }
@@ -134,10 +128,10 @@ cursor: pointer;
   width: 400px;
 
   position: absolute;
-  top: 3.2rem;
+  top: 3rem;
   /*bottom: auto;
   */
-  left: 1rem;
+  left: var(--spacing-md);
 
   padding: var(--spacing-md);
 
@@ -153,15 +147,13 @@ cursor: pointer;
 }
 
 ul {
-
   margin: 0;
   margin-bottom: var(--spacing-md);
   
   padding: var(--spacing-sm);
-  padding-left: 1.5rem;
+
 
   text-align: left;
-
   }
 
 a {
@@ -187,8 +179,8 @@ a:hover {
 /*  width: 400px;*/
 
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: var(--spacing-md);
+  right: var(--spacing-md);
 
   cursor: pointer;
 }
@@ -196,18 +188,18 @@ a:hover {
 .title {  
     position: absolute;
     bottom: .7rem;
-    right: 1rem;
+    right: var(--spacing-md);
     text-align: right;
     text-decoration: none;
   }
 
   .title_text1 {
-    font-size: 1.5rem;
+    font-size: var(--font-xl);
     color: var(--card-color);
   }
 
   .title_text2 {
-    font-size: 2rem;
+    font-size: var(--font-xxl);
     color: var(--selected-card-font-color);
   }
 
@@ -222,10 +214,10 @@ a:hover {
 
 #link {
   font-style: oblique;
-  font-size: .75rem;
+  font-size: var(--font-sm);
   color: black;
   text-decoration: none;
-  margin-right: 1rem;
+  margin-right: var(--spacing-md);
 }
 
 .App {
@@ -244,7 +236,7 @@ a:hover {
   flex-direction: row;
   justify-content: center;
 
-  margin: 1rem;
+  margin: var(--spacing-md);
 /*  margin-top: 5rem;*/
 
   position: fixed;
@@ -260,10 +252,9 @@ needed if columns accross bottom of page*/
 
 .CardList {
   display: inline-block;
-/*  padding: 1rem;*/
-  margin: 0rem;
-  margin-right: 1rem;
-/*  margin-bottom: 1rem;*/
+
+  margin: 0;
+  margin-right: var(--spacing-md);
 
   box-sizing: border-box;
   align-self: flex-start;
@@ -293,7 +284,8 @@ needed if columns accross bottom of page*/
 
 .Card {
   /* min-width:20rem; */
-  min-height: 3.5rem;
+
+  font-size: var(--font-sm);
   text-align: center;
   padding: var(--spacing-sm);
   box-sizing: border-box;
@@ -309,7 +301,7 @@ needed if columns accross bottom of page*/
   background: var(--card-color);
   color: var(--card-font-color);
 
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
 
   display: flex;
   flex-direction: column;
@@ -381,25 +373,24 @@ color: var(--card-font-color);
 
 .Card__title {
   font-weight: bold;
-  /* font-size: 1.1rem; */
+
 }
 .Card__Info {
-/*  color: var(--primary-font-color);*/
 }
 
 h2 {
   margin: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 
 .Button {
   border-radius: var(--radius-xl);
-  padding: var(--spacing-xs) var(--spacing-md);
+  padding: var(--spacing-md);
 
   font-weight: bold;
-  line-height: 1.2rem;
-  font-size: 1rem;
+  line-height: var(--spacing-md);
+  font-size: var(--font-sm);
   text-align: center;
 
   transition: .3s;
@@ -440,22 +431,19 @@ h2 {
 .Button__large {
 
   border-radius: var(--radius-xl);
-  padding: var(--spacing-xs) var(--spacing-md);
-/*  min-width: 3rem;*/
-/*  min-width: 100%;*/
-  font-weight: bold;
-  line-height: 1.2rem;
-  outline: none;
-/*  border: 4px solid var(--card-color);*/
+  padding: var(--spacing-md);
 
-  width: 3.5rem;
-/*  font-weight: bold;*/
-/*  line-height: 2.75rem;*/
-  height: 3.5rem;
-  font-size: 1.5rem;
-/*  background: var(--card-color);*/
+  font-weight: bold;
+  line-height: var(--spacing-md);
+  outline: none;
+
+
+  width: var(--spacing-xl);
+
+  height: var(--spacing-xl);
+  font-size: var(--font-lg);
+
   color: var(--card-font-color);
-/*  border: 1px solid var(--primary-color);*/
 
   border: 1px solid transparent;
   cursor: pointer;
@@ -478,13 +466,11 @@ h2 {
 
   cursor: pointer;
 
-  padding: 1rem;
+  padding: var(--spacing-md);
 
-  height: 3.5rem;
+  height: var(--spacing-xl);
 
-  /* box-sizing: border-box; */
-
-  min-width: 20rem;
+  /* min-width: 20rem; */
 
   overflow: hidden;
 
@@ -493,25 +479,20 @@ h2 {
   background: var(--card-color);
 
   font-family: Arial Narrow, sans-serif; 
-  font-size: 1.1rem;
+  font-size: var(--font-md);
 
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
-
+  transition: .3s;
 }
 
 .dropbtn__red {
 
   cursor: pointer;
 
-  padding: 1rem;
+  padding: var(--spacing-md);
 
-  height: 3.5rem;
+  height: var(--spacing-xl);
 
-  /* box-sizing: border-box; */
-
-  width: 20rem;
+  /* min-width: 20rem; */
 
   overflow: hidden;
 
@@ -520,12 +501,13 @@ h2 {
   background: var(--recording-card-color);
 
   font-family: Arial Narrow, sans-serif; 
-  font-size: 1.1rem;
+  font-size: var(--font-md);
 
   /* display: flex; */
   /* align-items: center;
   justify-content: center; */
 
+  transition: .3s;
 }
 
 
@@ -541,7 +523,7 @@ h2 {
   display: none;
   position: absolute;
   /* width: 100%; */
-  bottom: 3.5rem;
+  bottom: 2.5rem;
   z-index: 1;
   cursor: pointer;
 }
@@ -562,8 +544,10 @@ h2 {
 .dropup:hover .dropbtn {
 /*          background-color: #2980B9;*/
 /*          background: var(--card-color);*/
-
+  transform: scale(1.01,1.01);
 }
+
+
 
 
 
@@ -610,38 +594,26 @@ h2 {
 }
 
 .Card__introContent {
-/*   width: 25rem;*/
+  line-height: 1.5;
 
-  /* position: absolute;
-  top: 50%;
-  left: 50%; */
-  /* margin-left: -10rem;
-  margin-top: -5%; */
-  
-  line-height: 2;
-
-  /* width: 40rem; */
   text-align: center;
-  font-size: 1.1rem;
+  font-size: var(--font-md);
 
-  /* z-index: 2; */
+  width: 23rem;
 
-  width: 30rem;
-
-  padding: var(--spacing-md);
+  padding: var(--spacing-lg);
   border-radius: var(--radius-xl);
   background: var(--card-color);
   color: var(--card-font-color);
-  /* align-content: right; */
-/* padding: var(--spacing-lg); */
+
 }
 
 
 #closeIntro {
 
   cursor: pointer;
-  padding: 1rem;
-  margin-top: .7rem;
+  padding: var(--spacing-md);
+  margin-top: .4rem;
   /* height: 3.5rem; */
 
   box-sizing: border-box;
@@ -652,126 +624,22 @@ h2 {
   border: 1px solid transparent;
   background: rgba(0, 0, 0, 1);;
 
-  font-size: 1.1rem;
+  /* font-size: var(--font-sm); */
   font-family: Arial Narrow, sans-serif; 
   color: var(--selected-card-font-color);
-  
 }
 
 
 /* Small Screens. */
-@media (max-width: 1241px) {
+@media (max-width: 1290px) {
   .title {  
     display: none;
   }
-
-/*  .AppContent {
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-
-    margin: 0rem;
-    margin-top: 5rem;
-   }
-
-  .CardList {
-      width: 100vw;
-      align-items: center;
-  }
-
-  .roomInfo {
-    text-align: center;
-    position: relative;
-    top: 0;
-    left: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 75%;
-  }
-
-  .stuff {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .taLink {
-  position: relative;
-  bottom: 0rem;
-  right: 0rem;
-  margin-bottom: 1rem;
-  }*/
 }
 
 /* Phones only. */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-/*  .CardList {
-    width: 100vw;
-    align-items: center;
-  }
-*/
-/*  body{
-    font-size: 1.8em;
-  }
 
-
-  .Card {
-    width: 60%;
-    max-width: unset;
-
-  }
-
-  .roomInfo {
-    text-align: center;
-    position: relative;
-    top: 0;
-
-    left: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 75%;
-  }
-
-   .AppContent {
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-
-    margin: 0rem;
-    margin-top: 5rem;
-   }
-
-  .CardList {
-      width: 100vw;
-      align-items: center;
-  }
-
-  .stuff {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .taLink {
-  position: relative;
-  bottom: 0rem;
-  right: 0rem;
-  margin-bottom: 1rem;
-  }*/
 
 
 }
