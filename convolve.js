@@ -18,7 +18,6 @@
 
   let convolvedNode = null;
 
-
   var elem = document.documentElement; //fullscreen button related
 
   const impulses = [
