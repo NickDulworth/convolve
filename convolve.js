@@ -125,10 +125,18 @@
 
     // document.getElementById('source-btn').classList.remove('dropbtn'); 
     // document.getElementById('source-btn').classList.add('dropbtn_red'); 
-
-
     // document.getElementById('source-btn').style.background = "rgba(235, 33, 46, .9)";
+    
 
+
+
+
+
+
+    //stop recording after 30 seconds
+    setTimeout(function(){  
+      stopRecording();
+    }, 30000); // stop recording
   }
 
   function stopRecording() {
@@ -152,8 +160,6 @@
 
     // document.getElementById('source-btn').classList.remove('dropbtn_red');
     // document.getElementById('source-btn').classList.add('dropbtn'); 
-
- 
   }
 
   /**
