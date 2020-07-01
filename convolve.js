@@ -120,7 +120,14 @@
     document.getElementById('convolve-btn').innerHTML = '<i class="fas fa-stop"></i>';
     // document.getElementById('record').innerHTML = '<span style="font-family:Karla;"> <i class="fas fa-save"></i></span><span style="font-family:Arial Narrow;"></span>';
     document.getElementById('convolve-btn').classList.add('Card__red'); 
-    document.getElementById('record').classList.add('Card__red'); 
+    document.getElementById('record').classList.add('Card__red');
+
+
+
+    // document.getElementById("record").style.height = "1000px";
+    // document.getElementById("record").style.transition = "30s";
+    // document.getElementById("record").style.height = "10px";
+    
     document.getElementById('source-0').classList.add('Card__red'); 
 
     // document.getElementById('source-btn').classList.remove('dropbtn'); 
@@ -134,7 +141,7 @@
         stopRecording();
         console.log('recording time limit: Stop Recording!');         
       }
-    }, 3000); // stop recording
+    }, 30000); // stop recording
   }
 
   function stopRecording() {
