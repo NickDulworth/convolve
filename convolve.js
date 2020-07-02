@@ -122,9 +122,17 @@
     document.getElementById('convolve-btn').classList.add('Card__red'); 
     document.getElementById('record').classList.add('Card__red');
 
+    // button size transition to indicate remaining time. Transition time to equal max recording duration.
+    // setTimeout(function(){  
+    //   if (recording === true) {
+    //     document.getElementById("record").style.transition = "height 30s";
+    //     document.getElementById("record").style.height = "var(--spacing-xl)"; //return button to original size       
+    //   }
+    // }, 400); 
 
+    document.getElementById('record').classList.add('recordTimeAnimation_class');
 
-    // document.getElementById("record").style.height = "1000px";
+    // document.getElementById("record").style.height = "300px";
     // document.getElementById("record").style.transition = "30s";
     // document.getElementById("record").style.height = "10px";
     
@@ -146,13 +154,13 @@
 
   function stopRecording() {
 
+    document.getElementById('record').classList.remove('recordTimeAnimation_class');
+    
     // delay stop recording to catch phrase end
     setTimeout(function(){  
-    
       have_recording = true;
       recording = false;
       console.log('stopRecording: Stop Recording!');
-
     }, 500); // end of: delay stop recording to catch phrase end
 
 

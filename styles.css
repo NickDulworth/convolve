@@ -82,6 +82,8 @@ body {
   font-family: Arial Narrow, sans-serif; 
   color: var(--primary-font-color);
   font-size: var(--font-md);
+
+  transition-timing-function: ease-in;
 }
 
 /* not used, use for non bgn image*/
@@ -234,7 +236,10 @@ a:hover {
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: flex-end;
+
+  /* justify-content: center; */
+  /* vertical-align: bottom; */
 
   margin: var(--spacing-md);
 /*  margin-top: 5rem;*/
@@ -256,19 +261,19 @@ needed if columns accross bottom of page*/
   margin: 0;
   margin-right: var(--spacing-md);
 
-  box-sizing: border-box;
-  align-self: flex-start;
+  /* box-sizing: border-box; */
+  /* align-self: flex-start; */
 
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: flex-start; */
+  /* align-items: bottom; */
 }
 
 /*margin between sub cards*/
-.CardList > *:not(:last-child) {
+/* .CardList > *:not(:last-child) {
   margin-bottom: .5rem;
-}
+} */
 
 
 .tile {
@@ -391,7 +396,7 @@ h2 {
   font-weight: bold;
   line-height: var(--spacing-md);
   font-size: var(--font-sm);
-  text-align: center;
+  text-align: bottom;
 
   transition: .3s;
 
@@ -441,6 +446,7 @@ h2 {
   width: var(--spacing-xl);
 
   height: var(--spacing-xl);
+  
   font-size: var(--font-lg);
 
   color: var(--card-font-color);
@@ -458,10 +464,21 @@ h2 {
 }
 
 
+/*animation indicates recording time limit*/
+.recordTimeAnimation_class {
+  animation: recordTimeAnimation 30s;
+  animation-timing-function: ease-out;
+  /* vertical-align: bottom; */
+}
+@keyframes recordTimeAnimation {
+  from {height: 300px;}
+  to {height: var(--spacing-xl);}
+}
+
+
 
 
 /* all drop buttons --------------   */
-
 .dropbtn {
 
   cursor: pointer;
@@ -631,7 +648,7 @@ h2 {
 
 
 /* Small Screens. */
-@media (max-width: 1290px) {
+@media (max-width: 955px) {
   .title {  
     display: none;
   }
@@ -639,7 +656,6 @@ h2 {
 
 /* Phones only. */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-
 
 
 }
