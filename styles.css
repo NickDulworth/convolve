@@ -73,12 +73,6 @@ html {
 
 }
 
-/*@import url(//db.onlinewebfonts.com/c/85aa81413708ebb77a4ed7712511b8aa?family=Univers);
-
-@font-face {font-family: "Univers"; src: url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.eot"); src: url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.woff") format("woff"), url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/85aa81413708ebb77a4ed7712511b8aa.svg#Univers") format("svg"); }
-
-*/
-
 
   @font-face {
     font-family: 'universe47';
@@ -431,8 +425,8 @@ h2 {
 
 
 
-  font-family: Arial Narrow, sans-serif; 
-
+  /* font-family: Arial Narrow, sans-serif;  */
+  font-family: universe47, sans-serif; 
   }
 
   .Button:hover {
@@ -509,8 +503,9 @@ h2 {
   border-radius: var(--radius-xl);
   border: 1px solid transparent;
   background: var(--card-color);
-
-  font-family: Arial Narrow, sans-serif; 
+/* 
+  font-family: Arial Narrow, sans-serif;  */
+  font-family: universe47, sans-serif; 
   font-size: var(--font-md);
 
   transition: .3s;
@@ -531,8 +526,9 @@ h2 {
   border-radius: var(--radius-xl);
   border: 1px solid transparent;
   background: var(--recording-card-color);
-
-  font-family: Arial Narrow, sans-serif; 
+/* 
+  font-family: Arial Narrow, sans-serif;  */
+  font-family: universe47, sans-serif; 
   font-size: var(--font-md);
 
   /* display: flex; */
@@ -657,7 +653,8 @@ h2 {
   background: rgba(0, 0, 0, 1);;
 
   /* font-size: var(--font-sm); */
-  font-family: Arial Narrow, sans-serif; 
+  /* font-family: Arial Narrow, sans-serif;  */
+  font-family: universe47, sans-serif; 
   color: var(--selected-card-font-color);
 }
 
