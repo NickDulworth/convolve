@@ -1,5 +1,6 @@
 :root {
-  --primary-color: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
+  /* --primary-color: rgba(235, 33, 46, 1); */
+  --primary-color: rgba(169, 12, 21, 1);/*#eb212e; TA Red */
 
   --secondary-color: rgba(241, 241, 239, 0.0);
   /* --secondary-color: rgba(255, 255, 255, 0.0); */
@@ -7,18 +8,23 @@
 
   --card-color: rgba(241, 241, 239, 0.9);
   /* --card-color: rgba(255, 255, 255, 0.9); */
-  --selected-card-color: rgba(0, 0, 0, .9);
+  --selected-card-color: rgba(0, 0, 0,.9);
 
 /*  --card-color: rgba(0, 0, 0, 0.5);*/
 
-  --recording-color: rgba(235, 33, 46, .9);/*#eb212e; TA Red */
+  /* --recording-color: rgba(235, 33, 46, .9); */
+  --recording-color: rgba(169, 12, 21, .9);/*#eb212e; TA Red */
+
   --not-recording-color: rgba(0, 0, 0, .9);
-  --ta-red: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
+  
+  /* --ta-red: rgba(235, 33, 46, 1); */
+  --ta-red: rgba(169, 12, 21, 1);/*#eb212e; TA Red */
+  --ta-red-hover: rgba(191, 81, 87, 1);/*#eb212e; TA Red */
 
   --card-font-color: black;
-  --selected-card-font-color: white;
+  --selected-card-font-color: rgba(241, 241, 239, 1);
 
-  --surface-color: white;
+  --surface-color: rgba(241, 241, 239, 1);
   --bg-hover-color: #f2f2f2;
   --surface-hover-color: hsl(0, 0%, 98%);
 
@@ -31,7 +37,7 @@
   */
   --on-surface: rgba(241, 241, 239, 0.6);
   /* --on-surface: rgba(255, 255, 255, 0.6); */
-  --on-primary: #fff;
+  --on-primary: rgba(241, 241, 239, 1);
   --on-secondary: #000;
 
   /* spacing t-shirt sizes */
@@ -47,7 +53,7 @@
   --radius-md: 0.125rem;
   --radius-lg: 0.25rem;
   --radius-xl: 0.7rem;
-  --radius-xxl: 1rem;
+  --radius-xxl: 2rem;
   --radius-circle: 50%;
 
   /* radii */
@@ -167,12 +173,13 @@ ul {
   }
 
 a {
-  color: black;  
+  color: var(--ta-red);  
   transition: .3s;
 }
 
 a:hover {
   transform: scale(1.05,1.05); /* Standard syntax */
+  color: var(--ta-red-hover); 
 }
 
 .taLink {
