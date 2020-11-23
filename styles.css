@@ -1,9 +1,12 @@
 :root {
   --primary-color: rgba(235, 33, 46, 1);/*#eb212e; TA Red */
 
-  --secondary-color: rgba(255, 255, 255, 0.0);
+  --secondary-color: rgba(241, 241, 239, 0.0);
+  /* --secondary-color: rgba(255, 255, 255, 0.0); */
 
-  --card-color: rgba(255, 255, 255, 0.9);
+
+  --card-color: rgba(241, 241, 239, 0.9);
+  /* --card-color: rgba(255, 255, 255, 0.9); */
   --selected-card-color: rgba(0, 0, 0, .9);
 
 /*  --card-color: rgba(0, 0, 0, 0.5);*/
@@ -23,8 +26,11 @@
   --secondary-font-color: black;
   --button-font-color: black;
 
-  --on-background: rgba(255, 255, 255, 0.87);
-  --on-surface: rgba(255, 255, 255, 0.6);
+  --on-background: rgba(241, 241, 239, 0.87);
+  /* --on-background: rgba(255, 255, 255, 0.87);
+  */
+  --on-surface: rgba(241, 241, 239, 0.6);
+  /* --on-surface: rgba(255, 255, 255, 0.6); */
   --on-primary: #fff;
   --on-secondary: #000;
 
@@ -403,7 +409,8 @@ h2 {
 
 
 /*  color: var(--button-font-color);*/
-  background: rgba(255, 255, 255, 1);
+  /* background: rgba(255, 255, 255, 1); */
+  background: rgba(241, 241, 239, 1);
 
   opacity: .9;
   
