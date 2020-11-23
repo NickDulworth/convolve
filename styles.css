@@ -80,6 +80,15 @@ html {
 */
 
 
+@font-face {
+  font-family: "Univers 47 Condensed Light";
+  src: url("css/fonts/Univers 47 Condensed Light.eot");
+  src:
+  url("css/fonts/Univers 47 Condensed Light.ttf") format("ttf"),
+  url("css/fonts/Univers 47 Condensed Light.svg#filename") format("svg");
+  }
+
+
 body {
   padding: 0;
   margin: 0;
