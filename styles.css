@@ -1,6 +1,6 @@
 :root {
   /* --primary-color: rgba(235, 33, 46, 1); */
-  --primary-color: rgba(169, 12, 21, 1);/*#eb212e; TA Red */
+  --primary-color: rgba(169, 12, 21, 1);/*TA Red */
 
   --secondary-color: rgba(241, 241, 239, 0.0);
   /* --secondary-color: rgba(255, 255, 255, 0.0); */
@@ -13,13 +13,13 @@
 /*  --card-color: rgba(0, 0, 0, 0.5);*/
 
   /* --recording-color: rgba(235, 33, 46, .9); */
-  --recording-color: rgba(169, 12, 21, .9);/*#eb212e; TA Red */
+  --recording-color: rgba(169, 12, 21, .9);/* TA Red */
 
   --not-recording-color: rgba(0, 0, 0, .9);
   
   /* --ta-red: rgba(235, 33, 46, 1); */
-  --ta-red: rgba(169, 12, 21, 1);/*#eb212e; TA Red */
-  --ta-red-hover: rgba(191, 81, 87, 1);/*#eb212e; TA Red */
+  --ta-red: rgba(169, 12, 21, 1);/* TA Red */
+  --ta-red-hover: rgba(191, 81, 87, 1);/*TA Red */
 
   --card-font-color: black;
   --selected-card-font-color: rgba(241, 241, 239, 1);
@@ -64,7 +64,7 @@
   --font-xxl: 2rem;
 
 /*  --danger: #f53d4e;*/
-  --danger: #eb212e;
+  --danger: rgba(169, 12, 21, 1);
 }
 
 
