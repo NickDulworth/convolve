@@ -420,9 +420,9 @@
     selected_source = source;
     document.getElementById('source-0').classList.remove('Card__selected');
     document.getElementById('source-1').classList.remove('Card__selected');
-    document.getElementById('source-2').classList.remove('Card__selected');
-    document.getElementById('source-3').classList.remove('Card__selected');
-    document.getElementById('source-4').classList.remove('Card__selected');
+    // document.getElementById('source-2').classList.remove('Card__selected');
+    // document.getElementById('source-3').classList.remove('Card__selected');
+    // document.getElementById('source-4').classList.remove('Card__selected');
     document.getElementById('source-' + source).classList.add('Card__selected'); 
 
 
@@ -532,9 +532,9 @@ function toggleConvolve() {
   // select source
   document.getElementById('source-0').onclick = () => selectSource(0); // source-0 is user recording
   document.getElementById('source-1').onclick = () => selectSource(1);
-  document.getElementById('source-2').onclick = () => selectSource(2);
-  document.getElementById('source-3').onclick = () => selectSource(3);
-  document.getElementById('source-4').onclick = () => selectSource(4);
+  // document.getElementById('source-2').onclick = () => selectSource(2);
+  // document.getElementById('source-3').onclick = () => selectSource(3);
+  // document.getElementById('source-4').onclick = () => selectSource(4);
 
   // toggle full screen
   document.getElementById('toggleFullscreen').onclick = handleToggleFullscreen; 
