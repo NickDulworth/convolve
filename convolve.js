@@ -38,8 +38,8 @@
 
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
-    'sources/clarinet_solo.m4a',
-    // 'sources/Violin_Bach_Partita No2-001.m4a',
+    // 'sources/clarinet_solo.m4a',
+    'sources/Violin_Bach_Partita No2-001.m4a',
 
     // 'sources/StereoTest.m4a',
     // 'sources/StereoTest.m4a',
@@ -431,7 +431,7 @@
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Recording</span>&nbsp;By User&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 1) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Clarinet Solo</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Partita No. 2 in D minor</span>&nbsp;Bach&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 2) {
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 2</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
