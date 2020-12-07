@@ -38,8 +38,10 @@
 
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
-    // 'sources/clarinet_solo.m4a',
-    'sources/Violin_Bach_Partita No2-001.m4a',
+    'sources/Cello - Bruch Kol Nidrei for Cello.wav',
+    'sources/Male - Richard III-001.wav',
+    'sources/Clarinet Solo 2-001.wav',
+    // 'sources/Violin_Bach_Partita No2-001.m4a',
 
     // 'sources/StereoTest.m4a',
     // 'sources/StereoTest.m4a',
@@ -420,8 +422,8 @@
     selected_source = source;
     document.getElementById('source-0').classList.remove('Card__selected');
     document.getElementById('source-1').classList.remove('Card__selected');
-    // document.getElementById('source-2').classList.remove('Card__selected');
-    // document.getElementById('source-3').classList.remove('Card__selected');
+    document.getElementById('source-2').classList.remove('Card__selected');
+    document.getElementById('source-3').classList.remove('Card__selected');
     // document.getElementById('source-4').classList.remove('Card__selected');
     document.getElementById('source-' + source).classList.add('Card__selected'); 
 
@@ -431,13 +433,13 @@
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Recording</span>&nbsp;By User&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 1) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Partita No. 2 in D minor</span>&nbsp;Bach&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Kol Nidrei - Cello</span>&nbsp;Bruch&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 2) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 2</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Richard III - Monologue</span>&nbsp;Shakespeare&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 3) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 3</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">The Cape Cod Files - Clarinet</span>&nbsp;Paquito D&lsquo;Rivera&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 4) {
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 4</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
@@ -532,8 +534,8 @@ function toggleConvolve() {
   // select source
   document.getElementById('source-0').onclick = () => selectSource(0); // source-0 is user recording
   document.getElementById('source-1').onclick = () => selectSource(1);
-  // document.getElementById('source-2').onclick = () => selectSource(2);
-  // document.getElementById('source-3').onclick = () => selectSource(3);
+  document.getElementById('source-2').onclick = () => selectSource(2);
+  document.getElementById('source-3').onclick = () => selectSource(3);
   // document.getElementById('source-4').onclick = () => selectSource(4);
 
   // toggle full screen
